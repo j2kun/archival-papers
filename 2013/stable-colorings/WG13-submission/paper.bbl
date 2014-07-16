@@ -1,0 +1,83 @@
+\begin{thebibliography}{10}
+
+\bibitem{AharoniMP90}
+Ron Aharoni, E.~C. Milner, and Karel Prikry.
+\newblock Unfriendly partitions of a graph.
+\newblock {\em J. Comb. Theory, Ser. B}, 50(1):1--10, 1990.
+
+\bibitem{BazganTV10}
+Cristina Bazgan, Zsolt Tuza, and Daniel Vanderpooten.
+\newblock Satisfactory graph partition, variants, and generalizations.
+\newblock {\em European Journal of Operational Research}, 206(2):271--280,
+  2010.
+
+\bibitem{BramoulleLGV04}
+Yann Bramoull{\'e}, Dunia L{\'o}pez-Pintado, Sanjeev Goyal, and Fernando
+  Vega-Redondo.
+\newblock Network formation and anti-coordination games.
+\newblock {\em Int. J. Game Theory}, 33(1):1--19, 2004.
+
+\bibitem{BruhnDGS10}
+Henning Bruhn, Reinhard Diestel, Agelos Georgakopoulos, and Philipp
+  Spr{\"u}ssel.
+\newblock Every rayless graph has an unfriendly partition.
+\newblock {\em Combinatorica}, 30(5):521--532, 2010.
+
+\bibitem{CaoY12a}
+Zhigang Cao and Xiaoguang Yang.
+\newblock The fashion game: Matching pennies on social networks.
+\newblock {\em SSRN}, 2012.
+
+\bibitem{ChaudhuriGJ08}
+Kamalika Chaudhuri, Fan~Chung Graham, and Mohammad~Shoaib Jamall.
+\newblock A network coloring game.
+\newblock In {\em WINE}, pages 522--530, 2008.
+
+\bibitem{CowanE}
+Robert Cowen and William Emerson.
+\newblock Proportional colorings of graphs.
+\newblock unpublished.
+
+\bibitem{ElsasserT11}
+Robert Els{\"a}sser and Tobias Tscheuschner.
+\newblock Settling the complexity of local max-cut (almost) completely.
+\newblock In {\em ICALP (1)}, pages 171--182, 2011.
+
+\bibitem{GareyJ79}
+Michael~R. Garey and David~S. Johnson.
+\newblock {\em Computers and Intractability: A Guide to the Theory of
+  NP-Completeness}.
+\newblock W. H. Freeman \& Co., New York, NY, USA, 1979.
+
+\bibitem{KearnsSM06}
+Michael Kearns, Siddharth Suri, and Nick Montfort.
+\newblock A behavioral study of the coloring problem on human subject networks.
+\newblock {\em Science}, 313:2006, 2006.
+
+\bibitem{MonienT10}
+Burkhard Monien and Tobias Tscheuschner.
+\newblock On the power of nodes of degree four in the local max-cut problem.
+\newblock In {\em CIAC}, pages 264--275, 2010.
+
+\bibitem{NaorS93}
+Moni Naor and Larry Stockmeyer.
+\newblock What can be computed locally?
+\newblock In {\em Proceedings of the twenty-fifth annual ACM symposium on
+  Theory of computing}, STOC '93, pages 184--193, New York, NY, USA, 1993. ACM.
+
+\bibitem{ShafiqueD09}
+Khurram Shafique and Ronald~D. Dutton.
+\newblock Partitioning a graph into alliance free sets.
+\newblock {\em Discrete Mathematics}, 309(10):3102--3105, 2009.
+
+\bibitem{ShelahM90}
+Saharon Shelah and E.~C. Milner.
+\newblock Graphs with no unfriendly partitions.
+\newblock {\em A tribute to Paul Erd{\"o}s}, pages 373--384, 1990.
+
+\bibitem{vandenHeuvel98}
+J.~van~den Heuvel, R.~A. Leese, and M.~A. Shepherd.
+\newblock Graph labeling and radio channel assignment.
+\newblock {\em J. Graph Theory}, 29(4):263--283, December 1998.
+
+\end{thebibliography}

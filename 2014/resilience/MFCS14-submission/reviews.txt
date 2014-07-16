@@ -1,0 +1,60 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 247
+TITLE: On Coloring Resilient Graphs
+AUTHORS: Jeremy Kun and Lev Reyzin
+
+OVERALL EVALUATION: 3 (accept (typical MFCS paper))
+
+----------- REVIEW -----------
+This paper introduces a notion of “resilience” for constraint-based combinatorial problems.
+
+Generally speaking, a positive instance of a given problem is n-resilient, if it remains positive under the addition of n extra constraints. The authors claim that many NP-hard problems have natural definitions of resilience. These are some of the examples they provide:
+
+- resilient positive instances for optimization problems over graphs can be defined as those that remain positive after the addition (or removal) of a given number of arbitrary edges;
+
+- for satisfiability, a resilient instance is one for which a specified number of variables can be fixed, and still the formula remains satisfiable.
+
+The paper focuses on the problem of graph coloring. A graph G is defined to be r-resiliently k-colorable if G is k-colorable and it will remain so even after the addition of r arbitrary edges. The authors concentrate on the search version of the above problem, suggesting that finding a k-coloring for a very resilient graph might be easy, as that instance is in some sense “far” from being not colorable, and posing the general question: for which values of k and r does the task of k-coloring an r-resiliently k-colorable graph admit an efficient algorithm?
+
+The results of the paper concerning the coloring of r-resiliently k-colorable graphs are well summarized in Figure 1, where instances are classified as being solvable in polynomial time, NP-hard if a specific conjecture holds, genuinely NP-hard or “open” as a function of k and r. From a technical point of view, the most significant contribution is the proof that 3-coloring a 1-resiliently 3-colorable graph is NP-hard (Theorem 1).
+
+In my opinion, the definition of resilience proposed by the authors is interesting, and it may prove a useful tool for investigating the boundaries between tractability and intractability for several combinatorial problems.
+
+The results reported for graph coloring imply tractability for high values of r and intractability for low values of r (compared to k), even though a vast region of unknown cases remains between these two. These results seem to support the intuition behind the authors' definition of resilience for constraint-based combinatorial problems.
+
+In Section 3.1, several “classic” graphs are mentioned. I think that some references, and possibly a brief description of each graph, should be given. Also, in Section 3.3, right before Proposition 4, Khot's 2-to-1 conjecture is mentioned, and I think again that some references,  and a brief description, are necessary.
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 247
+TITLE: On Coloring Resilient Graphs
+AUTHORS: Jeremy Kun and Lev Reyzin
+
+OVERALL EVALUATION: 3 (accept (typical MFCS paper))
+
+----------- REVIEW -----------
+The paper studies hardness of coloring k-colorable graphs that remains k-colorable after adding r new edges. Graphs that satisfy this property is called r-resilient k-colorable. The paper gives both upper- and lower-bound for k-coloring of r-resilient k-colorable graphs.
+
+The lower-bound results come in two different types. One applies to the case where k is at least some large constant. This follows from previous hardness results of graph coloring combined with some observations/reductions regarding the resiliency and the colorability of the graphs. Another type of lower-bound proved in this paper is the hardness of 3-coloring a 1-resilient 3-colorable graph. This is proved by a gadget reduction from SAT.
+
+The main upper-bound result is that k-coloring {k choose 2}-resilient k-colorable graphs is in polynomial time. The argument is that such graphs cannot have vertices of degree at least k since otherwise one can add {k choose 2} edges to make a (k+1)-clique containing a high-degree vertex and its neighbors, which would not be k-colorable.
+
+The authors motivate the study of resilient instances as a new way of understanding the boundary between hard and easy, given that there has been little progress with the classic notions. Although the current paper mostly uses known results from related problems, but it is possible that one could say more interesting things by analyzing the structure of the instances from the perspective of resiliency, and that a different angle could provide some new insights.
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 247
+TITLE: On Coloring Resilient Graphs
+AUTHORS: Jeremy Kun and Lev Reyzin
+
+OVERALL EVALUATION: 2 (weak accept (below average MFCS paper))
+
+----------- REVIEW -----------
+My review can be summarized in the following words: Despite the limited technical depth of the paper, I find the new research field proposed by the authors interesting and promising.
+
+The authors introduce the notion of resilience in constraint satisfaction problems, which is defined informally and the general idea of that is the following: A positive instance of a constraint satisfaction problem is resilient if it remains a positive instance up to the addition of a constraint. As an example of this, we can say that a graph G is r-resiliently k-colorable if G is k-colorable and will remain so even if any r edges are added.
+Coloring is also the paradigm, which the authors focus on in this paper in order to compute the computational complexity of the different resilient coloring problems.
+The authors characterize many resilient coloring problems.
+The most important results are that they show that k-coloring 1-resilient k-colorable graphs remains NP-hard, (except of k=1 and k=2). They also show that there exist efficient algorithms for k-coloring (k over 2)-resiliently k-colorable graphs for all k.
+The proofs are correct. Most proofs are pretty trivial, the only proof which is more involved is that of  showing that 3-coloring a 1-resiliently 3-colorable graph is NP-hard. They use a reduction to the 1-resilient 6-SAT, a problem the authors also defined and showed to be NP-hard. Despite that one of the two gadgets that is used in the proof is taken from another paper, the idea is nice and the invention of the  1-resilient 6-SAT in order to use it for the proof is a clever trick.
+As I mentioned before, I find the idea of resilience interesting and I think it could open a wide new area of research with many new useful problems.

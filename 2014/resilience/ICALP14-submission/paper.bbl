@@ -1,0 +1,176 @@
+\begin{thebibliography}{10}
+
+\bibitem{AckermanB09}
+Margareta Ackerman and Shai Ben-David.
+\newblock Clusterability: A theoretical study.
+\newblock {\em Journal of Machine Learning Research - Proceedings Track},
+  5:1--8, 2009.
+
+\bibitem{Arora06}
+Sanjeev Arora and Eden Chlamtac.
+\newblock New approximation guarantee for chromatic number.
+\newblock In {\em STOC}, pages 215--224, 2006.
+
+\bibitem{Arora11}
+Sanjeev Arora and Rong Ge.
+\newblock New tools for graph coloring.
+\newblock In {\em APPROX-RANDOM}, pages 1--12, 2011.
+
+\bibitem{ABS10}
+Pranjal Awasthi, Avrim Blum, and Or~Sheffet.
+\newblock Center-based clustering under perturbation stability.
+\newblock {\em Inf. Process. Lett.}, 112(1-2):49--54, 2012.
+
+\bibitem{BR90}
+Bonnie Berger and John Rompel.
+\newblock A better performance guarantee for approximate graph coloring.
+\newblock {\em Algorithmica}, 5(3):459--466, 1990.
+
+\bibitem{BL12}
+Yonatan Bilu and Nathan Linial.
+\newblock Are stable instances easy?
+\newblock {\em Combinatorics, Probability {\&} Computing}, 21(5):643--660,
+  2012.
+
+\bibitem{Blum94}
+Avrim Blum.
+\newblock New approximation algorithms for graph coloring.
+\newblock {\em J. ACM}, 41(3):470--516, 1994.
+
+\bibitem{Blum97}
+Avrim Blum and David~R. Karger.
+\newblock An $\tilde{O}(n^{3/14})$-coloring algorithm for 3-colorable graphs.
+\newblock {\em Inf. Process. Lett.}, 61(1):49--53, 1997.
+
+\bibitem{Cai03}
+Leizhen Cai.
+\newblock Parameterized complexity of vertex colouring.
+\newblock {\em Discrete Applied Mathematics}, 127(3):415--429, 2003.
+
+\bibitem{Chl09}
+Eden Chlamtac.
+\newblock {\em Non-local analysis of SDP-based approximation algorithms}.
+\newblock PhD thesis, Princeton University, Princeton, NJ, USA, 2009.
+\newblock AAI3338674.
+
+\bibitem{Dailey80}
+David~P. Dailey.
+\newblock Uniqueness of colorability and colorability of planar 4-regular
+  graphs are np-complete.
+\newblock {\em Discrete Mathematics}, 30(3):289 -- 293, 1980.
+
+\bibitem{DMR06}
+Irit Dinur, Elchanan Mossel, and Oded Regev.
+\newblock Conditional hardness for approximate coloring.
+\newblock {\em SIAM J. Comput.}, 39(3):843--873, 2009.
+
+\bibitem{EBH99}
+David Eppstein, Marshall~W. Bern, and Brad~L. Hutchings.
+\newblock Algorithms for coloring quadtrees.
+\newblock {\em Algorithmica}, 32(1):87--94, 2002.
+
+\bibitem{GJ76}
+Michael~R. Garey and David~S. Johnson.
+\newblock The complexity of near-optimal graph coloring.
+\newblock {\em J. ACM}, 23(1):43--49, 1976.
+
+\bibitem{GuKh2000}
+Venkatesan Guruswami and Sanjeev Khanna.
+\newblock On the hardness of 4-coloring a 3-colorable graph.
+\newblock {\em SIAM J. Discrete Math.}, 18(1):30--40, 2004.
+
+\bibitem{Ha93}
+Magn{\'u}s~M. Halld{\'o}rsson.
+\newblock A still better performance guarantee for approximate graph coloring.
+\newblock {\em Inf. Process. Lett.}, 45(1):19--23, 1993.
+
+\bibitem{Ha99}
+Johan H{\aa}stad.
+\newblock Clique is hard to approximate within $n^{1-\varepsilon}$.
+\newblock {\em Acta Mathematica}, 182:105--142, 1999.
+
+\bibitem{HMM10}
+Ch\'{\i}nh~T. Ho{\`a}ng, Fr{\'e}d{\'e}ric Maffray, and Meriem Mechebbek.
+\newblock A characterization of b-perfect graphs.
+\newblock {\em Journal of Graph Theory}, 71(1):95--122, 2012.
+
+\bibitem{Huang13}
+Sangxia Huang.
+\newblock Improved hardness of approximating chromatic number.
+\newblock {\em CoRR}, abs/1301.5216, 2013.
+
+\bibitem{Johnson74}
+David~S. Johnson.
+\newblock Worst case behavior of graph coloring algorithms.
+\newblock In {\em Proc. 5th Southeastern Conf. on Comb., Graph Theory and
+  Computing}, pages 513--527, 1974.
+
+\bibitem{Ka98}
+David~R. Karger, Rajeev Motwani, and Madhu Sudan.
+\newblock Approximate graph coloring by semidefinite programming.
+\newblock {\em J. ACM}, 45(2):246--265, 1998.
+
+\bibitem{Karp72}
+Richard~M. Karp.
+\newblock Reducibility among combinatorial problems.
+\newblock In {\em Complexity of Computer Computations}, pages 85--103, 1972.
+
+\bibitem{KT12}
+Ken{-}ichi Kawarabayashi and Mikkel Thorup.
+\newblock Combinatorial coloring of 3-colorable graphs.
+\newblock In {\em FOCS}, pages 68--75, 2012.
+
+\bibitem{KLS00}
+Sanjeev Khanna, Nathan Linial, and Shmuel Safra.
+\newblock On the hardness of approximating the chromatic number.
+\newblock {\em Combinatorica}, 20(3):393--415, 2000.
+
+\bibitem{Khot01}
+Subhash Khot.
+\newblock Improved inaproximability results for maxclique, chromatic number and
+  approximate graph coloring.
+\newblock In {\em FOCS}, pages 600--609, 2001.
+
+\bibitem{Ko03}
+Daniel Kobler and Udi Rotics.
+\newblock Edge dominating set and colorings on graphs with fixed clique-width.
+\newblock {\em Discrete Applied Mathematics}, 126(2-3):197--221, 2003.
+
+\bibitem{KKTW01}
+Daniel Kr{\'a}l, Jan Kratochv\'{\i}l, Zsolt Tuza, and Gerhard~J. Woeginger.
+\newblock Complexity of coloring graphs without forbidden induced subgraphs.
+\newblock In {\em WG}, pages 254--262, 2001.
+
+\bibitem{Kumar92}
+Vipin Kumar.
+\newblock Algorithms for constraint-satisfaction problems: A survey.
+\newblock {\em AI magazine}, 13(1):32, 1992.
+
+\bibitem{KunPR13}
+Jeremy Kun, Brian Powers, and Lev Reyzin.
+\newblock Anti-coordination games and stable graph colorings.
+\newblock In {\em SAGT}, pages 122--133, 2013.
+
+\bibitem{MSSW11}
+Mat{\'u}s Mihal{\'a}k, Marcel Sch{\"o}ngens, Rastislav Sr{\'a}mek, and Peter
+  Widmayer.
+\newblock On the complexity of the metric tsp under stability considerations.
+\newblock In {\em SOFSEM}, pages 382--393, 2011.
+
+\bibitem{Rey11}
+Lev Reyzin.
+\newblock Data stability in clustering: A closer look.
+\newblock In {\em ALT}, pages 184--198, 2012.
+
+\bibitem{Wi83}
+Avi Wigderson.
+\newblock Improving the performance guarantee for approximate graph coloring.
+\newblock {\em J. ACM}, 30(4):729--735, 1983.
+
+\bibitem{Zu07}
+David Zuckerman.
+\newblock Linear degree extractors and the inapproximability of max clique and
+  chromatic number.
+\newblock {\em Theory of Computing}, 3(1):103--128, 2007.
+
+\end{thebibliography}

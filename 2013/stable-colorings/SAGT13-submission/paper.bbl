@@ -1,0 +1,126 @@
+\begin{thebibliography}{10}
+
+\bibitem{AharoniMP90}
+R.~Aharoni, E.~C. Milner, and K.~Prikry.
+\newblock Unfriendly partitions of a graph.
+\newblock {\em J. Comb. Theory, Ser. B}, 50(1):1--10, 1990.
+
+\bibitem{BazganTV10}
+C.~Bazgan, Z.~Tuza, and D.~Vanderpooten.
+\newblock Satisfactory graph partition, variants, and generalizations.
+\newblock {\em Eur. J. Oper. Res.}, 206(2):271--280, 2010.
+
+\bibitem{BramoulleLGV04}
+Y.~Bramoull{\'e}, D.~L{\'o}pez-Pintado, S.~Goyal, and F.~Vega-Redondo.
+\newblock Network formation and anti-coordination games.
+\newblock {\em Int. J. Game Theory}, 33(1):1--19, 2004.
+
+\bibitem{BruhnDGS10}
+H.~Bruhn, R.~Diestel, A.~Georgakopoulos, and P.~Spr{\"u}ssel.
+\newblock Every rayless graph has an unfriendly partition.
+\newblock {\em Combinatorica}, 30(5):521--532, 2010.
+
+\bibitem{CaoY12a}
+Z.~Cao and X.~Yang.
+\newblock The fashion game: Matching pennies on social networks.
+\newblock {\em SSRN}, 2012.
+
+\bibitem{CKPS10}
+I.~Chatzigiannakis, C.~Koninis, P.~N. Panagopoulou, and P.~G. Spirakis.
+\newblock Distributed game-theoretic vertex coloring.
+\newblock In {\em OPODIS'10}, pages 103--118, 2010.
+
+\bibitem{ChaudhuriGJ08}
+K.~Chaudhuri, F.~C. Graham, and M.~Shoaib Jamall.
+\newblock A network coloring game.
+\newblock In {\em WINE}, pages 522--530, 2008.
+
+\bibitem{CowanE}
+R.~Cowen and W.~Emerson.
+\newblock Proportional colorings of graphs.
+\newblock unpublished.
+
+\bibitem{ElsasserT11}
+R.~Els{\"a}sser and T.~Tscheuschner.
+\newblock Settling the complexity of local max-cut (almost) completely.
+\newblock In {\em ICALP (1)}, pages 171--182, 2011.
+
+\bibitem{EGM12}
+B.~Escoffier, L.~Gourv\`{e}s, and J.~Monnot.
+\newblock Strategic coloring of a graph.
+\newblock In {\em CIAC'10}, pages 155--166, Berlin, Heidelberg, 2010.
+  Springer-Verlag.
+
+\bibitem{FKKMS02}
+D.~Fotakis, S.~Kontogiannis, E.~Koutsoupias, M.~Mavronicolas, and P.~Spirakis.
+\newblock The structure and complexity of nash equilibria for a selfish routing
+  game.
+\newblock In {\em ICALP}, pages 123--134, Malaga, Spain, 2002.
+
+\bibitem{GareyJ79}
+M.~R. Garey and D.~S. Johnson.
+\newblock {\em Computers and Intractability: A Guide to the Theory of
+  NP-Completeness}.
+\newblock W. H. Freeman \& Co., New York, NY, USA, 1979.
+
+\bibitem{G09}
+L.~Gourv\`{e}s and J.~Monnot.
+\newblock On strong equilibria in the max cut game.
+\newblock In {\em In: Proc. of WINE 2009, Springer LNCS}, pages 608--615, 2009.
+
+\bibitem{Hoefer2007}
+M.~Hoefer.
+\newblock {\em Cost sharing and clustering under distributed competition}.
+\newblock PhD thesis, Universit{\"a}t Konstanz, Germany, 2007.
+
+\bibitem{KearnsSM06}
+M.~Kearns, S.~Suri, and N.~Montfort.
+\newblock A behavioral study of the coloring problem on human subject networks.
+\newblock {\em Science}, 313:2006, 2006.
+
+\bibitem{KP99}
+E.~Koutsoupias and C.~Papadimitriou.
+\newblock Worst-case equilibria.
+\newblock In {\em STACS}, pages 404--413, Trier, Germany, 4--6 March 1999.
+
+\bibitem{M96}
+Dov Monderer and Lloyd~S. Shapley.
+\newblock Potential games.
+\newblock {\em Games and Economic Behavior}, 14(1):124 -- 143, 1996.
+
+\bibitem{MonienT10}
+B.~Monien and T.~Tscheuschner.
+\newblock On the power of nodes of degree four in the local max-cut problem.
+\newblock In {\em CIAC}, pages 264--275, 2010.
+
+\bibitem{NaorS93}
+M.~Naor and L.~Stockmeyer.
+\newblock What can be computed locally?
+\newblock In {\em STOC '93}, pages 184--193. ACM, 1993.
+
+\bibitem{PS08}
+P.~N. Panagopoulou and P.~G. Spirakis.
+\newblock A game theoretic approach for efficient graph coloring.
+\newblock In {\em ISAAC '08}, pages 183--195, 2008.
+
+\bibitem{RT02}
+T.~Roughgarden and \'{E}. Tardos.
+\newblock How bad is selfish routing?
+\newblock {\em J. ACM}, 49(2):236--259, March 2002.
+
+\bibitem{ShafiqueD09}
+K.~Shafique and R.~D. Dutton.
+\newblock Partitioning a graph into alliance free sets.
+\newblock {\em Discrete Mathematics}, 309(10):3102--3105, 2009.
+
+\bibitem{ShelahM90}
+S.~Shelah and E.~C. Milner.
+\newblock Graphs with no unfriendly partitions.
+\newblock {\em A tribute to Paul Erd{\"o}s}, pages 373--384, 1990.
+
+\bibitem{vandenHeuvel98}
+J.~van~den Heuvel, R.~A. Leese, and M.~A. Shepherd.
+\newblock Graph labeling and radio channel assignment.
+\newblock {\em J. Graph Theory}, 29(4):263--283, December 1998.
+
+\end{thebibliography}

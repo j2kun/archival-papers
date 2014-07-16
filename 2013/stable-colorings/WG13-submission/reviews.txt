@@ -1,0 +1,74 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 30
+TITLE: Anti-Coordination Games and Stable Graph Colorings
+AUTHORS: Jeremy Kun, Brian Powers and Lev Reyzin
+
+
+----------- REVIEW -----------
+The "story" told by the authors in the introduction is about anti-coordination games; yet the results are about generalized colouring notions of graphs, that is, the game-theoretical aspects, which serve as setting and as motivation, do not really play any role in the paper. The positive results are trivial and use proof ideas that have been employed very often for related problems. Theorem 1, for instance, has the following one-line-proof "minimize the number of edges with both ends colored equally". Theorem 2 is an absolutely immediate consequence of the pigeon hole principle. The hardness results appear a little deeper but they are quite standard and even straightforward NP-completeness proofs. In view of the many very closely related graph coloring and partitioning notions, and the hardness proofs for many corresponding problems, the proofs given in the present submission do not contribute anything really new to the area.
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 30
+TITLE: Anti-Coordination Games and Stable Graph Colorings
+AUTHORS: Jeremy Kun, Brian Powers and Lev Reyzin
+
+
+----------- REVIEW -----------
+The paper is well written in general. It is easy to read and understand. The constructions used to prove hardness results and bounds are really non-trivial and the results themselves seem relevant to resent other work. I do have some remarks though.
+
+I feel the paper by Koutsoupias and Papadimitriou should be mentioned somewhere around the part where price of anarchy is defined. Also the following parts on mixed and pure strategies and strict and non-strict stability may need a reference. Although I'm not sure here, since I don't know what references these should be.
+
+I believe what the authors do in the proof of Theorem 1 is basically some definition of a potential function. If not, I'd like to see a discussion on why this is not the case. If so, in my opinion, the formulation of the proof would improve by defining it that way.
+
+The proof of Theorem 3 mentions a problem when there is an isolated vertex, but I think we may assume there are no such vertices, since coloring them is easy (there is no need to attach a K_{k-1}.
+
+The proof of Theorem 4 misses the part that describes the arcs between G' and the K_{k-2} copies. From Fig. 8 I do think I understand what the construction is though, but this leaves me wondering why it is necessary to have (k-2)n^3 copies. Wouldn't n+1 copies suffice? Again, if not, I would like to see a clear explanation why.
+
+Typos:
+Proof of Lemma 1, last sentence: "...a and c...", should be "... a and b...".
+Beginning of Section 5, second paragraph: "...3-cycle has no stable coloring...", should be "...3-cycle has no stable 2-coloring...".
+Proof of Theorem 4, first sentence: Should be: "This problem is clearly contained in NP.".
+Proof of Theorem 4, second page just above Fig. 8: "For each vertex in one of these copies...", should be "For each vertex in any of these copies...".
+Don't use \forall as an abbreviation of "for all" in plain text.
+
+My overall opinion is that the paper should be accepted. However, at least the proof of Theorem 4 should be revised, such that the construction of the graph for the reduction is complete.
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 30
+TITLE: Anti-Coordination Games and Stable Graph Colorings
+AUTHORS: Jeremy Kun, Brian Powers and Lev Reyzin
+
+
+----------- REVIEW -----------
+The authors study coloring games in directed and undirected graphs. In this model, each node of the graph is a player and there are k color classes to choose from. A node receives as payoff the number of (outgoing-edge) neighbors that pick a different color. The paper provides results on the complexity of deciding existence of strict and non-strict pure Nash equilibria. The two main results are NP-hardness proofs for non-strict equilibria in directed graphs and strict equilibria in undirected graphs. Non-strict equilibria in undirected graphs can be found by a trivial potential function argument. In addition, a bound for the price of anarchy is given.
+
+My main concern with the paper is that it fails to review a number of previous studies on very closely related coloring games. For example, papers that contain extremely similar results on price of anarchy and equilibrium existence and computation are
+
+- Panagopoulou, Spirakis. A Game Theoretic Approach for Efficient Graph Coloring. ISAAC 2008.
+- Chatzigiannakis, Koninis, Panagopoulou, Spirakis. Distributed Game-Theoretic Vertex Coloring. OPODIS 2010.
+- Escoffier, Gourves, Monnot. Strategic Coloring of a Graph. Internet Mathematics 8(4):424-455.
+
+In particular, the coloring game as defined in the present paper is also known as the Max-k-Cut Game. Theorem 1 is an obvious consequence of known results and should rather be an observation instead of a theorem. Theorem 2 is known - see, e.g., Lemma 8.2 in
+
+- Hoefer. Cost Sharing and Clustering under Distributed Competition. Ph.D. Thesis, University of Konstanz, 2007.
+
+For more related results and references on the Max-k-Cut game the authors should take a look at
+
+- Gourves, Monnot. On Strong Equilibria in the Max Cut Game. WINE 2009.
+- Gourves, Monnot. The Max-k-Cut Game and its Strong Equilibria. TAMC 2010.
+
+While I believe that the main results of the paper - the NP-hardness proofs - are novel and interesting, I cannot recommend acceptance of the paper in the present form.
+
+
+----------------------- REVIEW 4 ---------------------
+PAPER: 30
+TITLE: Anti-Coordination Games and Stable Graph Colorings
+AUTHORS: Jeremy Kun, Brian Powers and Lev Reyzin
+
+
+----------- REVIEW -----------
+(Anti)-coordination of actions in a distributed system is an important topic which can be modeled as a coloring problem. This paper considers different stability notions for this setting. The motivation does not really convince me. 4 results are shown of which the first 2 are quite simple. The other 2 are NP-hardness reductions. I judge the innovation quite limited since distributed aspects are not really adressed.
+
+Section 1.1, reference to previous work, should be improved.  It should be explained how coordination can be achieved in case of more than 2 colors. Balanced partitions should formally be defined.

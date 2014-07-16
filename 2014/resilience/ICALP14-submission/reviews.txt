@@ -1,0 +1,91 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 295
+TITLE: On Coloring Resilient Graphs
+AUTHORS: Jeremy Kun and Lev Reyzin
+
+
+----------- REVIEW -----------
+The paper studies the concept of resilient k-colorings of graphs. One of the
+questions asked (and also answered) in this paper is the following: Given a
+graph that is 3-colorable and stays 3-colorable after adding an arbitrary edge,
+what is the computational complexity of finding a 3-coloring of the graph?
+Such a problem is called 1-resilient 3-coloring (1-resilient since the graph is
+obliged to stay 3-colorable after adding only 1 edge, albeit arbitrary). The
+main result in this paper shows that 1-resilient 3-coloring is NP-hard.
+
+I like the research direction of the paper, which is well motivated and compared
+to the existing work. The notion of resilience can be applied not only to graph
+colorings but also more generally to constraint satisfaction problems. (For
+instance, for SAT problems r-resilience would correspond to staying satisfiable
+after fixing values to arbitrary r variables.) However, the authors only
+mentions this as even for graph coloring there are still many open problems left
+so it's not clear whether anything interesting and nontrivial can be said about
+general CSPs at this point.
+
+The main NP-hardness reduction is not trivial but seems fairly standard and in
+fact is similar to previous work done by the authors (with others) in [28], as
+noted by the authors. The authors relate the concept of resilient colorings to
+other coloring problems and show basic observations that narrow down the search
+for pairs (r,k) such that r-resilient k-coloring is in P.
+
+As far as I can tell the paper is correct but I have not checked few claims that
+the authors verified by a computer search.
+
+I like the paper and think that it is a great first step in the right direction
+but find the contribution (for ICALP track A) on a weak side and perhaps a bit
+premature. Having said that, I would like to encourage the authors to continue
+their work on this.
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 295
+TITLE: On Coloring Resilient Graphs
+AUTHORS: Jeremy Kun and Lev Reyzin
+
+
+----------- REVIEW -----------
+The notion of resilience is introduced and applied to graph coloring: a graph is r-resiliently k-colorable if it remains k-colorable after the addition of any r-edges.  This is an interesting new way of looking at the boundary between P vs NP-hard algorithms related to graph coloring.  Some nice related results are provided including a slick NP-hardness result.  Additionally, there are a number of interesting open problems and avenues of future research that will be of interest to the community.
+
+The proofs for the new results are clearly stated and appear correct.  The paper is very well written.
+
+Minor comments:
+
+
+- Sec 1.2 (line 4): the color of an edge is not really defined (what does it mean for an edge to be monochromatic?), so instead of saying that "no edge is monochromatic", it may be better to say "no two adjacent vertices are assigned the same color".
+- missing reference ? near bottom of page 3
+- Since figures are labeled Fig.1 ... the references to the figures should also be Fig. 1, rather than Figure 1.
+- Even though the results are mentioned earlier, when using them later in proofs, it might be nice to have the reference.  In Prop 2 - for "graphs with bounded degree k-1 are greedy k-colorable [?]"  and then the result in Prop 3 - "4-coloring a 3 colorable graph is NP-hard [?]".
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 295
+TITLE: On Coloring Resilient Graphs
+AUTHORS: Jeremy Kun and Lev Reyzin
+
+
+----------- REVIEW -----------
+This paper initiates the study of solving constraint satisfaction problems on resilient instances.  In the context of graph coloring, a graph is r-resiliently  k-colorable, if it remains k-colorable even if one introduces any r new edges to the graph.  The main focus of the paper is the complexity of coloring r-resilient k-colorable graphs for various values of r and k.
+
+The notion of `resilient instances' is somewhat inspired by the study of `stable instances for MaxCut' or other clustering problems.  In the works on stability, the focus was in identifying a natural subclass of instances on which the problems are easy.  However, in this work, the resilience is treated just as another dimension along which we would classify tractability vs NP-hardness.
+
+The notion of resilience can also be extended to CSPs like SAT by saying that, the instance must be satisfiable for any fixing of any r-variables.
+
+The paper makes several easy observations about the relations between the complexity of coloring r-resilient k-colorable graphs.  The main non-trivial result of the paper shows that:  it is NP-hard to 3-color a 1-resilient 3-colorable graph.  To this end,  the authors first show 1) 1-resilient 6-SAT is NP-hard   2) a gadget reduction from 6-SAT to 3-coloring that preserves the 1-resilience.
+
+The notion of resilience seems to be just another parameter along which one could study P vs NP-completeness.  There is little justification that the parameter is natural or that the stratification of the instances produced using the parameter gives any insight in to the problems at all.  The results seem very weak, and the proofs are not very interesting.
+
+
+----------------------- REVIEW 4 ---------------------
+PAPER: 295
+TITLE: On Coloring Resilient Graphs
+AUTHORS: Jeremy Kun and Lev Reyzin
+
+
+----------- REVIEW -----------
+The authors propose a notion of resilience for constraint satisfaction problems and focus on the study of the resilient version of the coloring problem. A graph is r-resilient k-colorable if it remains k-colorable after the addition of any set of r new edges.
+
+Although the authors argue that the property is not trivial,  some motivation on why this resilience is of interest to practical problems is missing in the presentation.
+
+The contribution of the paper are some complexity bounds (positive and negative) for the problem. None of  them is technically involved.
+
+In some places in the paper it is said that some properties have been determined by computer search, although this is plausible,  a complete table with all the cases should have been  given in an appendix or access to the experimental platform.

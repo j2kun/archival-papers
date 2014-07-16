@@ -1,0 +1,234 @@
+\begin{thebibliography}{10}
+
+\bibitem{Enron}
+Enron email dataset.
+\newblock \url{https://www.cs.cmu.edu/~enron/}.
+
+\bibitem{Adamic01}
+L.~Adamic and E.~Adar.
+\newblock Friends and neighbors on the web.
+\newblock {\em Social Networks}, 25:211--230, 2001.
+
+\bibitem{Aggarwal2011}
+C.C. Aggarwal, Y.~Xie, and P.S. Yu.
+\newblock Towards community detection in locally heterogeneous networks.
+\newblock In {\em SDM}, pages 391--402. SIAM, 2011.
+
+\bibitem{Arora12}
+S.~Arora, E.~Hazan, and S.~Kale.
+\newblock The multiplicative weights update method: a meta-algorithm and
+  applications.
+\newblock {\em Theory of Computing}, 8(1):121--164, 2012.
+
+\bibitem{Balcan2006}
+M.~Balcan and A.~Blum.
+\newblock {\em On a theory of kernels as similarity functions}.
+\newblock Mansucript, 2006.
+
+\bibitem{Balcan2008}
+M.~Balcan, A.~Blum, and N.~Srebro.
+\newblock A theory of learning with similarity functions.
+\newblock {\em Machine Learning}, 72(1-2):89--112, 2008.
+
+\bibitem{Berlingerio2011}
+M.~Berlingerio, M.~Coscia, and F.~Giannotti.
+\newblock Finding redundant and complementary communities in multidimensional
+  networks.
+\newblock In {\em CIKM}, pages 2181--2184, 2011.
+
+\bibitem{Bubeck12}
+S.~Bubeck and N.~Cesa-Bianchi.
+\newblock Regret analysis of stochastic and nonstochastic multi-armed bandit
+  problems.
+\newblock {\em Foundations and Trends in Machine Learning}, 5(1):1--122, 2012.
+
+\bibitem{Bubeck09}
+S.~Bubeck, R.~Munos, and G.~Stoltz.
+\newblock Pure exploration in multi-armed bandits problems.
+\newblock In {\em ALT}, pages 23--37, 2009.
+
+\bibitem{CCK14}
+R.~Caceres, K.~Carter, and J.~Kun.
+\newblock A boosting approach to learning graph representations.
+\newblock In {\em Proc. SIAM Int. Conf. Data Mining, Workshop on Mining
+  Networks and Graphs}, 2014.
+\newblock To appear.
+
+\bibitem{Caceres2011}
+R.~S. Caceres, T.~Y. Berger-Wolf, and R.~Grossman.
+\newblock Temporal scale of processes in dynamic networks.
+\newblock In {\em ICDM Workshops}, pages 925--932, 2011.
+
+\bibitem{Cai2005}
+D.~Cai, Z.~Shao, X.~He, X.~Yan, and Jiawei Han.
+\newblock Community mining from multi-relational networks.
+\newblock In {\em PKDD}, pages 445--452, 2005.
+
+\bibitem{Danon05}
+L.~Danon, J.~Duch, A.~Diaz-Guilera, and A.~Arenas.
+\newblock Comparing community structure identification.
+\newblock {\em J. Stat. Mech.}, 2005:P09008, 2005.
+
+\bibitem{Dice1945}
+L.~R. Dice.
+\newblock Measures of the amount of ecologic association between species.
+\newblock {\em Ecology}, 26(3):297--302, July 1945.
+
+\bibitem{RealityMining}
+N.~Eagle and A.~Pentland.
+\newblock Reality mining: sensing complex social systems.
+\newblock {\em Personal and Ubiquitous Computing}, 10(4):255--268, 2006.
+
+\bibitem{Erdos60}
+P.~Erd\"{o}s and A.~R\'{e}nyi.
+\newblock {On random graphs, I}.
+\newblock {\em Publicationes Mathematicae (Debrecen)}, 6:290--297, 1959.
+
+\bibitem{Fortunato07}
+S.~Fortunato and M.~Barth\'{e}l\'{e}my.
+\newblock Resolution limit in community detection.
+\newblock {\em Proceedings of the National Academy of Sciences}, 104(1):36--41,
+  2007.
+
+\bibitem{Gallagher2008}
+B.~Gallagher, H.~Tong, T.~Eliassi-Rad, and C.~Faloutsos.
+\newblock Using ghost edges for classification in sparsely labeled networks.
+\newblock In {\em Proc. (14th) ACM SIGKDD Inter. Conf. on Knowledge Discovery
+  and Data Mining}, pages 256--264. ACM, 2008.
+
+\bibitem{Getoor2005}
+L.~Getoor and C.~P Diehl.
+\newblock Link mining: a survey.
+\newblock {\em ACM SIGKDD Explorations Newsletter}, 7(2):3--12, 2005.
+
+\bibitem{Gilbert2009}
+E.~Gilbert and K.~Karahalios.
+\newblock Predicting tie strength with social media.
+\newblock In {\em Proc. of SIGCHI Conf. on Human Factors in Computing Systems},
+  CHI '09, pages 211--220, New York, NY, USA, 2009. ACM.
+
+\bibitem{Gleich2012}
+D.~F. Gleich and C.~Seshadhri.
+\newblock Vertex neighborhoods, low conductance cuts, and good seeds for local
+  community methods.
+\newblock In {\em Proceedings of the 18th ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}, KDD '12, pages 597--605, New York,
+  NY, USA, 2012. ACM.
+
+\bibitem{Jaccard1912}
+P.~Jaccard.
+\newblock The distribution of the flora in the alpine zone.
+\newblock {\em New Phytologist}, 11(2):37--50, February 1912.
+
+\bibitem{EnronConf}
+B.~Klimt and Y.~Yang.
+\newblock The enron corpus: A new dataset for email classification research.
+\newblock In {\em ECML}, pages 217--226, 2004.
+
+\bibitem{Leskovec2008}
+J.~Leskovec, K.~J. Lang, A.~Dasgupta, and M.~W. Mahoney.
+\newblock Statistical properties of community structure in large social and
+  information networks.
+\newblock In {\em Proc. (17th) Inter. Conf. on World Wide Web}, WWW '08, pages
+  695--704, New York, NY, USA, 2008. ACM.
+
+\bibitem{Ley02}
+M.~Ley.
+\newblock The dblp computer science bibliography: Evolution, research issues,
+  perspectives.
+\newblock In {\em SPIRE}, pages 1--10, 2002.
+
+\bibitem{Mccallum05}
+A.~McCallum, A.~Corrada-Emmanuel, and X.~Wang.
+\newblock The author-recipient-topic model for topic and role discovery in
+  social networks, with application to enron and academic email.
+\newblock In {\em Workshop on Link Analysis, Counterterrorism and Security},
+  pages 33--44, Newport Beach, CA, 2005.
+
+\bibitem{mallet}
+A.~K. McCallum.
+\newblock {MALLET: A Machine Learning for Language Toolkit}.
+\newblock http://mallet.cs.umass.edu, 2002.
+
+\bibitem{Miller2014}
+B.~A. Miller and N.~Arcolano.
+\newblock Spectral subgraph detection with corrupt observations.
+\newblock In {\em Proc. IEEE Int. Conf. Acoust., Speech and Signal Process.},
+  2014.
+\newblock To appear.
+
+\bibitem{Mucha2010}
+P.~J. Mucha, T.~Richardson, K.~Macon, M.~A. Porter, and J.~P. Onnela.
+\newblock Community structure in time-dependent, multiscale, and multiplex
+  networks.
+\newblock {\em Science}, 328(5980):876--878, 2010.
+
+\bibitem{nadakuditi2012}
+R.~R. Nadakuditi and M.~E.~J. Newman.
+\newblock Graph spectra and the detectability of community structure in
+  networks.
+\newblock {\em CoRR}, abs/1205.1813, 2012.
+
+\bibitem{Neville2005}
+J.~Neville and D.~Jensen.
+\newblock Leveraging relational autocorrelation with latent group models.
+\newblock In {\em Proc. (4th) Inter. Workshop on Multi-relational Mining},
+  pages 49--55. ACM, 2005.
+
+\bibitem{Newman06}
+M.~E.~J. Newman.
+\newblock Modularity and community structure in networks.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America}, 103(23):8577--8696, 2006.
+
+\bibitem{Papalexakis2013}
+E.~E. Papalexakis, L.~Akoglu, and D.~Ience.
+\newblock Do more views of a graph help? community detection and clustering in
+  multi-graphs.
+\newblock In {\em FUSION}, pages 899--905, 2013.
+
+\bibitem{Walktrap}
+P.~Pons and M.~Latapy.
+\newblock Computing communities in large networks using random walks.
+\newblock {\em Journal of Graph Algorithms and Applications}, 10(2):191--218,
+  2006.
+
+\bibitem{Rocklin2013}
+M.~Rocklin and A.~Pinar.
+\newblock On clustering on graphs with multiple edge types.
+\newblock {\em Internet Mathematics}, 9(1):82--112, 2013.
+
+\bibitem{Rossi2012}
+R.~A. Rossi, L.~McDowell, D.~W. Aha, and J.~Neville.
+\newblock Transforming graph data for statistical relational learning.
+\newblock {\em J. Artif. Intell. Res. (JAIR)}, 45:363--441, 2012.
+
+\bibitem{Schapire90}
+R.~E. Schapire.
+\newblock The strength of weak learnability.
+\newblock {\em Machine Learning}, 5:197--227, 1990.
+
+\bibitem{Tang2012}
+L.~Tang, X.~Wang, and H.~Liu.
+\newblock Community detection via heterogeneous interaction analysis.
+\newblock {\em Data Min. Knowl. Discov.}, 25(1):1--33, 2012.
+
+\bibitem{Tang2009}
+W.~Tang, Z.~Lu, and I.~S. Dhillon.
+\newblock Clustering with multiple graphs.
+\newblock In {\em Proc. (2009) IEEE Int. Conf. on Data Mining}, ICDM '09, pages
+  1016--1021, Washington, DC, USA, 2009. IEEE Computer Society.
+
+\bibitem{Wang87}
+Y.~Wang and G.~Wong.
+\newblock {Stochastic Block Models for Directed Graphs}.
+\newblock {\em Journal of the American Statistical Association}, 82(397):8--19,
+  1987.
+
+\bibitem{Xiang2010}
+R.~Xiang, J.~Neville, and M.~Rogati.
+\newblock Modeling relationship strength in online social networks.
+\newblock In {\em Proc. (19th) Int. Conf. on World Wide Web}, WWW '10, pages
+  981--990, New York, NY, USA, 2010. ACM.
+
+\end{thebibliography}

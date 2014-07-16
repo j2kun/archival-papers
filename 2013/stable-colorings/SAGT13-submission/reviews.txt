@@ -1,0 +1,112 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 13
+TITLE: Anti-Coordination Games and Stable Graph Colorings
+AUTHORS: Jeremy Kun, Brian Powers and Lev Reyzin
+
+OVERALL EVALUATION: 1 (weak accept)
+
+----------- REVIEW -----------
+The paper considers an anti-coordination game on graphs, where the nodes represent players, and each node has to choose one of k colors. The payoff is the number of neighbors having a different color than the given node.  A coloring is called (strictly) stable  if it corresponds to a (strict) Nash-equilibrium, i.e. each node is colored by the color chosen by the (strictly) least of his neighbors.
+
+In the directed version of the problem the player cares only about the colors of his outgoing neighbors. This directed model turns out to generalize both the defined anti-coordination and the corresponding coordination game.
+
+
+These models are closely related to some coloring and graph partitioning problems.
+The main results of the paper are two NP-hardness results, which answer some open questions in discrete mathematics and AGT posed in [2,5,22]:
+
+1. For k>=2, it is NP-hard to determine if an undirected graph has a strictly stable graph k-coloring.
+
+2. For k>=2 it is NP-hard to determine if a directed graph has a stable k-coloring.
+
+
+The NP-hardness proofs are very nice. Furthermore, the presentation is clear and succinct.
+All in all, I quite liked the paper, only the volume of the results was not completely convincing.
+
+
+
+Some typos.
+
+
+abstract: 'prove the decision problem'  prove that the decision problem
+
+p2. 'as well games on'   as well as games on
+
+'We establish both the NP-hardness ... and the case for higher k.' this sentence is not completely clear
+
+
+p3. You should be somewhat more specific about the open problems that your results solve. Formulations like 'is a strengthening of/solving their open problem' 'defined/but left unsolved' 'solves two open problems/generalizing and considering the directed case' might be correct but look sloppy. The same holds for the definitions of related problems, like k-unfriendly partitions etc.
+
+p6. 'low bound' lower bound
+'the vertices... takes color' the vertices ... take color
+'we show the problem'  we show that the problem
+
+p7.  Fig3.  in the text you call  w the vertex u
+
+you use \phi to denote 3 different things (CNF formula, coloring, and earlier potential function)
+
+p10. 'proved the decision problem' proved that the decision problem
+
+'unbalanced friendly'  balanced unfriendly
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 13
+TITLE: Anti-Coordination Games and Stable Graph Colorings
+AUTHORS: Jeremy Kun, Brian Powers and Lev Reyzin
+
+OVERALL EVALUATION: 1 (weak accept)
+
+----------- REVIEW -----------
+The authors in this paper study a network anti-coordination game that (they view as a coloring game, and) is defined as follows: Given a graph G, each node represents a player and each edge denotes some interaction between the corresponding players/nodes. All players have a common strategy set, which is a set of k colors, and, given a coloring of the graph, the payoff of each player is the number of her neighbors with a different color than her. The authors study the existence of stable and strictly stable k-colorings (equilibria). In the former, no player can improve her payoff by changing her strategy, whereas in the latter, any change of strategy would result in a strictly decreased payoff, for any player.
+
+The main results of the paper are two NP-completeness results, regarding the problems of deciding whether an undirected graph admits a strictly stable k-coloring, and deciding whether a directed graph admits even a stable k-coloring, for k\geq 2. (Previous results are almost immediately applied in the setting with undirected graphs to prove that there always exists a stable k-coloring -and can be reached in polynomially many steps- and that the price of anarchy is exactly k/(k-1).)
+
+In particular, for undirected graphs, the authors give a relatively simple reduction from the classical k-coloring problem that works only for k\geq 3. The case for k=2 is more interesting as it involves a reduction from 3-SAT and uses a clever construction. However, although the clause and literal gadgets are correct, the authors should elaborate more on how the consistency is maintained between the same literals across clauses. The authors only present a gadget that guarantees consistency of a literal between exactly two clauses. After some thought, I realized that a careful concatenation of such gadgets is necessary, but it should be explicitly presented for completeness, since it is not obvious. Moreover, I later mention an idea that could simplify the construction.
+
+Regarding the directed case, again the cases of k=2 and k\geq 3 are considered separately. For the case k=2, the authors give a reduction from the balanced unfriendly partition problem, which is actually the problem of deciding if a stable 2-coloring of an undirected graph exists with the extra constraint that the two sets of nodes of different colors are of the same size. The construction is elegant and is nicely extended to prove the k\geq 3 case.
+
+The problem examined is similar to the MAX-k-CUT game. This paper presents the first set of results regarding strict equilibria, and also examines the directed case. The paper is generally well written, the proofs are correct, and the constructions presented are non trivial. Overall, it is a nice paper that could be accepted.
+
+Proof of Theorem 1 (3-SAT reduction):
+An idea is to distinguish the clause gadgets from the literal gadgets, so that a clause gadget now consists of 9 nodes (3 connected triangles), and only one variable gadget is constructed for every variable. The variable gadget for variable x should consist of four nodes labeled x,x,\bar{x}, and \bar{x}, respectively, that would be connected to all clause gadgets that correspond to clauses in which x appears, in a similar manner as in the current proof. These four nodes should be, in addition, connected to each other in the way that the literal negation gadget implies, and several single degree vertices should be attached to each one of them. The literal persistence gadget of Fig. 6 need not be used.
+
+
+minor suggestions
+
+Page 2, Line -4: equlibria -> equilibria
+
+p. 3, l. 3: 2-friendly -> 2-unfriendly
+
+p. 7, Fig. 3: The nodes should be v and w
+
+p. 7, l. 10: Fix any coloring \phi -> Fix any proper k-coloring \phi
+
+p. 8, l. 12: is not in equilibrium -> is not is strict equilibrium
+
+p. 10, l. 13: is in clearly in -> is clearly in
+
+p. 10, l. -4: unbalanced friendly -> balanced unfriendly
+
+p. 12, Ref. 11: nash -> Nash
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 13
+TITLE: Anti-Coordination Games and Stable Graph Colorings
+AUTHORS: Jeremy Kun, Brian Powers and Lev Reyzin
+
+OVERALL EVALUATION: 2 (accept)
+
+----------- REVIEW -----------
+The paper defines and analyzes the computational complexity and the price of anarchy of stable colorings of graphs. Given an undirected graph and an integer k, the authors define a vertex coloring game where each vertex v is a player and chooses a color (from 1 to k), and the payoff of a vertex in a given profile (coloring) is the number of its neighboring vertices that have chosen a color different than the color of v. For the case of digraphs, the payoff of a vertex is defined as the number of outgoing vertices having different color than v's. The social welfare is defined as the sum of the payoffs of all vertices. A stable coloring of a graph is a pure Nash equilibrium of the underlying coloring game.
+
+Such coloring games are shown to be exact potential games for any k>=2, and selfish improvements steps are shown to converge into a stable coloring in polynomial time. The price of anarchy of the k-coloring game is shown to be k/(k-1) (a tight bound). Then, the authors focus on strict stable colorings, i.e., stable colorings that correspond to strict Nash equilibria. Via elegant reductions from the classical $k$-coloring, 3-SAT and the balanced unfriendly partition problems, it is shown that, for all k, it is NP-complete to decide whether a graph has a strictly stable k-coloring, as well as to decide whether a digraph has a (strictly or not) k-coloring.
+
+Although the stable colorings defined in the paper do not necessarily correspond to proper colorings of the given graph (the graph might not be k-colorable), they are very well motivated by anti-coordination games, in which, roughly speaking, players have the same set of actions, and receive higher payoffs when their actions differ from the actions chosen by the other players. Such a situation can be modeled by the coloring game defined in the paper, where the players are the vertices and the edges capture their pairwise interactions. Each player chooses one of k strategies, trying to anti-coordinate with as many of its neighbors as possible.
+
+The paper is very well written and well-organized, the proofs are correct and clearly explained and the results are quite interesting, therefore I recommend that it should be accepted for publication.
+
+Some minor comments to the authors:
+In the proof Theorem 1, 2nd line after the figure: "Fix any *proper $k$-coloring* $\phi$...".
+
+Throughout the text, some mathematical symbols not inside $ $ (e.g., k and i+1 in the 2nd paragraph of the proof of Proposition 2).

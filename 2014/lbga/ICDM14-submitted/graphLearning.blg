@@ -1,0 +1,72 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: graphLearning.aux
+The style file: plain.bst
+Database file #1: graphLearning.bib
+A bad cross reference---entry "Caceres2011"
+refers to entry "DBLP:conf/icdm/2011w", which doesn't exist
+A bad cross reference---entry "Aggarwal2011"
+refers to entry "conf/sdm/2011", which doesn't exist
+A bad cross reference---entry "Papalexakis2013"
+refers to entry "DBLP:conf/fusion/2013", which doesn't exist
+A bad cross reference---entry "Berlingerio2011"
+refers to entry "DBLP:conf/cikm/2011", which doesn't exist
+A bad cross reference---entry "Cai2005"
+refers to entry "DBLP:conf/pkdd/2005", which doesn't exist
+A bad cross reference---entry "Bubeck09"
+refers to entry "DBLP:conf/alt/2009", which doesn't exist
+A bad cross reference---entry "Ley02"
+refers to entry "DBLP:conf/spire/2002", which doesn't exist
+A bad cross reference---entry "EnronConf"
+refers to entry "DBLP:conf/ecml/2004", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/fusion/2013"
+Warning--I didn't find a database entry for "DBLP:conf/cikm/2011"
+Warning--I didn't find a database entry for "DBLP:conf/pkdd/2005"
+Warning--I didn't find a database entry for "DBLP:conf/alt/2009"
+Warning--I didn't find a database entry for "DBLP:conf/spire/2002"
+Warning--I didn't find a database entry for "DBLP:conf/icdm/2011w"
+Warning--I didn't find a database entry for "conf/sdm/2011"
+Warning--I didn't find a database entry for "DBLP:conf/ecml/2004"
+Warning--to sort, need author or key in Enron
+You've used 40 entries,
+            2118 wiz_defined-function locations,
+            793 strings with 10291 characters,
+and the built_in function-call counts, 14945 in all, are:
+= -- 1519
+> -- 597
+< -- 16
++ -- 241
+- -- 194
+* -- 996
+:= -- 2335
+add.period$ -- 128
+call.type$ -- 40
+change.case$ -- 216
+chr.to.int$ -- 0
+cite$ -- 41
+duplicate$ -- 620
+empty$ -- 1231
+format.name$ -- 194
+if$ -- 3290
+int.to.chr$ -- 0
+int.to.str$ -- 40
+missing$ -- 39
+newline$ -- 203
+num.names$ -- 78
+pop$ -- 218
+preamble$ -- 1
+purify$ -- 177
+quote$ -- 0
+skip$ -- 481
+stack$ -- 0
+substring$ -- 1045
+swap$ -- 188
+text.length$ -- 16
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 158
+warning$ -- 1
+while$ -- 144
+width$ -- 42
+write$ -- 456
+(There were 8 error messages)

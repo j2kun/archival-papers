@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: paper.aux
+The style file: plain.bst
+Database file #1: paper.bib
+Warning--empty school in Chl09
+Warning--empty booktitle in DMR06
+Warning--can't use both volume and number fields in DMR06
+Warning--empty journal in Ha99
+Warning--empty booktitle in Johnson74
+Warning--empty booktitle in KLS00
+Warning--can't use both volume and number fields in KLS00
+You've used 30 entries,
+            2118 wiz_defined-function locations,
+            710 strings with 7689 characters,
+and the built_in function-call counts, 10355 in all, are:
+= -- 1017
+> -- 362
+< -- 12
++ -- 149
+- -- 114
+* -- 691
+:= -- 1635
+add.period$ -- 91
+call.type$ -- 30
+change.case$ -- 146
+chr.to.int$ -- 0
+cite$ -- 37
+duplicate$ -- 438
+empty$ -- 898
+format.name$ -- 114
+if$ -- 2276
+int.to.chr$ -- 0
+int.to.str$ -- 30
+missing$ -- 29
+newline$ -- 154
+num.names$ -- 60
+pop$ -- 138
+preamble$ -- 1
+purify$ -- 117
+quote$ -- 0
+skip$ -- 341
+stack$ -- 0
+substring$ -- 750
+swap$ -- 124
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 120
+warning$ -- 7
+while$ -- 98
+width$ -- 32
+write$ -- 332
+(There were 7 warnings)

@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: graphLearning.aux
+The style file: plain.bst
+Database file #1: graphLearning.bib
+A bad cross reference---entry "Caceres2011"
+refers to entry "DBLP:conf/icdm/2011w", which doesn't exist
+A bad cross reference---entry "Aggarwal2011"
+refers to entry "conf/sdm/2011", which doesn't exist
+A bad cross reference---entry "Papalexakis2013"
+refers to entry "DBLP:conf/fusion/2013", which doesn't exist
+A bad cross reference---entry "Berlingerio2011"
+refers to entry "DBLP:conf/cikm/2011", which doesn't exist
+A bad cross reference---entry "Cai2005"
+refers to entry "DBLP:conf/pkdd/2005", which doesn't exist
+A bad cross reference---entry "Bubeck09"
+refers to entry "DBLP:conf/alt/2009", which doesn't exist
+A bad cross reference---entry "Ley02"
+refers to entry "DBLP:conf/spire/2002", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/fusion/2013"
+Warning--I didn't find a database entry for "DBLP:conf/cikm/2011"
+Warning--I didn't find a database entry for "DBLP:conf/pkdd/2005"
+Warning--I didn't find a database entry for "DBLP:conf/alt/2009"
+Warning--I didn't find a database entry for "DBLP:conf/spire/2002"
+Warning--I didn't find a database entry for "DBLP:conf/icdm/2011w"
+Warning--I didn't find a database entry for "conf/sdm/2011"
+You've used 30 entries,
+            2118 wiz_defined-function locations,
+            729 strings with 8704 characters,
+and the built_in function-call counts, 11766 in all, are:
+= -- 1194
+> -- 480
+< -- 13
++ -- 193
+- -- 158
+* -- 807
+:= -- 1835
+add.period$ -- 97
+call.type$ -- 30
+change.case$ -- 168
+chr.to.int$ -- 0
+cite$ -- 30
+duplicate$ -- 483
+empty$ -- 957
+format.name$ -- 158
+if$ -- 2588
+int.to.chr$ -- 0
+int.to.str$ -- 30
+missing$ -- 31
+newline$ -- 153
+num.names$ -- 60
+pop$ -- 167
+preamble$ -- 1
+purify$ -- 139
+quote$ -- 0
+skip$ -- 371
+stack$ -- 0
+substring$ -- 848
+swap$ -- 152
+text.length$ -- 13
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 118
+warning$ -- 0
+while$ -- 114
+width$ -- 32
+write$ -- 346
+(There were 7 error messages)

@@ -1,0 +1,111 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 37
+TITLE: On Coloring Resilient Graphs
+AUTHORS: Jeremy Kun and Lev Reyzin
+
+
+----------- REVIEW -----------
+This paper considers the problem of k-coloring a graph, when it is known that
+the graph is k-colorable and known that it remains k-colorable even after any r edges
+are added to the graph.
+
+The authors call such graphs  "r-resiliently k-colorability".
+
+The authors first make some (relatively simple) observations about the problem of k-coloring
+an r-resiliently k-colorable graph, by using known results in the literature.
+
+They then give one non-trivial NP-hardness reduction,
+to show that the problem of 3-coloring a 1-resiliently
+3-colorable graph is NP-hard.
+
+Although the notion of r-resilience is appealing,
+it is close to a number of related notions that have been studied in
+the literature,  and overall I feel that the results about
+it that the authors have establish
+in this paper are too limited.
+
+The authors leave many problems open, such as whether 3-coloring a 2-resilient 3-colorable
+graph is NP-hard or P-time.
+
+I think it would be better for the authors to develop their study of r-resilience
+much more thoroughly, not just for k-coloring, but for other graph problems
+and other combinatorial problems, and more generally for
+families of constraint satisfaction problems,
+and to establish non-trivial general results about several of these (and hopefully even develop a
+more general theory applicable to many of them).
+
+Such a fully develped theory, establishing the tractability/intractability boundary
+for the problem of computing a witness for r-resilient
+satisfiable instances of various families of constraint satisfaction problems
+(of which k-colorability is just one)  could indeed
+be quite interesting, but this paper only scratches the surfaces of such a general
+theory, and doesn't get too far even for k-coloring.
+
+So, in its current form, I think the paper is premature and limited,
+and shouldn't be accepted.
+(I hope this encourages the authors to develop the theory further in the above
+ directions, rather than to abandon it.)
+
+More specific comments:
+========================
+
+--- The statement of Observation 2 on page 5 is botched in several ways:
+
+    Firstly, the second half of the stated observation is mis-phrased:
+    instead of saying "Similarly, if k-coloring is in P for ...."
+    it should say "Similarly, if k-coloring is NP-hard for ...."
+
+    Moreover, even after this correction,  in both cases the
+    observation is ambiguously phrased and open to mis-interpretation.
+
+    Namely, you say:
+
+    "If k-coloring is in P for r-resiliently k-colorable graphs,
+     then it is for r-resiliently k'-colorable graphs for all k' <= k."
+
+    What you intend to say is that
+
+    "If k-coloring is in P for r-resiliently k-colorable graphs,
+     then k'-coloring is in P for r-resiliently k'-colorable graphs,
+     for all k' <= k."
+
+    Note that the original sentence leaves it ambiguous whether
+    "it is" refers to k-coloring or k'-coloring  (and in fact the
+    more straightforward interpretation would be that it refers to
+    k-coloring, which would be wrong).
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 37
+TITLE: On Coloring Resilient Graphs
+AUTHORS: Jeremy Kun and Lev Reyzin
+
+
+----------- REVIEW -----------
+The paper introduces a notion of resilience for constraint satisfaction problems, and examines the tractability of graph 3-coloring under this notion. A k-colorable graph G is r-resilient if G remains k-colorable even if an arbitrary subset of r additional edges are added to it. Similarly, for satisfiability problems, r-resilience implies that the instance remains satisfiable even if the values of any r variables is fixed. The broad motivation is to understand how much resilience needs to be added to a NP-hard constraint satisfaction problem so that it becomes efficiently solvable. The paper focuses on graph 3-coloring -- one of the few classical problems whose approximability threshold remains wide open. The authors posit that resilience may provide a more fruitful avenue for understanding the tractability of graph 3-coloring.
+
+The main results of the paper are that (a) graph 3-coloring remains NP-hard on 1-resilient instances, and (b) graph 3-coloring is poly-time solvable for 3-resilient instances. The latter result is trivial -- it follows from the fact that a 3-resilient 3-colorable graph must have all vertex degrees bounded by 2 (you can insert a 3-clique in the neighborhood of a degree 3 vertex). The NP-hardness result is based on a gadget reduction using 1-resilient 6-SAT (the NP-hardness of 1-resilient 6-SAT is straightforward by composing together a 3-SAT instance with itself). The authors leave open tractability of 2-resilient 3-colorable instances as an open question.
+
+It may well be that a study of resilience could give us some new insights into fundamental problems such as graph 3-coloring and satisfiability. But as far as I can see, the paper does not provide evidence to support this. Neither the positive result nor the NP-hardness reduction highlight any interesting new insights about 3-coloring.
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 37
+TITLE: On Coloring Resilient Graphs
+AUTHORS: Jeremy Kun and Lev Reyzin
+
+
+----------- REVIEW -----------
+The paper proposes some "resilient" variants of standard NP-hard problems such as SAT and coloring.  For example, for coloring, the authors define a graph to be r-resiliently k-colorable if it remains k-colorable even when k arbitrary extra edges are inserted to the graph.  For SAT, the authors define a formula to be r-resiliently satisfiable if it remains satisfiable even after arbitrarily fixing the values of any r variables.
+
+The paper first gives a number of straightforward observations.  E.g., it is NP-hard to find a satisfiable assignment for a 6-SAT instance even if we are promised that the instance is 1-resiliently satisfiable (the proof is easy, just 4 lines).  The one and only nontrivial result
+is a proof that it is NP-hard to 3-color a graph even if we are promised that the graph is 1-resiliently 3-colorable.  This proof is about 2 pages long, using variations of gadgets one typically sees in NP-hardness proofs for 3-coloring.
+
+Judging by the technical content alone, the paper is not too strong (papers that are mainly about giving an NP-hardness proof are usually not strong enough for conferences like FOCS/STOC unless there is something special about the proof or the problem). Also, the new concept of resilience, while worth studying, does not appear sufficiently innovative to this reader to meet ITCS standards.
+
+Minor typos:
+* p3: "satsifying"
+* p5: "Dinur, et al.": delete comma
+* p6: "Propsition"
+* p9: "n{3/14}" (incidentally, there is also a more recent FOCS'12 paper by Kawarabayashi and Thorup)
+* p10: "sdp" -> "SDP"
