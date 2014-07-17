@@ -1,0 +1,66 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 160
+TITLE: On the Computational Complexity of MapReduce
+AUTHORS: Benjamin Fish, Jeremy Kun, Ádám Lelkes, Lev Reyzin and György Turán
+
+
+----------- REVIEW -----------
+The paper studies the nature of MapReduce computations mainly from the point of computational complexity. By defining, what they refer to as a “uniform” model for MapReduce machines, the first show that all regular languages and in fact all problems in sub-logarithmic space can be solved by constant number of rounds (alternating map and reduce sequences) in the MapReduce computation.  Then they present a lower bound that addresses the time vs. rounds tradeoff in MapReduce. Essentially they show that adding more time to each round of MapReduce will not necessarily reduce the number of rounds for all computations.
+
+The main pros of this paper are as follows:
+- The main pro of this paper is that it addresses a problem that is still not very well understood. MapReduce computations are unique in the sense that they allow this alternating parallel and sequential steps that model parallel problems in a very different way. More research in this area will help determine an important question: which problems should be modeled using MapReduce and which should not?
+- The two upper bounds they present regarding regular languages and problems in sub-logarithmic space are important because they represent a reasonably broad class of problems. For example, one of the important uses of MapReduce is the grep function over large data sets which involves various class of regular expressions. A result such as this gives us an insight for why grep is indeed a good function to be performed using MapReduce.
+- The lower bound on the time-rounds trade-off also tackles an important question of whether throwing more resources (which I believe is the same as increasing the time for each round) can actually benefit in reducing the number of rounds. They claim that there are instances when this will not help.
+
+The main cons of this paper are as follows:
+- My main problem with the paper is that I found it difficult to understand. The original Karloff et al. on MapReduce complexity ensured that their models, assumptions, theorems were always backed up by real-world examples of MapReduce computations. The authors here make no attempt to do so and this makes the paper abstract, tough to read and interpret. Further it seems to be written primarily for an audience in CS complexity theory rather than theoretical distributed systems.
+
+-They claim that the Karloff paper used a non-uniform model of MapReduce that allowed completely different MapReduce machines for different input sizes. This needs more clarification because in the real world, based on the size of the input size the number of mappers does change. So if this is what the older meant, then it is a realistic assumption. If on the other hand, they suggested that the entire mapper/reducer code changes, then it is a different issue. It is not clear which of the two it is. Further, even if the old model allows different mappers and reducers across different rounds, that too is practical. So the motivation for the new model is not entirely clear to me.
+-  While these are interesting contributions, to the extent to which I understood,  theorem 2 and theorem 3 seem reasonably straightforward and almost follow from the way in which the MRC machines are constructed.
+
+Fine-grained comments:
+
+- On page 2, “It is understood that in practice the critical quantity to optimize in MapReduce is the number of rounds”. Can the authors provide a reference for this? I do not completely agree that is the key problem. MapReduce faces a myriad number of challenges from data locality to fault tolerance.
+- Their definition of MRC in section 3 is exactly borrowed from the Karloff paper. They should cite the fact that it is not their own definition.
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 160
+TITLE: On the Computational Complexity of MapReduce
+AUTHORS: Benjamin Fish, Jeremy Kun, Ádám Lelkes, Lev Reyzin and György Turán
+
+
+----------- REVIEW -----------
+The paper looks at some complexity questions related to the recently introduced "MapReduce model", in particular one from the Karloff et al paper [6]. There are a couple results establishing some relatively fundamental facts.
+
+The MapReduce model is for modelling the situation where we have a number of processors (computers), each with sublinear space that, jointly, try to solve a computational problem. The main complexity measure is the number of rounds, which is the number of times the processors have to do "shuffle all", i.e., exchange information between them (which is a very expensive step).
+
+The two main theorems are:
+1) sub-logarithmic, o(log n), space algorithms can be simulated in MapReduce.
+2) there are problems which may not be solvable in a fixed number of rounds, and fixed amount of time per round, but are solvable with more runtime, in just 1 round. This leads to the conclusion that if "L is solvable with polynomial number of rounds and time per round, then L\neq P".
+
+Neither of the two results is particularly hard technically or surprising, but this is essentially the first paper (that I am aware of) that initiates a complexity-theoretic study of MapReduce model. From this perspective, it is an interesting contribution to the still relatively incipient theoretical study of MapReduce style computation.
+
+I have a couple qualms about the particular choice of the model:
+
+1) in my opinion, the MapReduce model, as defined here and in [6], is cumbersome. As a complexity class, one would hope for a definition that does not mention "map", "reduce", or "key". For example, this can be seen as a form of BSP algorithm, or a circuit; these definitions would be much cleaner. In particular, one concrete suggestion would be to follow the (cleaner) MPC model defined in Beame etal paper: http://homes.cs.washington.edu/~pkoutris/papers/parallel_steps.pdf The model is slightly different (more restrictive, and closer to practice, in my opinion), but the results here should apply to that model as well.
+
+2) I am not quite sure why one requires that the number of different keys (output by one mapper) should be bounded. If it is really the case that there are many more keys, one processor can handle many keys (as is done in practice). The more pertinent question is perhaps the total amount of information in the system, i.e., the size of V_r, as well as the max number V_{k,r}. But again, this is perhaps better handled by the MPC model.
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 160
+TITLE: On the Computational Complexity of MapReduce
+AUTHORS: Benjamin Fish, Jeremy Kun, Ádám Lelkes, Lev Reyzin and György Turán
+
+
+----------- REVIEW -----------
+This paper contains a collection of results on MapReduce as a complexity class.  It looks closely at the issue of uniformity vs non-uniformity, presents some alternate definitions of the complexity class, and provides some interesting relationships between complexity classes.
+
+At this stage, this paper still does not seem to cohere all that well.  I don't see a convincing argument that this definition of MapReduce is the correct one, especially as there are now several candidate definitions available.  Why does uniform make more sense?  What is the value in this new complexity class?  How does it relate to what can actually be computed using Mapreduce?
+
+Second, the results seem to be a somewhat random set of relations.  Some of them seem somewhat interesting, but again, I don't see a coherent argument being made here.  Why do these matter?  Where is this going?
+
+I am not opposed to complexity theory for its own beauty, but when inventing a new complexity class and relating it to others, I want to know more about why I should be interested in it.
+
+I suspect that this paper is simply a bit preliminary.  I actually do believe that there is something interesting to discover in looking at MapReduce as a complexity class, and that as more is discovered, the answers to my questions about will become more clear.  But I don't think this is ready to be published yet.
