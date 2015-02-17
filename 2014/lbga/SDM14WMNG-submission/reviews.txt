@@ -1,0 +1,49 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 6
+TITLE: A Boosting Approach to Learning Graph Representations
+AUTHORS: Rajmonda Caceres, Kevin Carter and Jeremy Kun
+
+OVERALL EVALUATION: 1 (weak accept)
+REVIEWER'S CONFIDENCE: 4 (high)
+
+----------- REVIEW -----------
+The paper presents a graph aggregation framework -- how to combine multiple graphs.  While the combination problem is too general, the paper tries to bring that into a framework by using ideas from Boosting in machine learning.  When trying to combine several graphs (on the same vertex set) for some application, some quality measure can be defined per edge so that the combination can be done in a more principled manner, namely, by defining a weight on edges and adjusting the weights according to how they contribute to the quality.  The paper illustrates this paradigm in the context of community-finding.
+The paper also has experiments to demonstrate the applicability of the methods in practice.
+
+The aggregation method is definitely interesting.  But I am concerned that the method won't scale well to large graphs (which are the primary objects of many applications).  Also, the method itself seems to be a putting together of various well-established subroutines.  It would have been nicer to establish some theoretical bounds in this framework - eg the rate of convergence.
+
+Question: would the method be efficient for very large graphs since you seem to need a weight for every pair of nodes?
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 6
+TITLE: A Boosting Approach to Learning Graph Representations
+AUTHORS: Rajmonda Caceres, Kevin Carter and Jeremy Kun
+
+OVERALL EVALUATION: 2 (accept)
+REVIEWER'S CONFIDENCE: 3 (medium)
+
+----------- REVIEW -----------
+The paper presents a solution for constructing, given a set of input graphs obtained from multiple sources, a graph that accurately captures most crucial aspects (in particular, relationships between real-world entities) for target applications (e.g., community detection). This solution repeats, until convergence, the process of (1) selecting, for each relevant pair of vertices, an edge from the edges connecting these vertices in the input graphs (with probabilities proportional to the edge weights), (2) performing the target operation (e.g., community detection) on the obtained graph, (3) evaluating the quality of each edge (e.g., 1 for the edges with endpoints in the same community and 0 for other edges), and (4) updating, based on the quality of edges, the edge weights of the input graphs.
+
+The paper presents an effective solution to an important problem from which a variety of applications can benefit. The paper convincingly states the technical contributions of this solution  (Section 1) with a clear comparison to previous work (Section 2). The paper also provides compelling/promising evaluation results that used both synthetic and real-world data sets (Section 4).
+
+The authors might be able to further improve the paper by discussing future research directions/challenges in more detail. For example, what are the potential limitations of the current work? Would it be possible to overcome these limitations? If so, how? What extensions would be needed if there is a higher degree of inconsistency in the input data (e.g., a real-world entity is expressed as different vertices in different input graphs)?
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 6
+TITLE: A Boosting Approach to Learning Graph Representations
+AUTHORS: Rajmonda Caceres, Kevin Carter and Jeremy Kun
+
+OVERALL EVALUATION: 2 (accept)
+REVIEWER'S CONFIDENCE: 4 (high)
+
+----------- REVIEW -----------
+This paper gives a machine learning approach to aggregating multiple graphs on the same data set. For example, one may have numerous graphs (corresponding to different attributes on edges), and the aim is to get a community decomposition. It is not clear which graph to choose from. The main idea is to think of each graph as an "expert" predicting a particular graph structure. The authors use boosting methods (specifically bandit algorithms) to combine the graphs using a low regret algorithm.
+
+There are numerous theoretical applications of multiplicative weights to optimization problems, but this is one of the few direct practical applications to social networks. I mean that while bandit algorithms are obviously used for prediction problems, this paper is about using the techniques for a problem that is not typically cast as prediction/machine learning. I rate this paper high on novelty.
+
+The experiments are quite interesting, though I would prefer more detailed explanation. Namely, Figure 1 has little supporting text in the main body, but shows many results. (Also, how do you construct a title graph among authors? Shouldn't it be between papers?)
+
+I think this paper could spur additional research and is an excellent addition to the program. Definite accept.

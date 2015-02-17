@@ -1,0 +1,279 @@
+        --========  Review Reports  ========--
+
+The review report from reviewer #1:
+
+*1: Is the paper relevant to ICDM?
+  [_] No
+  [X] Yes
+
+*2: How innovative is the paper?
+  [_] 6 (Very innovative)
+  [_] 3 (Innovative)
+  [_] -2 (Marginally)
+  [X] -4 (Not very much)
+  [_] -6 (Not at all)
+
+*3: How would you rate the technical quality of the paper?
+  [_] 6 (Very high)
+  [_] 3 (High)
+  [X] -2 (Marginal)
+  [_] -4 (Low)
+  [_] -6 (Very low)
+
+*4: How is the presentation?
+  [_] 6 (Excellent)
+  [X] 3 (Good)
+  [_] -2 (Marginal)
+  [_] -4 (Below average)
+  [_] -6 (Poor)
+
+*5: Is the paper of interest to ICDM users and practitioners?
+  [_] 3 (Yes)
+  [_] 2 (May be)
+  [X] 1 (No)
+  [_] 0 (Not applicable)
+
+*6: What is your confidence in your review of this paper?
+  [_] 2 (High)
+  [X] 1 (Medium)
+  [_] 0 (Low)
+
+*7: Overall recommendation
+  [_] 6: must accept (in top 25% of ICDM accepted papers)
+  [_] 3: should accept (in top 80% of ICDM accepted papers)
+  [_] -2: marginal (in bottom 20% of ICDM accepted papers)
+  [_] -4: should reject (below acceptance bar)
+  [X] -6: must reject (unacceptable: too weak, incomplete, or wrong)
+
+*8: Summary of the paper's main contribution and impact
+  The authors propose a method for aggregating information from multiple graphs geared toward a subsequent application. The particular application considered here is community detection.
+The method is presented in the context of graph representation learning for statistical relational learning, borrowing from boosting algorithms and the multiplicative weights update algorithm for multi-armed bandit.
+Experiments are presented on both synthetic data and real-world networks.
+
+*9: Justification of your recommendation
+  It seems that the proposed algorithm actually discovers a subgraph inside the union of the input graphs which has a good score with respect to some clustering metric. It seems to belong to community detection methods and should be compared to such methods.
+The method works by randomly sampling candidate subgraphs, extracting the structure of interest from the candidate, then penalizing edges that do not contribute to the structure and rewarding those that do, so that after a number of iteration the procedure converges to a candidate with a high scoring stucture.
+The approach could be interesting as a generic way to discover some structure of interest within a given input graph. But the usefulness of such an approach can only be assessed by a comparison to existing specialized algorithm for discovering such structure and the genericity be demonstrated by considering a different structure than communities.
+Furthermore, the approach is highly dependent on an external algorithm for extracting the structure within a given candidate graph.
+
+*10: Three strong points of this paper (please number each point)
+  i) statistical relational learning, boosting and armed bandit techniques are used to motivate the proposed approach ii) experiments are carried out on multiple networks both synthetic and from real-world data
+
+*11: Three weak points of this paper (please number each point)
+  i) the proposed method seems to answer a problem somewhat different than what is discussed in the introduction (community detection rather than representation learning) ii) comparative experiments would be needed to demonstrated the quality of the methods iii) considering an other type of structure besides community detection is necessary to support the claim of genericity
+
+*12: Is this submission among the best 10% of submissions that you reviewed for ICDM14?
+  [X] No
+  [_] Yes
+
+*13: Would you be able to replicate the results based on the information given in the paper?
+  [_] No
+  [X] Yes
+
+*14: Are the data and implementations publicly available for possible replication?
+  [X] No
+  [_] Yes
+
+*15: If the paper is accepted, which format would you suggest?
+  [_] Regular Paper
+  [X] Short Paper
+
+*16: Detailed comments for the authors
+  The proposed approach is presented as a generic preprocessing method for aggregating networks data prior to a chosen learning task, but it appears that the algorithm is in fact performing the task itself, i.e. here community detection.
+
+Considering the union of multiple input graphs, the algorithm works by sampling a subgraph, according to current edge weights then compute a clustering of the obtained graph, then lowers the weight of cross-cluster edges and increase that of intra-cluster edges. The procedure is repeated until convergence.
+
+It seems the algorithm is in fact equivalent to a community detection method, not a method for learning a graph representation. The authors claim the framework to be generic and apply to other problems than community detection but there is no discussion about that. Although it seem rather straightforward to apply the same approach replacing the clustering algorithm by some method to discover another structure in the graph, it is not entirely obvious what other kind of structure would lend itself to this approach.
+
+The role of the different sources appears somewhat dubious since the edges are scored independently across the input graphs. Considering a simple input graph, possibly with adjusted initial weights would yield the same result.
+
+The method should be compared to existing algorithms for detecting the structure of interest (here communities) and the genericity of the approach (which is presented as a major contribution) should be demonstrated by considering cases other than community detection.
+
+For synthetic experiments, more varied datasets could be considered, with clusters of different sizes and different densities, possibly with overlaps.
+
+Several runs should be carried out, since the algorithm is stochastic, to explore with the stability (in particular in the presence of communities with different densities).
+
+The modularity of the union of the input graph does not provide a suitable basis for comparison.
+
+The convergence is proved for the case of a fixed target, i.e. the optimal structure is fixed and an edge is apriori good or bad. This is not a realistic scenario. It is unclear whether this has implications on the more realistic case where there is no ground truth and the best structure detected by the external algorithm differs in subsequent steps.
+
+The heavy use of acronyms can make the reading difficult, see for instance the caption of figure 5.
+
+To ensure anonymity, acknowledgments should not be included in the submission for blind review.
+
+========================================================
+The review report from reviewer #2:
+
+*1: Is the paper relevant to ICDM?
+  [_] No
+  [X] Yes
+
+*2: How innovative is the paper?
+  [_] 6 (Very innovative)
+  [_] 3 (Innovative)
+  [_] -2 (Marginally)
+  [X] -4 (Not very much)
+  [_] -6 (Not at all)
+
+*3: How would you rate the technical quality of the paper?
+  [_] 6 (Very high)
+  [_] 3 (High)
+  [X] -2 (Marginal)
+  [_] -4 (Low)
+  [_] -6 (Very low)
+
+*4: How is the presentation?
+  [_] 6 (Excellent)
+  [X] 3 (Good)
+  [_] -2 (Marginal)
+  [_] -4 (Below average)
+  [_] -6 (Poor)
+
+*5: Is the paper of interest to ICDM users and practitioners?
+  [_] 3 (Yes)
+  [X] 2 (May be)
+  [_] 1 (No)
+  [_] 0 (Not applicable)
+
+*6: What is your confidence in your review of this paper?
+  [_] 2 (High)
+  [X] 1 (Medium)
+  [_] 0 (Low)
+
+*7: Overall recommendation
+  [_] 6: must accept (in top 25% of ICDM accepted papers)
+  [_] 3: should accept (in top 80% of ICDM accepted papers)
+  [_] -2: marginal (in bottom 20% of ICDM accepted papers)
+  [X] -4: should reject (below acceptance bar)
+  [_] -6: must reject (unacceptable: too weak, incomplete, or wrong)
+
+*8: Summary of the paper's main contribution and impact
+  This paper presents a boosting framework to integrate multi-source data into a single graph representation and applies it to community detection. The basic idea is intuitive and simple, namely, aggregating graphs by weighting several graphs from multi-source data. To determine the optimal weights, quality measures called neighborhood overlap and edge consistency are applied. From my point of view, the topic is very interesting, yet the innovation of this paper is not very significant due to two factors: (1) There already exist several more sophisticated approaches for mining multi-source data, e.g. combining multiple data sets by using multiple kernel learning or probabilistic models such as Markov random fields or Bayesian network. (2) Boosting based graph aggregation is really intuitive and simple, but from my perspective, the relations or dependencies among nodes in and between graphs are considered only little in this paper.
+
+*9: Justification of your recommendation
+  Generally, this paper is well motivated and organized. However, as I mentioned above, the techniques used in this paper are simple and without major contributions. Although authors perform extensive experiments on synthetic and real-world data sets, the benefits of the new approach are not well validated. For example, concerning the effectiveness (cf. Table 2), the quality of detected communities in terms of NMI and modularity is even worse than a baseline union aggregation. Regarding the efficiency, without explicit complexity analysis, it seems the algorithm also does not scale well on large graphs (cf. Fig. 6, about 3 hours for graph with only 500,000 edges).
+
+*10: Three strong points of this paper (please number each point)
+  1. The topic is interesting.
+2. The paper is well motivated and organized.
+3. The paper proposes a boosted graph aggregation framework.
+
+*11: Three weak points of this paper (please number each point)
+  1. The quality measures for community detection lack theoretical foundation.
+2. Effectiveness and efficiency of the proposed algorithm are not very promising based on the experimental evaluation.
+3. More state-of-the-art algorithms should be compared.
+
+*12: Is this submission among the best 10% of submissions that you reviewed for ICDM14?
+  [X] No
+  [_] Yes
+
+*13: Would you be able to replicate the results based on the information given in the paper?
+  [X] No
+  [_] Yes
+
+*14: Are the data and implementations publicly available for possible replication?
+  [X] No
+  [_] Yes
+
+*15: If the paper is accepted, which format would you suggest?
+  [_] Regular Paper
+  [X] Short Paper
+
+*16: Detailed comments for the authors
+  How to integrate multi-source data is a very interesting topic. The authors aim to propose a locally boosted graph aggregation framework, LBGA, for learning a graph representation from mutli-source data sharing the same nodes. Technically, the idea is intuitive and straightforward. To validate the effectiveness of the framework, they propose two quality measures for community detection, EC and NO. Experiments on synthetic and real-world data sets are further provided to demonstrate its benefits.
+
+However, there are some potential problems. (1) The two quality measures are not well elaborated: why are they benefical for community detection? (2) The experiments on synthetic and real data sets show that the proposed algorithm has no evident advantages compared to the simple union aggregation. (3) More algorithms are needed to be compared from my point of view, e.g. using multiple kernel learning (Shi Yu et al., L2-norm multiple kernel learning and its application to biomedical data fusion).
+
+========================================================
+The review report from reviewer #3:
+
+*1: Is the paper relevant to ICDM?
+  [_] No
+  [X] Yes
+
+*2: How innovative is the paper?
+  [_] 6 (Very innovative)
+  [_] 3 (Innovative)
+  [_] -2 (Marginally)
+  [X] -4 (Not very much)
+  [_] -6 (Not at all)
+
+*3: How would you rate the technical quality of the paper?
+  [_] 6 (Very high)
+  [_] 3 (High)
+  [_] -2 (Marginal)
+  [X] -4 (Low)
+  [_] -6 (Very low)
+
+*4: How is the presentation?
+  [_] 6 (Excellent)
+  [_] 3 (Good)
+  [_] -2 (Marginal)
+  [X] -4 (Below average)
+  [_] -6 (Poor)
+
+*5: Is the paper of interest to ICDM users and practitioners?
+  [_] 3 (Yes)
+  [X] 2 (May be)
+  [_] 1 (No)
+  [_] 0 (Not applicable)
+
+*6: What is your confidence in your review of this paper?
+  [_] 2 (High)
+  [X] 1 (Medium)
+  [_] 0 (Low)
+
+*7: Overall recommendation
+  [_] 6: must accept (in top 25% of ICDM accepted papers)
+  [_] 3: should accept (in top 80% of ICDM accepted papers)
+  [_] -2: marginal (in bottom 20% of ICDM accepted papers)
+  [X] -4: should reject (below acceptance bar)
+  [_] -6: must reject (unacceptable: too weak, incomplete, or wrong)
+
+*8: Summary of the paper's main contribution and impact
+  In this paper, the authors present a graph aggregation framework that learns a useful graph representation with respect to an application requiring only a local heuristic measure of quality. Their framework is robust and suitable for sparse and noisy networks. They also conduct extensive to show the performance of their algorithm and prove a convergence for their framework in the end.
+
+*9: Justification of your recommendation
+  In this paper, the author study an interesting problem that learning the right graph representation from noisy, multi-source data. They give a framework and conduct experiments to show the effectiveness of their algorithm. However, there are some problems in this paper,
+
+1, a formal definition of the problem that they aim to solve is not given.
+
+2, the presentation of the paper is not very good, which makes it not readable.
+
+3, the method for selecting parameters used in the paper is not given.
+
+*10: Three strong points of this paper (please number each point)
+  1. They study a interesting problem that learning the right graph representation from noisy, multi-source data.
+2. They propose a framework to solve the problem
+3. Extensive experiment are conducted to show the effectiveness of their algorithm.
+
+*11: Three weak points of this paper (please number each point)
+  1. A formal definition of the problem that they aim to study is not given.
+2. The presentation of the paper is not very good.
+3. the method used for selecting parameters in the paper is not given.
+
+*12: Is this submission among the best 10% of submissions that you reviewed for ICDM14?
+  [X] No
+  [_] Yes
+
+*13: Would you be able to replicate the results based on the information given in the paper?
+  [_] No
+  [X] Yes
+
+*14: Are the data and implementations publicly available for possible replication?
+  [_] No
+  [X] Yes
+
+*15: If the paper is accepted, which format would you suggest?
+  [_] Regular Paper
+  [X] Short Paper
+
+*16: Detailed comments for the authors
+  The authors study an interesting problem in this paper. However, there are problems that need to be addressed to improve the paper.
+
+1. A formal definition of the problem that they aim to study is not given. In this paper, the authors just give some intuitive introduction of the problem they aim to address. It is hard to judge whether the problem is well solved without a formal definition of the problem. As a consequence, in the experiments part, the authors validate lots of metrics, however, it is hard to convince me that these metrics can
+really related to the problem the paper aims to solve.
+
+2. The presentation is not good, which makes it hard to read. It is better to reorganize the structure of the paper.
+
+3. In the paper, some parameters are introduced in the algorithm. However, the method used to select these parameters is not given. Are these parameters independent to application, or there are some tricks to choose them. It is very important to present the method used to choose the parameters for others when they use the algorithm.

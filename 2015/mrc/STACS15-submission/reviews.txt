@@ -1,0 +1,136 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 194
+TITLE: On the Computational Complexity of MapReduce
+AUTHORS: Jeremy Kun, Benjamin Fish, Ádám D. Lelkes, Lev Reyzin and Gyorgy Turan
+
+
+----------- REVIEW -----------
+The paper presents a uniform (input-size independent) model of map-reduce computations, and relates it to common model, e.g., with small space.
+The model is convincing and the discussion of related work and models is thorough.
+The algorithmic ideas used to simulate common models are simple, namely, concurrently expanding all future transitions of the computation, they seem faithful to the spirit of MR computations (where parallelism is more important than total work).
+
+The paper is well written and easy to read.
+
+A small typo:
+Page 10, "can be solved efficiently" X2
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 194
+TITLE: On the Computational Complexity of MapReduce
+AUTHORS: Jeremy Kun, Benjamin Fish, Ádám D. Lelkes, Lev Reyzin and Gyorgy Turan
+
+
+----------- REVIEW -----------
+The authors introduce and study a new computational complexity
+model based on a popular map-reduce paradigm.
+A computation is a sequence of rounds, in each round an operation
+map is executed in parallel by many processors followed by an
+appropriate arrangement of outputs (which is done "for free")
+and parallel execution of reduce, as explained in the paper.
+
+Several complexity measures can be associated with this model,
+including:
+- amount of communication measured as the number of rounds
+- classical time and space complexity of mappers and reducers.
+In order to avoid trivial algorithms where all data is processed
+by one reducer, the requirement is imposed that space complexity
+of each mapper/reducer is O(n^c) for c<1.
+Moreover, the amount of parallelism is limited such that
+O(n^c) processors are running in each (but the first one?) round.
+
+Prior to the reviewed paper, a nonuniform model was defined and studied
+in context of complexity theory (most of other work
+on map/reduce was devoted to
+solutions of particular problems).
+
+The paper contains the following main elements:
+(1) It is shown that nondecidable problems can be recognized
+in the nonuniform model.
+(2) The uniform variant of the model is introduced, and the
+class MRC[ f(n), g(n) ] is defined in this model, where f(n)
+is the bound on the number of rounds and g(n) is time complexity
+of mappers/reducers.
+(3) It is shown that all languages with sublogarithmic space
+complexity can be recognized with constant number of rounds
+in the MRC model.
+(4) Hierarchy theorems are proved which show that a polynomial
+increase of the number of rounds (or time) increases the family
+of problems which can be solved. These results
+rely on the Exponential Time Hypothesis.
+
+The result (1) is done by a clear and simple construction and (3) is
+obtained by standard complexity theoretic techniques.
+The result (4) looks interesting, while its proof was
+also obtained by rather standard techniques.
+It is intriguing whether similar results to (4) could be obtained
+with help of a weaker hypothesis.
+
+I like the model and prospective research challenges that
+it opens. As the map-reduce approach is one of the main contemporary
+models of parallel computing, its study from complexity theoretic
+point of view is well motivated research direction.
+And the model introduced in the paper (extending a previous one)
+looks reasonable and gives pace for such investigation.
+
+Regarding technical contribution,
+the paper itself contains rather initial
+results which are not extremely nontrivial or novel (as for STACS).
+
+Summarizing, the paper introduces a well motivated model
+and provides a couple of interesting observations.
+However, the technical contribution of the paper
+is rather limited.
+
+
+
+
+Some technical and editorial remarks:
+- p. 1, Introduction, par. 2.: popoularity ==> popularity
+- p. 5, Remark: is it not the case that n mappers are needed
+in the first round?
+- S. 3.3., par. 1: It is written that n is the number of rounds.
+But it is assumed that n is the size of input
+in the further part of the paper.
+- p. 6: a randomized variant of MRC class is defined but not
+used in the paper; BTW, do you assume that processors have
+common source of random bits or a separate ones?
+- Proof of Th. 2: I do not understand while you need "the first
+bit of y". Do the parts given to consecutive processors overlap
+by one bit? Is it not natural to assume that they are disjoint
+and then just the mapping from states to states gives the whole
+information about behavior of a finite automaton on each block?
+- Lemma 6: the non-inclusion should be in the reversed order
+- Proofs of Th 4 and 5: I suggest to comment the requirement that
+gamma = O(alpha+beta).
+- par. before Cor. 8: I suggest to state that L is Logspace.
+Regarding "stronger hierarchies", one can imagine strengthening by
+giving mu and nu as close to alpha and beta as possible.
+- Proof of Cor. 8: you use Th 4, not Th 5 in the first sentence.
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 194
+TITLE: On the Computational Complexity of MapReduce
+AUTHORS: Jeremy Kun, Benjamin Fish, Ádám D. Lelkes, Lev Reyzin and Gyorgy Turan
+
+
+----------- REVIEW -----------
+This paper makes progress in settling the computational complexity of the MapReduce model. MapReduce, an instantiation of the BSP model of Valiant, is the standard platform for large scale data analysis. While a number efficient algorithms are known for specific problems, there are few if any lower bounds or complexity results in this model. Therefore, the paper tackles an interesting and timely question.
+
+There are three basic results in the paper:
+1. A uniform definition of the model of Karloff et al.
+2. Showing SPACE(o(\log n)) \subseteq MRC^0
+3. A hierarchy type theorem, showing that additional rounds or time in MRC gives additional power.
+
+Of these:
+1. Is a necessary, but not particularly exciting step.
+2. Is a technically straightforward result, and is not terribly interesting. Even a slight generalization, for example showing that SPACE(\log n) \subseteq MRC^i for a constant i would be much more exciting.
+3. The most interesting result of the paper. It's a pity that it is not unconditional, but it is the first separation result of MRC classes of any kind.
+
+Overall, however, I view this manuscript, while an important first step, to be rather incremental at this point. The arguments used (brute force and padding) have been applied to MapReduce problems before, so there is limited novelty there, and the hierarchy result by itself is not enough to warrant acceptance in my eyes.
+
+Minor points:
+- You should discuss some connections to the BSP model.
+- Capitalize MUD (Massive Unordered Data) when citing [6]
+- Remark after Definition 5. This is also known as the 'Total Work' of the algorithm.
