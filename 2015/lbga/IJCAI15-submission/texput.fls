@@ -1,5 +1,0 @@
-PWD /Users/jeremy/work/mit-ll/graph-learning/papers/IJCAI15-submission
-INPUT /usr/local/texlive/2011/texmf.cnf
-INPUT /usr/local/texlive/2011/texmf/web2c/texmf.cnf
-INPUT /usr/local/texlive/2011/texmf-var/web2c/pdftex/pdflatex.fmt
-OUTPUT texput.log
