@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: acmsmall.bst
+Database file #1: main.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty publisher in AkhoondiYM12
+Warning--empty address in AkhoondiYM12
+Warning--empty publisher in GoldbergSHR10
+Warning--empty address in GoldbergSHR10
+Warning--no number and no volume in GormanV13
+Warning--page numbers missing in GormanV13
+Warning--no number and no volume in Stone08
+Warning--page numbers missing in Stone08
+You've used 16 entries,
+            3177 wiz_defined-function locations,
+            843 strings with 8172 characters,
+and the built_in function-call counts, 10712 in all, are:
+= -- 1005
+> -- 556
+< -- 0
++ -- 160
+- -- 204
+* -- 1000
+:= -- 1732
+add.period$ -- 71
+call.type$ -- 16
+change.case$ -- 120
+chr.to.int$ -- 16
+cite$ -- 24
+duplicate$ -- 335
+empty$ -- 755
+format.name$ -- 288
+if$ -- 2112
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 19
+newline$ -- 84
+num.names$ -- 160
+pop$ -- 92
+preamble$ -- 1
+purify$ -- 216
+quote$ -- 0
+skip$ -- 329
+stack$ -- 0
+substring$ -- 622
+swap$ -- 115
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 320
+warning$ -- 8
+while$ -- 129
+width$ -- 0
+write$ -- 222
+(There were 8 warnings)

@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: lbga.aux
+The style file: plain.bst
+Database file #1: lbga.bib
+You've used 35 entries,
+            2118 wiz_defined-function locations,
+            747 strings with 9254 characters,
+and the built_in function-call counts, 13314 in all, are:
+= -- 1338
+> -- 565
+< -- 13
++ -- 227
+- -- 186
+* -- 916
+:= -- 2107
+add.period$ -- 110
+call.type$ -- 35
+change.case$ -- 198
+chr.to.int$ -- 0
+cite$ -- 35
+duplicate$ -- 534
+empty$ -- 1072
+format.name$ -- 186
+if$ -- 2900
+int.to.chr$ -- 0
+int.to.str$ -- 35
+missing$ -- 34
+newline$ -- 178
+num.names$ -- 70
+pop$ -- 185
+preamble$ -- 1
+purify$ -- 163
+quote$ -- 0
+skip$ -- 414
+stack$ -- 0
+substring$ -- 940
+swap$ -- 157
+text.length$ -- 13
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 140
+warning$ -- 0
+while$ -- 127
+width$ -- 37
+write$ -- 398

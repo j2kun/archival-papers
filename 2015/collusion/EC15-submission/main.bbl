@@ -1,0 +1,107 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Akhoondi, Yu, and Madhyastha}{Akhoondi
+  et~al\mbox{.}}{2012}]{AkhoondiYM12}
+{\sc Akhoondi, M.}, {\sc Yu, C.}, {\sc and} {\sc Madhyastha, H.~V.} 2012.
+\newblock Lastor: {A} low-latency as-aware tor client.
+\newblock In {\em {IEEE} Symposium on Security and Privacy, {SP} 2012, 21-23
+  May 2012, San Francisco, California, {USA}}. 476--490.
+
+\bibitem[\protect\citeauthoryear{Albert, Jeong, and Barabási}{Albert
+  et~al\mbox{.}}{2000}]{AlbertJB00}
+{\sc Albert, R.}, {\sc Jeong, H.}, {\sc and} {\sc Barabási, A.-L.} 2000.
+\newblock The internet's achilles' heel: Error and attack tolerance of complex
+  networks.
+\newblock {\em Nature\/}~{\em 406}, 200--0.
+
+\bibitem[\protect\citeauthoryear{Ballani, Francis, and Zhang}{Ballani
+  et~al\mbox{.}}{2007}]{BallaniFZ07}
+{\sc Ballani, H.}, {\sc Francis, P.}, {\sc and} {\sc Zhang, X.} 2007.
+\newblock A study of prefix hijacking and interception in the internet.
+\newblock {\em SIGCOMM Comput. Commun. Rev.\/}~{\em 37,\/}~4, 265--276.
+
+\bibitem[\protect\citeauthoryear{Barabasi and Albert}{Barabasi and
+  Albert}{1999}]{BarabasiA99}
+{\sc Barabasi, A.-L.} {\sc and} {\sc Albert, R.} 1999.
+\newblock Emergence of scaling in random networks.
+\newblock {\em Science\/}~{\em 286,\/}~5439, 509--512.
+
+\bibitem[\protect\citeauthoryear{Butler, Farley, McDaniel, and Rexford}{Butler
+  et~al\mbox{.}}{2010}]{ButlerFMR10}
+{\sc Butler, K.}, {\sc Farley, T.}, {\sc McDaniel, P.}, {\sc and} {\sc Rexford,
+  J.} 2010.
+\newblock A survey of bgp security issues and solutions.
+\newblock {\em Proceedings of the IEEE\/}~{\em 98,\/}~1, 100--122.
+
+\bibitem[\protect\citeauthoryear{Freeman}{Freeman}{1977}]{Freeman77}
+{\sc Freeman, L.~C.} 1977.
+\newblock A set of measures of centrality based on betweenness.
+\newblock {\em Sociometry\/}~{\em 40}, 35--41.
+
+\bibitem[\protect\citeauthoryear{Goldberg, Halevi, Jaggard, Ramachandran, and
+  Wright}{Goldberg et~al\mbox{.}}{2008}]{GoldbergHJRW08}
+{\sc Goldberg, S.}, {\sc Halevi, S.}, {\sc Jaggard, A.~D.}, {\sc Ramachandran,
+  V.}, {\sc and} {\sc Wright, R.~N.} 2008.
+\newblock Rationality and traffic attraction: Incentives for honest path
+  announcements in bgp.
+\newblock In {\em Proceedings of the ACM SIGCOMM 2008 Conference on Data
+  Communication}. SIGCOMM '08. ACM, New York, NY, USA, 267--278.
+
+\bibitem[\protect\citeauthoryear{Goldberg, Schapira, Hummon, and
+  Rexford}{Goldberg et~al\mbox{.}}{2010}]{GoldbergSHR10}
+{\sc Goldberg, S.}, {\sc Schapira, M.}, {\sc Hummon, P.}, {\sc and} {\sc
+  Rexford, J.} 2010.
+\newblock How secure are secure interdomain routing protocols.
+\newblock In {\em SIGCOMM}. 87--98.
+
+\bibitem[\protect\citeauthoryear{Gorman and Valentino-DeVries}{Gorman and
+  Valentino-DeVries}{2013}]{GormanV13}
+{\sc Gorman, S.} {\sc and} {\sc Valentino-DeVries, J.} 2013.
+\newblock New details show broader nsa surveillance reach.
+\newblock {\em The Wall Street Journal\/}.
+
+\bibitem[\protect\citeauthoryear{Levin, Schapira, and Zohar}{Levin
+  et~al\mbox{.}}{2008}]{LevinSZ08}
+{\sc Levin, H.}, {\sc Schapira, M.}, {\sc and} {\sc Zohar, A.} 2008.
+\newblock Interdomain routing and games.
+\newblock In {\em Proceedings of the Fortieth Annual ACM Symposium on Theory of
+  Computing}. STOC '08. ACM, New York, NY, USA, 57--66.
+
+\bibitem[\protect\citeauthoryear{Nemhauser, Wolsey, and Fisher}{Nemhauser
+  et~al\mbox{.}}{1978}]{NemhauserWF78}
+{\sc Nemhauser, G.}, {\sc Wolsey, L.}, {\sc and} {\sc Fisher, M.} 1978.
+\newblock An analysis of approximations for maximizing submodular set functions
+  - i.
+\newblock {\em Mathematical Programming\/}~{\em 14,\/}~1, 265--294.
+
+\bibitem[\protect\citeauthoryear{Newman}{Newman}{2006}]{Newman06}
+{\sc Newman, M.} 2006.
+\newblock Network data.
+\newblock
+  \url{http://web.archive.org/web/20150124041405/http://www-personal.umich.edu/~mejn/netdata/}.
+\newblock Accessed: 2015-01-24.
+
+\bibitem[\protect\citeauthoryear{Nordstr\"{o}m and Dovrolis}{Nordstr\"{o}m and
+  Dovrolis}{2004}]{NordstromD04}
+{\sc Nordstr\"{o}m, O.} {\sc and} {\sc Dovrolis, C.} 2004.
+\newblock Beware of bgp attacks.
+\newblock {\em SIGCOMM Comput. Commun. Rev.\/}~{\em 34,\/}~2, 1--8.
+
+\bibitem[\protect\citeauthoryear{Stone}{Stone}{2008}]{Stone08}
+{\sc Stone, B.} 2008.
+\newblock Pakistan cuts access to youtube worldwide.
+\newblock {\em The New York Times\/}.
+
+\bibitem[\protect\citeauthoryear{Watts and Strogatz}{Watts and
+  Strogatz}{1998}]{WattsS98}
+{\sc Watts, D.~J.} {\sc and} {\sc Strogatz, S.~H.} 1998.
+\newblock Collective dynamics of `small-world' networks.
+\newblock {\em Nature\/}~{\em 393,\/}~6684, 409--10.
+
+\bibitem[\protect\citeauthoryear{Wolsey}{Wolsey}{1982}]{Wolsey82}
+{\sc Wolsey, L.} 1982.
+\newblock An analysis of the greedy algorithm for the submodular set covering
+  problem.
+\newblock {\em Combinatorica\/}~{\em 2,\/}~4, 385--393.
+
+\end{thebibliography}

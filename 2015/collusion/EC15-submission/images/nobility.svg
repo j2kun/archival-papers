@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg contentScriptType="text/ecmascript" width="1064px"
+     xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"
+     contentStyleType="text/css" viewBox="-180 -144 376 297" height="841px"
+     preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"
+     version="1.1">
+    <g id="edges">
+        <path fill="none" stroke-width="1"
+              d="M -103.694771,-102.117874 L -53.168209,-72.619095"
+              class="1.0 0.0" stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M 29.598145,-87.423355 L -10.423325,-70.067337" class="2.0 0.0"
+              stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M 107.507462,-125.179314 L 70.319099,-106.534859"
+              class="3.0 2.0" stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M 108.964645,-59.061203 L -8.443245,-60.271225" class="4.0 0.0"
+              stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M 158.173309,-16.435360 L 143.255722,-38.861855"
+              class="5.0 4.0" stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M 92.651360,39.183380 L 121.426018,-36.414658" class="6.0 4.0"
+              stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M 164.416107,68.420616 L 109.006401,61.699657" class="7.0 6.0"
+              stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M 38.946568,107.732964 L 68.696564,76.252861" class="8.0 6.0"
+              stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M 24.522013,-23.228554 L -12.361860,-47.373631" class="9.0 0.0"
+              stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M 53.039467,6.194063 L 72.669762,38.328819" class="9.0 6.0"
+              stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M -56.661636,-2.549398 L -41.694168,-38.373653"
+              class="10.0 0.0" stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M -44.469261,11.405672 L 18.905767,-5.530491" class="10.0 9.0"
+              stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M -43.589558,88.565506 L 3.103666,112.168556" class="11.0 8.0"
+              stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M -63.148823,58.107689 L -63.822857,40.809193"
+              class="11.0 10.0" stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M -96.468819,139.926315 L 0.754238,126.321663" class="12.0 8.0"
+              stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M -103.556946,126.928795 L -77.998886,97.272057"
+              class="12.0 11.0" stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M -150.889023,48.875568 L -85.045380,71.341614"
+              class="13.0 11.0" stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M -160.914795,60.641266 L -128.522369,121.639885"
+              class="13.0 12.0" stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M -127.671715,-36.962376 L -55.739784,-54.755573"
+              class="14.0 0.0" stroke-opacity="1.0" stroke="#999999"/>
+        <path fill="none" stroke-width="1"
+              d="M -154.216522,-11.843311 L -163.724823,19.149670"
+              class="14.0 13.0" stroke-opacity="1.0" stroke="#999999"/>
+    </g>
+    <g id="node-labels">
+        <text font-size="14" x="-32.44197" y="-57.97217" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="0.0">
+            Medici
+        </text>
+        <text font-size="14" x="-121.83023" y="-110.15946" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="1.0">
+            Acciaiuol
+        </text>
+        <text font-size="14" x="48.86446" y="-93.18771" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="2.0">
+            Salviati
+        </text>
+        <text font-size="14" x="126.28027" y="-132.04471" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="3.0">
+            Pazzi
+        </text>
+        <text font-size="14" x="129.96353" y="-56.2984" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="4.0">
+            Albizzi
+        </text>
+        <text font-size="14" x="169.80399" y="3.6405277" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="5.0">
+            Ginori
+        </text>
+        <text font-size="14" x="85.18103" y="62.09441" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="6.0">
+            Guadagni
+        </text>
+        <text font-size="14" x="185.2633" y="73.49568" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="7.0">
+            Lambertes
+        </text>
+        <text font-size="14" x="24.52266" y="125.542076" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="8.0">
+            Bischeri
+        </text>
+        <text font-size="14" x="42.09211" y="-9.180357" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="9.0">
+            Tornabuon
+        </text>
+        <text font-size="14" x="-64.75731" y="19.416504" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="10.0">
+            Ridolfi
+        </text>
+        <text font-size="14" x="-62.331177" y="81.68259" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="11.0">
+            Strozzi
+        </text>
+        <text font-size="14" x="-117.26619" y="145.38293" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="12.0">
+            Peruzzi
+        </text>
+        <text font-size="14" x="-170.76395" y="44.685005" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="13.0">
+            Castellan
+        </text>
+        <text font-size="14" x="-148.0573" y="-29.373377" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="14.0">
+            Barbadori
+        </text>
+    </g>
+</svg>
