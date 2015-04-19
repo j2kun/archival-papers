@@ -1,0 +1,102 @@
+\begin{thebibliography}{10}
+
+\bibitem{Adibi94}
+M.M. Adibi and L.H. Fink.
+\newblock Power system restoration planning.
+\newblock {\em {IEEE} Transactions on Systems}, 9(1):22 --28, 1994.
+
+\bibitem{Bertoli02}
+P.~Bertoli, R.~Cimatti, J.~Slaney, and S.~Thibaux.
+\newblock Solving power supply restoration problems with planning via symbolic
+  model checking.
+\newblock In {\em AIPS-02 Workshop on Planning via Model-Checking}, pages
+  576--580, 2002.
+
+\bibitem{coffrin2011strategic}
+Carleton Coffrin, Pascal Van~Hentenryck, and Russell Bent.
+\newblock Strategic stockpiling of power system supplies for disaster recovery.
+\newblock In {\em Power and Energy Society General Meeting, 2011 IEEE}, pages
+  1--8. IEEE, 2011.
+
+\bibitem{DowneyF13}
+Rodney~G. Downey and Michael~R. Fellows.
+\newblock {\em Fundamentals of Parameterized Complexity}.
+\newblock Texts in Computer Science. Springer, 2013.
+
+\bibitem{Guha99}
+Sudipto Guha, Anna Moss, Joseph~(Seffi) Naor, and Baruch Schieber.
+\newblock Efficient recovery from power outage (extended abstract).
+\newblock In {\em Proceedings of the thirty-first annual ACM symposium on
+  Theory of computing}, STOC '99, pages 574--582, New York, NY, USA, 1999. ACM.
+
+\bibitem{Gutfraind14}
+Alexander Gutfraind, Milan Bradonji\'c, and Tim Novikoff.
+\newblock Modelling the neighbour aid phenomenon for installing costly complex
+  networks.
+\newblock {\em Journal of Complex Networks}, 2014.
+\newblock doi:10.1093/comnet/cnu033.
+
+\bibitem{Karp61}
+Michael Held and Richard~M. Karp.
+\newblock A dynamic programming approach to sequencing problems.
+\newblock In {\em ACM '61: Proceedings of the 1961 16th ACM national meeting},
+  pages 71.201--71.204, New York, NY, USA, 1961. ACM.
+
+\bibitem{Lee07}
+E.E. Lee, J.E. Mitchell, and W.A. Wallace.
+\newblock Restoration of services in interdependent infrastructure systems: A
+  network flows approach.
+\newblock {\em Systems, Man, and Cybernetics, Part C: Applications and Reviews,
+  IEEE Transactions on}, 37(6):1303 --1317, Nov 2007.
+
+\bibitem{miller1960integer}
+Clair~E Miller, Albert~W Tucker, and Richard~A Zemlin.
+\newblock Integer programming formulation of traveling salesman problems.
+\newblock {\em Journal of the ACM (JACM)}, 7(4):326--329, 1960.
+
+\bibitem{Mitchell96}
+J.E. Mitchell and B.~Borchers.
+\newblock Solving real-world linear ordering problems using a primal-dual
+  interior point cutting plane method.
+\newblock {\em Annals of Operations Research}, 62(1):253--276, 1996.
+
+\bibitem{nurre2010restoring}
+Sarah~G Nurre and TC~Sharkey.
+\newblock Restoring infrastructure systems: An integrated network design and
+  scheduling problem.
+\newblock In {\em Proceedings of the 2010 Industrial Engineering Research
+  Conference}, 2010.
+
+\bibitem{schrijver2005history}
+A.~Schrijver.
+\newblock {On the history of combinatorial optimization (till 1960)}.
+\newblock {\em Handbooks in Operations Research and Management Science},
+  12:1--68, 2005.
+
+\bibitem{Turan1941}
+Paul Tur\'an.
+\newblock On an extremal problem in graph theory.
+\newblock {\em Matematikai \'es Fizikai Lapok}, 48:436--452, 1941.
+
+\bibitem{Hentenryck10}
+P.~Van~Hentenryck, R.~Bent, and C.~Coffrin.
+\newblock Strategic planning for disaster recovery with stochastic last mile
+  distribution.
+\newblock In Andrea Lodi, Michela Milano, and Paolo Toth, editors, {\em
+  Integration of AI and OR Techniques in Constraint Programming for
+  Combinatorial Optimization Problems}, volume 6140 of {\em LNCS}, pages
+  318--333. Springer Berlin / Heidelberg, 2010.
+
+\bibitem{West01}
+Douglas~B. West.
+\newblock {\em Introduction to Graph Theory}.
+\newblock Pearson Prentice Hall, New Jersey, 2001.
+
+\bibitem{Zuckerman06}
+David Zuckerman.
+\newblock Linear degree extractors and the inapproximability of max clique and
+  chromatic number.
+\newblock In {\em Proceedings of the Thirty-eighth Annual ACM Symposium on
+  Theory of Computing}, STOC '06, pages 681--690, New York, NY, USA, 2006. ACM.
+
+\end{thebibliography}

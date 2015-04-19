@@ -1,0 +1,85 @@
+Reviewer 1
+rating 3 confidence 9
+Comments to author(s)
+This paper deals with monitoring information in routing networks. The setting is that of a network graph in which routing is determined by a shortest-path Bellman Ford algorithm (The underlying model is not a good approximation to BGP in which routers do not necessarily pick the shortest path, but rather have far more complex preferences). A subset of malicious nodes tries to attract as much traffic between the different pairs of honest vertices in order to monitor messages. 
+
+My main objection to the paper is that it does not seem to fit into EC. There is no economic model, no game theoretic result, and nothing that would suggest it should be of particular interest to the EC community. A quick glance at the references reveals that most of them are from SIGCOMM (highly relevant) or are complex-networks related (less relevant to the paper's subject) but none are from EC, WINE, SAGT or any other related conference. The results too, mostly characterize the type of manipulation the attacker would preform to gain optimal results 
+I suspect that a networking / security conference is therefore a better place for the paper. 
+
+Another major complaint is that this paper does not reference BGP security proposals such as SBGP and SO-BGP, and so presents an incomplete picture of today's networking security research. 
+
+
+Reviewer 2
+rating 8 confidence 6
+Comments to author(s)
+1. Does the finding in the paper generalize to other setting beyond talking about shortest paths?
+2. What happens when non-colluding agents know the set of colluding agents and discount the messages accordingly.
+3. Can colluding agent send contradicting messages? In other words, can the honest agent test a series of messages to detect lies? Over time it should be possible to detect malicious nodes. How fast can we detect and isolate them? 
+
+
+Reviewer 3
+rating 4 confidence 6
+Comments to author(s)
+The paper studies a simple distributed route detection algorithm based on BGP with the goal of understanding if a set of malicious (or colluding) nodes in the network can divert significant network traffic through themselves. For the problem, we are given a graph G with unit edge lengths. Fix a target node t. In the basic setup, route detection occurs in rounds. In each round, similar to Dijkstra's algorithm, each node passes its current information on its shortest distance to t, to its neighbors, and each neighbor updates its own distance to t accordingly. This converges in |V| rounds.
+
+Honest nodes pass on their currently known distance to t honestly to neighbors. Colluding nodes can report this incorrectly, with the goal of diverting more traffic to themselves. It is assumed that traffic is uniformly distributed between pairs of nodes, hence the traffic through a node is the number of vertices that contain that node on their shortest path to t.
+
+The distances reported by colluding nodes must however prevent cycles; i.e., every message intended for t must reach t. Thus if a colluding node reports that it is t (distance = 0), every neighboring node will forward messages intended for t to this colluding node, but the colluding node has no path to t.
+
+For this problem, the paper considers two types of reporting by the colluding node. For uniform reporting, the distances reported to all neighbors by a colluding node must be the same. For nonuniform reporting, a colluding node can report different distances to different neighbors.
+
+For results, the paper first shows that nonuniform reporting reduces to uniform reporting. Then it gives an optimal reporting strategy for colluding agents when no two colluding agents are neighbors. Thirdly, it gives a reporting strategy when colluding agents may be adjacent, but gives an example where this strategy is not optimal. However, it gives a characterization for admissible strategies, which do not introduce cycles. Lastly, it runs tests on a number of different network databases. In each, a set of colluding nodes is picked randomly. These then use the reporting strategies obtained in the paper, and results are given for the fraction of shortest paths that utilize these colluding nodes.
+
+The techniques used seem to be fairly straightforward (despite my comments below), though the strategies given for colluding nodes were not obvious or intuitive to me. I found the problem interesting as well, and it seems to be well-motivated. The model is quite simplified, but it still seemed a natural candidate for studying this problem.
+
+However, I had a difficult time getting through the paper and developing any intuition about the problem. I don't think the authors present the problem in a structured manner, and given the fact that this is a new problem, I found this to be a significant weakness. I list out my major issues below.
+
+Presentation comments:
+
+- It was not at all clear to me what a colluding node strategy would look like, and how cycles would come about and would be avoided. It was not until the proof of Theorem 4.2 that these strategies became clearer. I did not find the brief discussion in Section 3.2 helpful. I would have really like to see some examples of colluding strategies earlier on.
+
+- I did not find the included examples very helpful, or at least these need more discussion. In particular, how is figure 2 an example of a better strategy, when every path between honest nodes passes through a colluding node? For both figures 1 and 3 I would have liked to see more discussion.
+
+- The statements made are often confusing or contradictory. In 3.2, para 2, \rho(x,y) is both 0 and at least 1 if x \neq y. Theorem 4.1 is stated for a strategy that appears much later. Proposition 3.1 is for optimal strategies, although at this point we do not know what these are. While the first para of 4.1 makes a very strong statement about the best strategy, this is not what the Theorem statement says (although it is what the corollary says). As stated earlier, Figure 2 claims to be an example where the new strategy performs better, but I don't see how. I even found the results for simulation confusing: Para 2 says "the benefits of colluding is clear..." but this is not backed up by the following sentence, and later on it says "relatively small difference between the two strategies..." which seems to contradict the earlier statement.
+
+- I would have really liked to see examples where the colluding strategy from 4.2 is better than the independent strategy. I suppose such examples exist, since the colluding strategy does better in the simulations. Without this, it is unclear why a different strategy is being studied.
+
+- In 4.1, the "target" node is introduced without any explanation, and I was at a loss initially to understand what the target is.
+
+- In Problem 1, the definition is confusing since a pair of vertices may have multiple shortest paths between them. Do we count a pair of vertices only if every shortest path between them goes through S?
+
+- Somewhat less significantly: t is used for time as well as the target vertex. I would recommend that the strategy be removed from the theorem statement in 4.12. The paper also refers to "infinite cycles" in places, is this just a cycle? In the proof of 3.1, f is a fraction, and cannot be O(m).
+
+Technical comments:
+
+- An unstated assumption in the paper is that since the given strategy in 4.2 minimizes \rho(x,t) for colluding nodes, it must be an optimal strategy. This could be true, but I couldn't see that this was obvious.
+
+- It would be better to separate out Theorem 4.2: show that it is admissible and non-detrimental with k' = k-2, and then beneficial with the added conditions.
+
+- I was trying to find where in the proof of 4.10 it is used that colluding nodes are separated, but couldn't. Is separation required for admissibility of the strategy?
+
+- In the proof of 4.10, it is stated that y_j must break ties to avoid cycles. Doesn't this assume y_j is honest? Why would this hold?
+
+
+Reviewer 4
+rating 6 confidence 6
+Comments to author(s)
+The question address in the paper is the following.
+Given a set of nodes, how can they report distances in order to maximize the traffic going through them, while maintaining the routing loop-free. (The motivation is to inspect as many packets as possible while ensuring they all reach their destination.
+
+The paper considers two models: uniform and non-uniform.
+The difference is whether the report to all neighbors is identical or not.
+
+The main result is a characterization of the uniform model when the set has no-neighboring nodes.
+
+Overall the paper is nicely written and well motivated.
+My main concern is whether EC is the right venue for this paper.
+A few possible connections is the work on "influence" in social network,
+where one want to get a set of nodes that would be influential.
+Another related topic is the BGP with incentive.
+I think the authors should try to highlight the relevance to EC (maybe through
+other connections)
+
+One remark:
+The reduction from non-uniform to uniform is computational, but there is no discussion on how the amount of intercepted traffic might change.
+
