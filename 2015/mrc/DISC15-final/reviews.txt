@@ -1,0 +1,88 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 108
+TITLE: On the Computational Complexity of MapReduce
+AUTHORS: Benjamin Fish, Jeremy Kun, Ádám D. Lelkes, Lev Reyzin and Gyorgy Turan
+
+
+----------- REVIEW -----------
+This article considers computational complexity of MapReduce by using a reasonal model Karloff et al. have proposed. The authors define uniform deterministic MRC(MapReduce class), which is a restriction of the original Karloff's model and show constant-round MRC computation can simulate sublogrithmic space-bounded Turing machines(which includes deciding regular language). The authors also shows some hierarchy theorems for MRC by assuming ETH(Exponential Time Hypothesis), which are main results. The former result is achieved by constructing two-round protocol for simulating sublogrithmic space-bounded Turing machines. The latter results show sufficiently incresing the number of rounds or the amount of time  per processor strictly increases the computational power of MRC.
+Although the techniques used in this article are standard and the results are not so deep,
+the ideas and the results itself are interesting and these hierarchy theorems are the first one
+in theoretical MapReduce computation. Therefore, the reviewer recommends this article should be weakly accepted.
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 108
+TITLE: On the Computational Complexity of MapReduce
+AUTHORS: Benjamin Fish, Jeremy Kun, Ádám D. Lelkes, Lev Reyzin and Gyorgy Turan
+
+
+----------- REVIEW -----------
+The paper studies MapReduce computation from the complexity theory perspectives. The authors build on the prior work by Karloff et al that introduced a parameterized complexity class MRC of languages computable by MapReduce programs with various time, space and communication complexity. They prove several results establishing relationship between REGULAR and SPACE(o(log n)) and MRC. They also prove a hierarchy theorem, which in plain terms show that allowing the computation to run for more time increases  the M/R computational power.
+
+Positives:
+- Complexity theoretical study of MapReduce is important, and may shed light on inherent capabilities and limitations of the model.
+- The paper is nicely written, and can be followed by a reader with limited background in complexity theory.
+
+Negatives:
+- I'm not sure what the reader is supposed to conclude from the results in the paper in more practical sense. Could you give examples of concrete problems in REGULAR and/or SPACE(o(log n)) which one would normally like to compute in the MapReduce framework?
+- I'm not sure that REGULAR \subseteq MRC^0 is necessarily good news since MRC^0 (if I got the definition right) includes languages with processing time O(n^k) for an arbitrary k\ge 0. Since any computation taking n^k steps for k > 1 will usually be considered impractical (given the size of the data), won't it be too crude to clump all MRC(1, n^k) together into a single class?
+- The paper might be a bit off topic for the DISC audience. In particular, I cannot tell how difficult the results are, whether their proofs involved any novel techniques from the complexity theoretical standpoint, and how much progress it is making compared to the prior work by Karloff et al.
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 108
+TITLE: On the Computational Complexity of MapReduce
+AUTHORS: Benjamin Fish, Jeremy Kun, Ádám D. Lelkes, Lev Reyzin and Gyorgy Turan
+
+
+----------- REVIEW -----------
+Map-Reduce is a very popular programming model for performing large scale big-data computations in a distributed fashion. In 2010, Karloff et al. (reference [12]) defined a complexity-theoretic model for Map-Reduce and related it to PRAM computability by proving that MapReduce can simulate CREW  PRAM that use sub-quadratic memory and processors. The current paper extends the work of [12] in a variety of meaningful ways. First of all, it observes that the definition in [12] is nonuniform, and as a result it allows a natural-seeming class of MapReduce machines (e.g., ones that use linear number of Map-Reduce steps and linear memory) that are capable of performing non-recursive computations. The authors modify the definition so that this issue is eliminated. The paper then shows that Map-Reduce with a constant number of rounds can decide all languages computable in o(log n) space [that's little-o], which includes all regular languages. Finally, the paper proves a couple of hier!
+
+ archy results based on a well-known complexity assumption called the ETH (exponential time hypothesis). These essentially show that increasing each of the parameters of space or number of processors strictly increases the set of decidable languages.
+
+This paper is clearly a complexity-theoretic paper. However, it makes useful progress on identifying the computational power of a model of distributed computing that is one of the most practically used and most popular settings. Many  have been complaining for years that the DC field does not enjoy a clean mathematical analysis akin to complexity theory for distributed systems. This paper is initiating such an approach in a model of interest that our community should be paying more attention to.
+
+The paper is carefully worked out and very readable despite its technical content. It would be good if the authors discuss the implication of their results to distributed computing tasks along the lines of their discussion in the rebuttal.
+
+In summary, I definitely feel that this paper is worthy of acceptance at DISC.
+
+
+
+Local comments, which should be fixed at the discretion of the authors.
+
+Page 1: typo spaceachieved
+
+Page 2: wording issue - `for EACH DISTINCT KEY a "reducer" ... for A GROUP OF KEYS..."
+             also "...single processor...second processor"
+
+Page 3 "...designing A m-r algorithmS"
+             "as a problem" should probably be "as an open problem"
+             "that 3SAT ... for some c [satisfying...]" the quantification of c is ambiguous. Better write "that there exists [or forall?] c [satisfying...] 3SAT.."
+
+Page 4: Please clarify "space bounds ... ensure ... smaller than the full input" is this true for sublinear space bounds? For all possible space bounds? Can space bounds be made to ensure?
+            "processed from the last round" should be "generated by round $r-1$"
+
+            You use $M$ to denote an MRC machine early on Page 4, and to denote a TM later on. Use different symbols or different fonts.
+            The order of parameters in the TM should be (r,m,...) to match your discussion. This requires a matching change when the TMs are used in the proofs. (Alternatively, change order in the discussion)
+
+Page 5: first par - will any space bounds (even 2^n) ensure that processors see sublinear data of the input?
+             on line preceding 3.2 - add "is the class corresponding to MRC computation with constant number of rounds R=c.
+
+             General comment re nonuniform MRC- I suggest using notation such as nuMRC (on this page and later) so that statements would not seem to be talking about your uniform classes MRC(.,.).
+
+             I suggest using the terminology the nuMRC(...) is not contained in R here and later on. Just discussion the halting problem does this in a less precise manner.
+
+Page 6: second par of sec 4: I suggest starting with something like "Given a DFA, we with to simulate..."
+              It would be cleaner to state  Theorem 1 as a \subseteq. Later on you can say that Space (o(...) is contained, and mention the canonical non-reg problem is contained in this class.
+
+Page 7: "Finally, accept..." should be "Finally, the reduce function accepts..."
+
+Page 8: Hypothesis 6 should have a cleaner order of quantifiers. "There is some... for some..." is ambiguous. Better: 'There exist c and c' satisfying such that T(..c'.)\setminus T(,,c,)\ne\emptyset
+
+Page 10: after BSP give a reference to where your claim is proven.
+
+Page 12: "this of required"
+               end of App A - Corollary: nuMRC(,,,)\\not\subseteq R
+
+               Appendix B is superfluous.

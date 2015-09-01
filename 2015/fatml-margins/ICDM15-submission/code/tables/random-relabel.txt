@@ -1,0 +1,166 @@
+Random Relabeling
+adult SVM
+Loading scikit-learn
+Training classifier
+Done
+Computing error
+Computing bias
+Computing UBIF
+Loading scikit-learn
+Training classifier
+Done
+Loading scikit-learn
+Training classifier
+Done
+Computing error
+Computing bias
+Computing UBIF
+Loading scikit-learn
+Training classifier
+Done
+Loading scikit-learn
+Training classifier
+Done
+Computing error
+Computing bias
+Computing UBIF
+Loading scikit-learn
+Training classifier
+Done
+Loading scikit-learn
+Training classifier
+Done
+Computing error
+Computing bias
+Computing UBIF
+Loading scikit-learn
+Training classifier
+Done
+Loading scikit-learn
+Training classifier
+Done
+Computing error
+Computing bias
+Computing UBIF
+Loading scikit-learn
+Training classifier
+Done
+Loading scikit-learn
+Training classifier
+Done
+Computing error
+Computing bias
+Computing UBIF
+Loading scikit-learn
+Training classifier
+Done
+Loading scikit-learn
+Training classifier
+Done
+Computing error
+Computing bias
+Computing UBIF
+Loading scikit-learn
+Training classifier
+Done
+Loading scikit-learn
+Training classifier
+Done
+Computing error
+Computing bias
+Computing UBIF
+Loading scikit-learn
+Training classifier
+Done
+Loading scikit-learn
+Training classifier
+Done
+Computing error
+Computing bias
+Computing UBIF
+Loading scikit-learn
+Training classifier
+Done
+Loading scikit-learn
+Training classifier
+Done
+Computing error
+Computing bias
+Computing UBIF
+Loading scikit-learn
+Training classifier
+Done
+	avg, min, max, variance
+error: (0.20063263927277197, 0.19882071125852221, 0.2043486272341994, 2.9084455028042223e-06)
+bias: (-0.017926245488946717, -0.025544766057107565, -0.009496066555170657, 2.1211397301449427e-05)
+ubif: (0.28211785666060385, 0.25888324873096447, 0.30051150895140666, 0.00019909291280568057)
+adult AdaBoost
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+	avg, min, max, variance
+error: (0.20725385418586084, 0.2019531969780726, 0.21208770960014742, 1.214605573737922e-05)
+bias: (-0.00251342997000614, -0.011674774077890249, 0.0059334937489872175, 3.801251985644391e-05)
+ubif: (0.46451374560403824, 0.44129032258064516, 0.4948586118251928, 0.00031986163252206197)
+adult LR
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+Computing error
+Computing bias
+Computing UBIF
+	avg, min, max, variance
+error: (0.20588415944966526, 0.20293593759597076, 0.2094465941895461, 3.69376980193282e-06)
+bias: (-0.0019366470274693904, -0.013985360797634738, 0.005204489192326522, 3.3899921688480666e-05)
+ubif: (0.47401746688639673, 0.4411384217335058, 0.5019157088122606, 0.0003348193700607131)

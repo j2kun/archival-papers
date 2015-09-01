@@ -1,0 +1,188 @@
+\begin{thebibliography}{10}
+
+\bibitem{Aggarwal2011}
+C.~Aggarwal, Y.~Xie, and P.~Yu.
+\newblock Towards community detection in locally heterogeneous networks.
+\newblock In {\em SDM}, pages 391--402. SIAM, 2011.
+
+\bibitem{Arora12}
+S.~Arora, E.~Hazan, and S.~Kale.
+\newblock The multiplicative weights update method: a meta-algorithm and
+  applications.
+\newblock {\em Theory of Computing}, 8(1):121--164, 2012.
+
+\bibitem{Berlingerio2011}
+M.~Berlingerio, M.~Coscia, and F.~Giannotti.
+\newblock Finding redundant and complementary communities in multidimensional
+  networks.
+\newblock In {\em CIKM}, pages 2181--2184, 2011.
+
+\bibitem{Bubeck12}
+S.~Bubeck and N.~Cesa-Bianchi.
+\newblock Regret analysis of stochastic and nonstochastic multi-armed bandit
+  problems.
+\newblock {\em Foundations and Trends in Machine Learning}, 5(1):1--122, 2012.
+
+\bibitem{Bubeck09}
+S.~Bubeck, R.~Munos, and G.~Stoltz.
+\newblock Pure exploration in multi-armed bandits problems.
+\newblock In {\em ALT}, pages 23--37, 2009.
+
+\bibitem{Caceres2011}
+R.~S. Caceres, T.~Y. Berger-Wolf, and R.~Grossman.
+\newblock Temporal scale of processes in dynamic networks.
+\newblock In {\em ICDM Workshops}, pages 925--932, 2011.
+
+\bibitem{Cai2005}
+D.~Cai, Z.~Shao, X.~He, X.~Yan, and J.~Han.
+\newblock Community mining from multi-relational networks.
+\newblock In {\em PKDD}, pages 445--452, 2005.
+
+\bibitem{Danon05}
+L.~Danon, J.~Duch, A.~Diaz-Guilera, and A.~Arenas.
+\newblock Comparing community structure identification.
+\newblock {\em J. Stat. Mech.}, 2005:P09008, 2005.
+
+\bibitem{DecelleKMZ11}
+A.~Decelle, F.~Krzakala, C.~Moore, and L.~Zdeborov\'a.
+\newblock Asymptotic analysis of the stochastic block model for modular
+  networks and its algorithmic applications.
+\newblock {\em Phys. Rev. E}, 84:066106, Dec 2011.
+
+\bibitem{Dice1945}
+L.~R. Dice.
+\newblock Measures of the amount of ecologic association between species.
+\newblock {\em Ecology}, 26(3):297--302, July 1945.
+
+\bibitem{RealityMining}
+N.~Eagle and A.~Pentland.
+\newblock Reality mining: sensing complex social systems.
+\newblock {\em Personal and Ubiquitous Computing}, 10(4):255--268, 2006.
+
+\bibitem{Erdos60}
+P.~Erd\"{o}s and A.~R\'{e}nyi.
+\newblock {On random graphs, I}.
+\newblock {\em Publicationes Mathematicae (Debrecen)}, 6:290--297, 1959.
+
+\bibitem{Getoor2005}
+L.~Getoor and C.~P. Diehl.
+\newblock Link mining: a survey.
+\newblock {\em ACM SIGKDD Explorations Newsletter}, 7(2):3--12, 2005.
+
+\bibitem{Gilbert2009}
+E.~Gilbert and K.~Karahalios.
+\newblock Predicting tie strength with social media.
+\newblock In {\em Proc. of SIGCHI Conf. on Human Factors in Computing Systems},
+  CHI '09, pages 211--220, New York, NY, USA, 2009. ACM.
+
+\bibitem{kolda2009}
+T.~G. Kolda and B.~W. Bader.
+\newblock Tensor decompositions and applications.
+\newblock {\em SIAM review}, 51(3):455--500, 2009.
+
+\bibitem{Leskovec2008}
+J.~Leskovec, K.~J. Lang, A.~Dasgupta, and M.~W. Mahoney.
+\newblock Statistical properties of community structure in large social and
+  information networks.
+\newblock In {\em Proc. (17th) Inter. Conf. on World Wide Web}, WWW '08, pages
+  695--704. ACM, 2008.
+
+\bibitem{Ley02}
+M.~Ley.
+\newblock The dblp computer science bibliography: Evolution, research issues,
+  perspectives.
+\newblock In {\em SPIRE}, pages 1--10, 2002.
+
+\bibitem{LiuAH15}
+J.~Liu, C.~C. Aggarwal, and J.~Han.
+\newblock On integrating network and community discovery.
+\newblock In {\em Proceedings of the Eighth {ACM} International Conference on
+  Web Search and Data Mining, {WSDM} 2015, Shanghai, China, February 2-6,
+  2015}, pages 117--126, 2015.
+
+\bibitem{Miller2014}
+B.~A. Miller and N.~Arcolano.
+\newblock Spectral subgraph detection with corrupt observations.
+\newblock In {\em Proc. IEEE Int. Conf. Acoust., Speech and Signal Process.},
+  2014.
+
+\bibitem{Mucha2010}
+P.~J. Mucha, T.~Richardson, K.~Macon, M.~A. Porter, and J.~P. Onnela.
+\newblock Community structure in time-dependent, multiscale, and multiplex
+  networks.
+\newblock {\em Science}, 328(5980):876--878, 2010.
+
+\bibitem{nadakuditi2012}
+R.~R. Nadakuditi and M.~E.~J. Newman.
+\newblock Graph spectra and the detectability of community structure in
+  networks.
+\newblock {\em CoRR}, abs/1205.1813, 2012.
+
+\bibitem{Newman06}
+M.~E.~J. Newman.
+\newblock Modularity and community structure in networks.
+\newblock {\em Proceedings of the US National Academy of Sciences},
+  103(23):8577--8696, 2006.
+
+\bibitem{Papalexakis2013}
+E.~E. Papalexakis, L.~Akoglu, and D.~Ience.
+\newblock Do more views of a graph help? community detection and clustering in
+  multi-graphs.
+\newblock In {\em FUSION}, pages 899--905, 2013.
+
+\bibitem{Walktrap}
+P.~Pons and M.~Latapy.
+\newblock Computing communities in large networks using random walks.
+\newblock {\em Journal of Graph Algorithms and Applications}, 10(2):191--218,
+  2006.
+
+\bibitem{Rocklin2013}
+M.~Rocklin and A.~Pinar.
+\newblock On clustering on graphs with multiple edge types.
+\newblock {\em Internet Mathematics}, 9(1):82--112, 2013.
+
+\bibitem{Rossi2012}
+R.~A. Rossi, L.~McDowell, D.~W. Aha, and J.~Neville.
+\newblock Transforming graph data for statistical relational learning.
+\newblock {\em J. Artif. Intell. Res. (JAIR)}, 45:363--441, 2012.
+
+\bibitem{Schapire90}
+R.~E. Schapire.
+\newblock The strength of weak learnability.
+\newblock {\em Machine Learning}, 5:197--227, 1990.
+
+\bibitem{Shiga12}
+M.~Shiga and H.~Mamitsuka.
+\newblock A variational bayesian framework for clustering with multiple graphs.
+\newblock {\em IEEE Trans. Knowl. Data Eng.}, 24(4):577--590, 2012.
+
+\bibitem{Tang2012}
+L.~Tang, X.~Wang, and H.~Liu.
+\newblock Community detection via heterogeneous interaction analysis.
+\newblock {\em Data Min. Knowl. Discov.}, 25(1):1--33, 2012.
+
+\bibitem{Tang2009}
+W.~Tang, Z.~Lu, and I.~S. Dhillon.
+\newblock Clustering with multiple graphs.
+\newblock In {\em Proc. (2009) IEEE Int. Conf. on Data Mining}, ICDM '09, pages
+  1016--1021, Washington, DC, USA, 2009. IEEE Computer Society.
+
+\bibitem{Wang14}
+B.~Wang, A.~M. Mezlini, F.~Demir, M.~Fiume, Z.~Tu, M.~Brudno, B.~Haibe-Kains,
+  and A.~Goldenberg.
+\newblock Similarity network fusion for aggregating data types on a genomic
+  scale.
+\newblock {\em Nat Meth}, 11:333--337, 2014.
+
+\bibitem{Wang87}
+Y.~Wang and G.~Wong.
+\newblock {Stochastic Block Models for Directed Graphs}.
+\newblock {\em J. Am. Statistic. Assoc.}, 82(397):8--19, 1987.
+
+\bibitem{Xiang2010}
+R.~Xiang, J.~Neville, and M.~Rogati.
+\newblock Modeling relationship strength in online social networks.
+\newblock In {\em Proc. (19th) Int. Conf. on World Wide Web}, WWW '10, pages
+  981--990, New York, NY, USA, 2010. ACM.
+
+\end{thebibliography}

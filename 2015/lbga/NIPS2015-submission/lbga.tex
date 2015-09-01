@@ -1,0 +1,668 @@
+\documentclass{article}
+\usepackage{nips15submit_e,times}
+\usepackage{cleveref}
+\usepackage{multicol}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+\usepackage{sidecap}
+\sidecaptionvpos{figure}{c}
+\sidecaptionvpos{table}{c}
+
+\usepackage[font=small,labelfont=bf]{caption}
+\DeclareCaptionType{copyrightbox}
+\usepackage{subcaption}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+%\usepackage{authblk}
+\usepackage{url}
+\usepackage{color}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{wrapfig}
+
+\newcommand{\er}{Erd\H{o}s-R\'{e}nyi } 
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem{defn}{Definition}
+\newtheorem{propn}{Proposition}
+\newtheorem{obs}{Observation}
+
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+\title{\Large Constructing Robust Graphs for Community Detection}
+
+%\nipsfinalcopy % Uncomment for camera-ready version
+
+\begin{document}
+
+%\author{Jeremy Kun \\ University of Illinois at Chicago \\ MIT Lincoln
+%Laboratory \and Rajmonda S. Caceres \\ MIT Lincoln Laboratory \and Kevin M.
+%Carter \\ MIT Lincoln Laboratory}
+%\author{Submitted for blind review}
+%\thanks{ This work is sponsored by the Assistant Secretary of Defense for
+%Research \& Engineering under Air Force Contract FA8721-05-C-0002.  Opinions,
+%interpretations, conclusions and recommendations are those of the authors and
+%are not necessarily endorsed by the United States Government.  }
+
+\maketitle
+
+\begin{abstract} 
+
+We present a framework called \emph{Locally Boosted Graph Aggregation} for
+aggregating multiple noisy networks into a single network so as to improve the
+quality of community detection algorithms on the result. LBGA addresses the
+problem of finding a single network that faithfully and robustly represents
+multiple noisy, complementary underlying data sources. We define a new random
+graph model to model such scenarios in community detection called the
+\emph{local stochastic block model} (LSBM), and we exhibit the utility of LBGA
+on this synthetic model as well as real data sets. LBGA outperforms existing
+network aggregation algorithms when ground truth is available, and it produces
+high-quality representations of real networks. We argue that LBGA is generic
+and can be adapted to other application domains.
+
+\end{abstract}
+
+\section{Introduction}
+Community detection methods in machine learning literature generally assume a
+single truthful input graph. However, in practical scenarios the data that
+comprise a network come from multiple sources which may be noisy and may
+disagree~(\cite{Leskovec2008}). For example, in a social network one may
+communicate with friends via Instagram and family via Facebook. The best way to
+aggregate this information is unclear, and the choice of representation heavily
+impacts the performance of subsequent data mining algorithms
+(\cite{Getoor2005,Caceres2011,Miller2014}).  Though the impact of graph
+representation on subsequent analysis has been studied, few techniques exist
+for learning conducive graph representations. Aggregation is often ad-hoc in
+practice, making it difficult to compare algorithms within the same domain
+using different data sources.
+
+In this paper, we study the problem of constructing a single graph
+representation that accurately reflects the underlying network structure and
+allows for better detection of communities scattered across different data
+sources. We present an aggregation framework called \emph{Locally Boosted Graph
+Aggregation (LBGA)} which simulates an iterative reward system inspired by
+boosting and bandit learning. LBGA evaluates the quality of edges locally, so
+that it can choose aggregations which most accurately represent the local
+structure of communities observed in real
+networks~(\cite{Aggarwal2011,Leskovec2008}). LBGA relies on the pair of a simple
+clustering algorithm and a local heuristic quality measure as a proxy for
+evaluating the quality of intermediate results. We empirically show that our
+algorithm constructs robust aggregated graph representations for community
+detection by testing it on synthetic and real-world data sets and comparing it
+to existing aggregation algorithms. 
+
+We emphasize that while this paper specifically addresses community detection,
+the edge reward mechanism and the graph aggregation steps of LBGA are
+application agnostic. LBGA can be repurposed for graph aggregation with respect
+to other applications, a direction we leave for future work. The paper is
+organized as follows. In Section~\ref{sec:related} we review related
+literature. In Section~\ref{sec:lbga} we discuss in detail the LBGA framework.
+In Section~\ref{sec:experiments} we present the experimental analysis and
+results, and in Section~\ref{sec:conclusion} we discuss future work.
+
+\section{Related work} 
+\label{sec:related}
+\subsection{Graph representation learning and clustering}
+Our work generally falls under representation learning for graphs, which
+includes modeling decisions about the nodes and edges of the graph. Rossi et
+al.~(\cite{Rossi2012}) taxonomize this field, and show that transformations to
+heterogeneous graphs can improve the quality of a learning algorithm. Within
+their taxonomy our work falls under link re-weighting, which includes the work
+of~(\cite{Xiang2010,Gilbert2009}). Our setting deviates from these works by 
+allowing different edge types between the same pair of vertices. Also, our
+approach is stochastic, which we find necessary for learning a robust
+representation. 
+
+(\cite{Wang14}) develops a cross-diffusion based fusion framework called SNF.
+Both SNF and LBGA emphasize local similarities versus global ones. SNF's
+framework of iterative re-weighting of edges based on message-passing is
+similar to LBGA. The LBGA framework is different because the re-weighting is
+based on techniques from boosting, and unlike SNF our algorithm does not rely
+on consistency across the input graphs. In Section~\ref{sec:comparison} we
+demonstrate empirically how LBGA outperforms SNF on all of our data sets.
+ 
+Clustering in multilayer
+networks~(\cite{Papalexakis2013,Tang2009,Tang2012,Mucha2010,Berlingerio2011,kolda2009,Shiga12})
+also has close connections to our work. However, the literature does not
+address scenarios where the information provided by the different sources is
+complementary or the overlap is scarce. Our approach iteratively selects those
+edge sources that lead to better clustering quality, independently of
+disagreement across the different features. Also, these approaches differ
+fundamentally from LBGA in that they do not produce a graph, which could be
+used for other purposes. As an example of multi-edge clustering algorithms, we
+consider the GraphFuse algorithm~(\cite{Papalexakis2013}) that falls under the
+category of tensor-based clustering. GraphFuse computes the clustering based on
+the CP decomposition of the tensor formed by appending the adjacency matrices
+of the different graph sources. In Section~\ref{sec:comparison} we demonstrate
+that LBGA out-performs GraphFuse in terms of recovering the ground truth
+clustering across our datasets. (\cite{Rocklin2013,Cai2005}) present approaches
+for identifying the right graph aggregation, given a complete ground truth
+clustering or a portion of it. Our framework requires no such knowledge, but we
+do use ground truth to validate our experiments on synthetic data (Section
+\ref{sec:validation}).
+
+Most recently Liu et al.~\cite{LiuAH15} proposed a method for simultaneously
+discovering a graph and constructing a high quality clustering. Their setting
+is fundamentally different from ours in that we have full access to potentially
+noisy graphs, and they have partial informtion of a single noise-free graph.
+While our work is similar in that we both simultaneously leverage local
+information while producing a good global clustering, our techniques differ
+fundamentally. Their approach explores greedily while we adapt techniques from
+bandit learning and boosting to balance exploration with exploitation.
+Moreover, our techniques do not apply to their setting because they can only
+``discover'' a node once.  
+
+\subsection{Boosting and bandits}
+Our framework departs from previous work primarily through its algorithmic
+inspirations, namely boosting~(\cite{Schapire90}) and bandit
+learning~(\cite{Bubeck12}). In boosting, one assumes the existence of a {\em weak
+classifier} whose performance is slightly better than random. In a landmark
+paper (\cite{Schapire90}), Schapire showed how to combine weak classifiers into a
+PAC-learner by a majority voting scheme. One can consider different graph data
+sources as weak learners, and ask whether one can ``boost'' them to a good
+graph. Unfortunately, our setting does not allow pure boosting because boosting
+requires access to ground truth labels. Even with good input, a community has
+no known universal measure of quality. 
+
+In bandit learning an algorithm receives rewards as it explores a set of
+actions, and the goal is to minimize a notion of regret. The basic model has
+many variants, but two central ones are expert advice and adversaries. Experts
+are functions suggesting what action to take in each round, and regret is
+measured with respect to the best expert. The adversarial setting involves an
+omniscient adversary who sets the experts and rewards so as to maximize regret.
+We can imagine graphs as adversarial experts, and adapt bandit learning
+techniques to compensate. Indeed, LBGA is a reward system based on the given
+application and uses update techniques from bandit learning to learn a graph
+representation. In our setting we only care if the aggregate graph is good at
+the end, while bandit learning often seeks to maximize cumulative rewards
+during learning. There are bandit settings that only care about the final
+result~(\cite{Bubeck09}), but to the best of our knowledge they do not apply to
+our problem. 
+
+The primary technique we use is the Multiplicative Weights Update Algorithm
+(MWUA). See~(\cite{Arora12}) for an overview and an extensive list of successful
+applications. The algorithm maintains a weight for each element $x_j$ of a
+finite set $X$. In rounds, an element $x_i$ is chosen by sampling
+proportionally to the weights, a reward $q_{t,i}$ is received, and the weight
+for $x_i$ is multiplied or divided by $(1 + \varepsilon q_{t,i})$, for some
+parameter $\varepsilon >0$. After many rounds, the elements with the highest
+weight are deemed the best and used for whatever purpose needed. Next, we
+describe how this algorithm is adapted to graph aggregation. 
+
+\section{The Locally Boosted Graph Aggregation framework}
+\label{sec:lbga}
+
+LBGA can runs multiplicative weights for each edge, forming a candidate graph
+representation $G_t$ in each round by sampling edges, and computing local
+rewards on $G_t$ to update the weights for the next round. When $G_t$ converges
+we produce it as output. The remainder of this section expands the details of
+this sketch and our specific algorithm implementing it. 
+
+\subsection{Framework details}
+\label{sec:framework}
+
+Let $H_1, \dots, H_m$ be a set of unweighted, undirected graphs defined on the
+same vertex set $V$. We think of each $H_i$ as ``expert advice'' suggesting for
+a pair of vertices $u,v \in V$ whether to include edge $(u,v)$ or not. Our
+algorithm combines the $H_i$ into a single graph $G^*$ suitable for the
+proposed application. We present LBGA in the context of community detection,
+noting generalizations. Each round has four parts: producing the aggregate
+candidate graph $G_t$, computing a clustering $A(G_t)$ for use in measuring the
+quality of $G_t$, computing the local quality of each edge, and updating the
+weights for the edges. After $T$ rounds we output $G^* = G_T$.
+
+\textbf{Aggregated Candidate Graph $G_t$}: In each round construct $G_t$ as
+follows. Maintain a weight $w_{u,v,i}$ for each graph $H_i$ and each edge
+$(u,v)$ in $H_1 \cup \dots \cup H_m$. Normalize the set of all weights for an
+edge $\mathbf{w}_{u,v}$ to a probability distribution over the $H_i$. For each
+edge $u,v$, sample an $H_i$ according to this distribution and include the edge
+in $G_t$ if it is present in the drawn $H_i$. 
+
+\textbf{Event $A(G_t)$}: After the graph $G_t$ is produced, run a clustering
+algorithm $A$ on it to produce a clustering $A(G_t)$. In this paper we fix $A$
+to be the Walktrap algorithm~(\cite{Walktrap}), though we have observed the
+effectiveness of other clustering algorithms as well. In general $A$ can be any
+event, and in this case we tie it to the application by making it a simple
+clustering algorithm.
+
+\textbf{Local quality measure}: Define a \emph{local quality measure}
+$q(G,e,c)$ to be a $[0,1]$-valued function of a graph $G$, an edge $e$ of $G$,
+and a clustering $c$ of the vertices of G. The quality of $(u,v)$ in $G_t$ is
+the ``reward'' for that edge, and it is used to update the weights of each
+input graph $H_i$.  More precisely, the reward for $(u,v)$ in round $t$ is
+$q(G_t, (u,v),A(G_t))$.
+
+\textbf{Update Rule}: Update the weights using MWUA as follows. Define two
+learning rate parameters $\varepsilon > 0, \nu > 0$, with the former being used
+to update edges from $G_t$ that are present in $H_i$ and the latter for edges
+not in $H_i$. In particular, suppose $q_{u,v}$ is the quality of the edge
+$(u,v)$ in $G_t$. Then, the update rule is defined as follows:
+\[
+w_{u,v,i}=
+\begin{cases}
+w_{u,v,i}(1 +\varepsilon q_{u,v}), & \text{if } (u,v) \in H_i \\
+w_{u,v,i}(1 - \nu q_{u,v}), & \text{if } (u,v) \not \in H_i .
+\end{cases}
+\]
+ \subsection{Quality measures for community detection}
+\label{sec:quality-measures}
+We presently describe the quality measure we use for community detection. First
+we define {\em edge consistency}, which measures whether an edge has endpoints
+in the same cluster or across clusters:
+\[
+   EC_{u,v}=
+   \begin{cases}
+   1, & \text{if  }c(u) = c(v) \\
+   -1,  & \text{if  }c(u) \neq c(v).
+   \end{cases}
+\]
+\begin{wrapfigure}{L}{0.5\textwidth}
+\begin{minipage}{0.5\textwidth}
+\begin{algorithm}[H]
+\caption{LBGA pseudocode. Note that $1_E$ denotes the indicator function for the event $E$.}
+\label{alg:lbga}
+\begin{algorithmic}
+\REQUIRE Unweighted graphs $H_1, \dots, H_m$, \\ a
+clustering algorithm $A$, \\ a local quality metric $q$, \\ three parameters
+$0 < \varepsilon, \nu, \delta < 1/2$.
+\ENSURE A graph $G$.
+ 
+\STATE Let $\mathbf{w}_{u,v} = \mathbf{1}$ for all $u \neq v \in V$. 
+\STATE Let $U$ be the edges $E(H_1 \cup \dots \cup H_m)$. 
+\STATE Let $G_\textup{learned} = (V, \varnothing)$. 
+
+\WHILE{$|U| > 0$}
+   \STATE Let $G$ be a copy of $G_{\textup{learned}}$.
+   \FOR{$(u,v) \in U$}
+      \STATE Let $p_{u,v} = \frac{\sum_i w_{u,v,i} 1_{\left \{(u,v) \in H_i \right \}}}{\sum_i w_{u,v,i}}$.
+      \STATE Flip a coin with bias $p_{u,v}$. 
+      \STATE If heads, include $(u,v)$ in $G$.
+   \ENDFOR
+   \STATE Cluster $G$ using $A$
+   \FOR{$(u,v) \in U$}
+      \STATE Set $p = q(G, A(G), (u,v))$.
+      \FOR{$i = 1, \dots, m$}
+         \IF{$(u,v) \in H_i$}
+            \STATE Set $w_{u,v,i} = w_{u,v,i} (1 + \varepsilon p)$.
+         \ELSE
+            \STATE Set $w_{u,v,i} = w_{u,v,i} (1 - \nu p)$.
+         \ENDIF
+      \ENDFOR
+
+   \STATE Let $p_{u,v} = \frac{\sum_i w_{u,v,i} 1_{\left \{(u,v) \in H_i \right \}}}{\sum_i w_{u,v,i}}$.
+   \IF{$p_{u,v} > 1-\delta$}
+      \STATE Add $(u,v)$ to $G_{\textup{learned}}$, remove it from $U$.
+   \ENDIF
+   \IF{$p_{u,v} < \delta$}
+      \STATE Remove $(u,v)$ from $U$.
+   \ENDIF
+   \ENDFOR
+\ENDWHILE
+\STATE Output $G$.
+\end{algorithmic}
+\end{algorithm}
+\end{minipage}
+\end{wrapfigure}
+
+We also define \emph{neighborhood overlap} ($NO$), which asserts that vertices
+sharing many neighbors are likely to be in the same community. NO declares the
+quality of $(u,v)$ to be the (normalized) cardinality of the intersection of
+the neighborhoods of $u$ and $v$, namely $NO_{u,v}=\frac{|N(u) \cap
+N(v)|}{|N(u) \cap N(v)| + log(|V|)},$ where $N(x)$ is the neighborhood of $x$.
+The additional log factor normalizes the metric to be consistent across $G$.
+Our quality metric, \emph{consistentNO}, combines edge consistency with
+neighborhood overlap by multiplying the two functions. We have also run
+experiments using more conventional neighborhood metrics, such as the Dice and
+Jaccard indices~(\cite{Dice1945})). ConsistentNO outperforms them by at least
+10\% in our experiments and for brevity we omit the results. 
+
+
+\subsection{Implementation}\label{sec:impl}
+
+We give pseudocode for our implementation of LBGA in Algorithm 1.  The runtime
+of LBGA is $O(T(|E| Q(n) + A(n)))$, where $|E|$ is the number of edges, $Q(n)$
+is the runtime of evaluating the quality function, $A(n)$ is the runtime of
+evaluating the event $A$, and $T$ is the number of rounds.  Algorithm 1
+improves this by fixing edges whose weights have grown $ > 1-\delta$ or $<
+\delta$ for a new parameter $\delta$. As LBGA learns, the sampling procedure
+becomes substantially sublinear in the number of edges.  Penalizing non-edges
+($\nu > 0$) also improves runtime, and LBGA is stable to minor variations in
+$\varepsilon$ and $\delta$. Moreover, our algorithm empirically scales linearly
+with the size of the input.
+
+
+\section{Experimental analysis}
+\label{sec:experiments}
+We describe the datasets used for analysis and provide quantitative results for
+the performance of LBGA. In all of our experiments LBGA was run with parameters
+$\varepsilon=\nu=0.2, \delta=0.05$, and we found little sensitivity to changes
+in these parameters.
+
+\subsection{Synthetic datasets}
+\label{sec:synthetic-model}
+
+Our primary synthetic data model is a generalization of the stochastic block
+model of~(\cite{Wang87}). We construct a probability distribution $G(n_i, p_i,
+r_i)$ over graphs as follows. Given a number $n$ of vertices and a list of
+cluster (block) sizes $\mathbf{n}=\{n_1, \dots, n_k\}$ with $n=\sum_i n_i$,
+partition the $n$ vertices into $k$ blocks $\{b_1, \dots, b_k\}$ with
+$|b_i|=n_i$. Define $k$ graphs $G_1, \dots, G_k$ and set the probability
+of an edge occurring in $G_i$ with both endpoints in block $b_i$ to $p_i$, all
+others occuring with probability $r_i$. We call this model the \emph{local
+stochastic block model} (LSBM). To contrast, we define the \emph{global
+stochastic block model} (GSBM) by setting the probability of an edge occuring
+in $G_i$ with endpoints in the same block (any block, not just block $b_i$) to
+be $p_i$, all others with probability $r_i$. Finally, we include \emph{\er
+random graphs}~(\cite{Erdos60}) alongside LSBM (e.g., LSBM-3) to capture noise
+combinations. LSBM-4 through LSBM-6 are models that are at the detectability
+threshold as shown in~\cite{DecelleKMZ11}. 
+
+\begin{SCtable}
+\begin{tabular}{| l | l |}
+\hline
+Dataset & Parameters\\
+\hline 
+\hline
+LSBM-1  &  $m=k=4, n_i=125, p_i=0.2, r_i=0.05$ \\
+LSBM-2  &  $m=k=4, n_i=125, p_i=0.3, r_i=0.05$ \\
+LSBM-3  &  $m=5,k=4, n_i=125, p_i=0.3, r_i=0.05$, \\ 
+        &  $i = 1, \dots, m, p_5= r_5 = 0.01$ \\
+LSBM-4  &  $m=k=2, n_i=250, p_i=0.0348, r_i=0.02$ \\
+LSBM-5  &  $m=k=2, n_i=250, p_i=0.0212, r_i=0.01$ \\
+LSBM-6  &  $m=k=2, n_i=250, p_i=0.0136, r_i=0.005$ \\
+\hline
+GSBM-4  &  $m =k= 4, n_i=125, p_1=0.1625, $ \\ 
+        &  $p_2 = 0.125, p_3 = 0.125, p_4 = 0.0875, r_i = 0.05$ \\
+       
+GSBM-5  &  $m=k=4, n_i=125, p_1=0.15, p_2=0.1,$ \\ 
+        &  $p_3=p_4=0.05, r_i = 0.05, i=1, \ldots, m$ \\
+
+\hline
+ER only &  $m=4, p_i=r_i=0.01$ \\
+DBLP-1  &  $n = 1230, m = 3$ \\
+DBLP-2  &  $n = 3090, m = 3$ \\
+RMining &  $n = 90, m = 6$ \\
+\hline
+\end{tabular}
+\caption{Description of datasets analyzed. Total number of vertices in each
+synthetic source graph is $n=500$. The number of graph sources is $m$. The
+number of clusters is $k$. The number of vertices in cluster $i$ is $n_i$. 
+The within- and across-cluster edge probabilities for graph source $i$ are
+$p_i$ and $r_i$, respectively.}
+\label{datasets}
+\end{SCtable}
+
+
+\subsection{Real datasets} 
+We use a subset of \emph{DBLP}~(\cite{Ley02}), an online database of research in
+computer science. We use the same datasets as~(\cite{Papalexakis2013}), in
+which node are authors and the three edge types are citations, coauthorship,
+and title similarity. The conferences used for DBLP-1 were STOC+FOCS, AAAI,
+SIGIR, TODS; for DBLP-2 ICDO, PODS, TKDE, and CACM. We use the manual ground
+truth labeling of~(\cite{Papalexakis2013}).\footnote{We recognize issues with this
+approach, for example that many authors who publish in STOC and AAAI are placed
+some ground truth community according to an undisclosed and arbitrary method.} 
+
+\emph{RealityMining} (\cite{RealityMining}) was a 9-month experiment in 2004
+which tracked a group of 90 individuals at MIT via their cell phones. The
+dataset includes voice calls, bluetooth scan events, cell tower usage, and
+self-reported friendship and proximity data. We used data between 2004-09-23
+19:00:00 and 2005-01-07 18:00:00 (UTC-05:00). Nodes are individuals in the
+study, and weighted edges correspond to the total duration of voice calls, the
+total amount of time two individuals used the same cell tower, the total number
+of bluetooth events, and the results of the friendship/proximity surveys for a
+total of 6 graphs. 
+
+\subsection{Validation procedure} \label{sec:validation}
+
+We now state how we evaluate the quality of LBGA's output.
+
+{\em Recovery of Inherent Clusters.} Since the output of LBGA is a graph, we
+use the walktrap clustering algorithm to extract communities for analysis. When
+ground truth communities are available we compare them with LBGA's communities
+using Normalized Mutual Information~(\cite{Danon05}). Otherwise we relate our
+clusters to known features of the dataset. 
+
+{\em Quality of Graph Representation.} In addition to producing a good
+clustering, an ideal graph representation also removes cross-community edges
+and produces a sparser representation. We use the standard Newman modularity
+measure~(\cite{Newman06}) and conductance~(\cite{Leskovec2008}) to
+measure this. Note that \emph{higher} modularity scores and \emph{lower}
+conductance scores signify stronger community structure. We note two extreme
+graph representation cases, the empty graph which is perfectly modular and the
+union graph which is a trivial aggregation. To signal these cases in our
+results, we display the \emph{sparsity} of the produced graph $G^*$, i.e. the
+fraction of edges in $G^*$ out of the total set of edges in all input graphs. 
+
+{\em Recovery of Graph Source Contribution.} In our experiments some input
+graphs contribute more to uncovering the underlying community structure, and
+should have higher edge weights on average. As such we display the average
+weights of the input graphs, e.g. in Figure~\ref{fig:local-sbm}. 
+
+{\em Consistency of predicted future links.} Given the final learned graph
+we rank the vertex pairs by their Adamic-Adar score and of the top 100
+predicted edges, we report what fraction are within a cluster or across
+clusters. This data is in Table~\ref{table:linkprediction}. 
+
+
+\subsection{Experimental results}
+\label{sec:results}
+
+Table~\ref{table:results} states the numerical results of our experiments. As a
+baseline, we computed the modularity and conductance values of the union of the
+input graphs with respect to the ground truth (for synthetic) or the Walktrap
+clusterings (for the real world). For synthetic examples, we compare our
+results with GraphFuse~(\cite{Papalexakis2013}) and SNF~(\cite{Wang14}) algorithms.
+Overall, LBGA converges to graphs with high modularity and low conductance.
+LBGA produces graph representations that induce correct clusterings in almost
+all cases where ground truth is known, the challenging case being when the
+noise rate is close to known detectability thresholds. 
+
+\textbf{Synthetic: }
+Figure~\ref{fig:local-sbm} depicts a run of LBGA with consistentNO on the
+dataset LSBM-3. LBGA converges quickly to a graph with a perfect clustering and
+high modularity. We plot the number of edges in $G_t$ over time and the average
+vertex-pair weight for each input graph. LBGA produces a graph using with 40\%
+sparsity and weights edges from the \er source appropriately. Our algorithm
+hence achieves a high quality graph while preserving and highlighting the
+underlying community structure. \Cref{fig:local-sbm,fig:erpvaries} also
+demonstrate that LBGA does not falsely boost noise to report community
+structure where none is present.  Figure~\ref{fig:erpvaries} depicts the
+behavior of LBGA on a dataset of only \er random graphs. LBGA produces
+aggregate graphs whose modularity values are low and conductance values are
+high. We see a clear phase transition in performance around $p = 0.3$
+corresponding to the \er graphs becoming triangle-dense and therefore less
+distinguishable from graphs that are a single community. Tolerance to such
+dense levels of noise is unavoidable. Indeed, at the detectability threshold
+(LSBM-4 through LSBM-6), we achieve NMI that outperforms both the baseline and
+all the compared methods. For the remaining synthetic models we outperform the
+compared methods while being comparable with the union baseline and producing a
+sparser, more modular graph. Indeed, the resulting link prediction scores in
+Table~\ref{table:linkprediction} are far better for LBGA than the union. 
+
+\begin{SCfigure}
+\includegraphics[width=0.5\columnwidth]{figures/LBM-SNR=6+ER-consistentNO+NEF.pdf}
+\caption{Graph representation learning for LSBM-3. The LBGA parameters are
+$\varepsilon=\nu=0.2, \delta=0.05$. Plots in order top to bottom: 1. NMI of
+$A(G_t)$ with the ground truth clustering, 2. modularity of $G_t$ w.r.t.
+$A(G_t)$, with the horizontal line showing the modularity of the union of the
+input graphs w.r.t. ground truth, 3. the number of edges in $G_t$, 4.  the
+average probability weight of vertex pairs for $H_i$.  The \er graph converges
+to low weight by round 300, even though it is initially favored. Hence
+LBGA can recover from bad luck and does not boost noise.} 
+\label{fig:local-sbm} 
+\end{SCfigure}
+
+
+\begin{figure}
+\centering
+   \begin{minipage}{.48\textwidth}
+   \centering
+   \includegraphics[width=0.9\linewidth]{figures/er-consistentNO-varying-p.pdf}
+   \captionof{figure}{Statistics about the aggregate graph produced by LBGA after
+   500 rounds on a suite of 4 \er random graphs on 500 nodes and varying edge
+   probability $p$.} 
+   \label{fig:erpvaries}
+   \end{minipage}
+   \begin{minipage}{.48\textwidth}
+   \centering
+   \includegraphics[scale=0.6]{figures/signal-to-noise-consistentNO.pdf}
+   \caption{Performance of LBGA (measured by NMI) as a function of SNR for the
+   LSBM model with different probabilities $p_i$ for $consistentNO$.} 
+   \label{fig:sensitivity-analysis}
+   \end{minipage}
+\end{figure}
+
+
+\textbf{DBLP \& RealityMining:} 
+Table~\ref{table:results} shows LBGA outperforms GraphFuse and SNF with respect
+to NMI on both DBLP data sets. LBGA also produces a sparse graph of high
+modularity. The compared methods GraphFuse and SNF do not produce graphs as
+output, and so we can only compare their NMI. LBGA also performs comparably
+with the baseline, while producing a sparser, more modular graph. For
+RealityMining, LBGA's output contains two dense clusters corresponding exactly
+to the MIT Media Lab and the Sloan Business School, with only three edges
+crossing the cut. In addition, this graph uses only 63.5\% of the total edges
+available. 
+
+\subsection{Comparison with GraphFuse and SNF}
+\label{sec:comparison}
+We compare LBGA with GraphFuse~(\cite{Papalexakis2013}), a multi-graph clustering
+algorithm and SNF~(\cite{Wang14}), a graph fusion algorithm. We use NMI with the
+ground truth as the performance measure. For the comparison analysis we have
+only considered the synthetic datasets where the notion of ground truth is
+known. Table~\ref{table:results} contains the comparison results. 
+
+LBGA outperforms SNF in all cases, and by a particularly large margin on the
+LSBM model. LBGA also outperforms GraphFuse on both the global block models and the
+lower-noise local block models LSBM-2 and LSBM-3. LBGA also produces very
+sparse representations that may be useful for future analysis, while GraphFuse
+and SNF produce only a clustering. We also note that SNF fails to detect the
+extreme case of LSBM, where each graph has a clique on a different (disjoint)
+subset of vertices.
+
+\begin{table*}
+\large
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{| l | c c c | c | c | c c c c |}
+\hline 
+
+\multicolumn{1}{| l}{} &  \multicolumn{3}{c|}{Union Graph} & \multicolumn {1}
+{c|}{GraphFuse} & \multicolumn {1} {c|}{SNF} & \multicolumn{4}{c|}{LBGA:
+ConsistentNO}\\ \hline
+Dataset  & Mod. & Cond. & NMI & NMI & NMI & Modularity & Conductance & NMI & Sparsity \\
+\hline
+\hline
+LSBM-1   &  0.103 &  14.725   &  0.724    &  0.686  & 0.099 &  0.679 $\pm$ 0.114 &  9.962 $\pm$ 23.0 &  0.503 $\pm$ 0.05 &  0.263 $\pm$ 0.04 \\
+LSBM-2   &  0.166 &  11.233   &  0.992    &  0.760  & 0.180 & 0.740 &  0.084 &  0.992 &  0.420  \\
+LSBM-3   &  0.166 &  11.216   &  1.000    &  0.779  & 0.209 &   0.737 &  0.104 &  1.000 &  0.422 \\
+LSBM-4   &  0.204 & 117.906 & 0.028  & -  & - & 0.891 & 99.219 & 0.107 & 0.183 \\
+LSBM-5   &  0.371 & 113.388 & 0.087  & -  & - & 0.918 & 459.00 & 0.200 & 0.035 \\
+LSBM-6   &  0.283 & 119.625 & 0.072  & -  & - & 0.960 & 322.00 & 0.184 & 0.104 \\
+\hline
+GSBM-4   &  0.178 &  10.678   &  1.000    &  0.716  & 0.658 &  0.739 &  0.084 &  1.000 &  0.433  \\
+GSBM-5   &  0.093 &  15.368   &  0.636    &  0.616  & 0.436 & 0.727 &  2.121 &  0.619 &  0.235  \\
+\hline
+ER only  & -0.002 & 24.729    &  -        & -   & -    &  0.193 & 112.947 & -    &  0.230  \\
+\hline
+DBLP-1   & 0.698  & 206.928  &  0.370     & 0.30    & 0.184   &  0.903 & 311.682 & 0.345    &  0.433  \\
+DBLP-2   & 0.601  & 573.514  &  0.217    & 0.12    & 0.013   &  0.926 & 614.953 & 0.211    &  0.492  \\
+RMining  & 0.452 & 70.314 &   -      & -   & -    &  0.246 & 0       & -    &  0.646  \\
+\hline
+\end{tabular}
+}
+\caption{LBGA performance results, compared to GraphFuse, SMF, and a baseline
+union aggregation. All datasets in this table were run with $consistentNO$
+using $\varepsilon = \nu = 0.2, \delta = 0.05$. Union modularity and
+conductance for real datasets was computed with the walktrap clustering. Values
+were averaged over 10 trials, and when variances $\sigma^2 > 10^{-4}$ were
+observed, values are reported with $\pm \sigma$. Note that GraphFuse and SNF
+\textbf{do not produce graphs,} and hence we could not report modularity etc.
+for these methods.} 
+\label{table:results}
+\end{table*}
+
+
+
+\begin{SCtable*}
+\centering
+\begin{tabular}{| c | c c |}
+\hline 
+Dataset & LBGA within & union within \\ 
+\hline
+LSBM-1  & 1.00   & 0.58 \\  
+LSBM-2  & 1.00   & 0.96 \\  
+LSBM-3  & 1.00   & 0.94 \\  
+LSBM-4  & 0.91   & 0.46 \\  
+LSBM-5  & 0.08   & 0.58 \\  
+LSBM-6  & 1.00   & 0.54 \\  
+\hline
+\end{tabular}
+\caption{Link prediction consistency for LBGA versus the baseline union on the
+LSBM datasets (LSBM-4 through LSBM-6 are at the detectability threhsold for
+stochastic block models). For each dataset and method the final graph was used
+to rank vertex pairs for link prediction, and we report the fraction of top-100
+ranked links which are between clusters.} 
+\label{table:linkprediction}
+\end{SCtable*}
+
+
+\subsection{Sensitivity analysis} \label{sec:sensitivity-analysis} 
+
+We analyze the sensitivity of LBGA to noise. In
+Figure~\ref{fig:sensitivity-analysis} we display NMI for the LSBM model and
+varying intra-cluster edge probability $p_i$ and varying signal-to-noise
+ratios. As expected, NMI falls as the noise rate $r_i$ increases. LBGA reaches
+higher quality and maintains the quality longer for denser graphs, which is
+also consistent with our expectations. At a signal to noise ratio of 2 or less,
+the NMI drops to non-useful levels regardless of $p_i$. The sharp drop in
+quality is related to well-known phase transitions for community
+detectability~(\cite{nadakuditi2012}).
+
+\begin{SCfigure}
+\end{SCfigure}
+\section{Conclusion}
+\label{sec:conclusion}
+LBGA offers a flexible, local aggregation method for combining different graph
+sources in order to better represent community structure in networks. We derive
+LBGA from a solid theoretical foundation in boosting and bandit learning, and
+demonstrated LBGA as a proof of concept on synthetic and real networks. LBGA
+also simplifies the task of designing a graph aggregation algorithm into
+utilizing a principled quality measure $q$ and global event $A$. Doing so
+allows us to connect the utility of the graph representation to the application
+of interest. 
+
+There are some natural directions to pursue in further studying LBGA. For
+community detection, we can improve LBGA in a number of ways. Our consistentNO
+metric is simple, and a more sophisticated metric comparing a local
+neighborhood to a given null model is likely to provide improvements.
+Additionally, we use the walktrap clustering algorithm as a black box in the
+``event'' step of LBGA, and walktrap makes some simplifying decisions to arrive
+at a final clustering. A direction for future work is to use a modified
+walktrap event that outputs raw similarity values before constructing a
+clustering, and incorporating this data into the quality measure. Finally,
+preliminary results of the authors and others show that LBGA can also be
+improved by incorporating a consensus technique using LBGA as a black box, and
+that LBGA can detect hierarchical community structure. Further study of these
+is needed for a better understanding of LBGA.
+
+Another primary direction is to study the utility of LBGA for other data mining
+techniques, such as link prediction. Since LBGA is modular, one can adapt LBGA
+to a new application domain simply by defining an event and quality function. A
+final direction is to prove convergence theorems for LBGA in general and for
+specific applications.
+
+
+{\footnotesize
+\bibliographystyle{abbrv}
+\bibliography{lbga}
+}
+
+\end{document}
+

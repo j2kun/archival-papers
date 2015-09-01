@@ -1,0 +1,275 @@
+        --========  Review Reports  ========--
+
+The review report from reviewer #1:
+
+*1: Is the paper relevant to ICDM?
+  [X] No
+  [_] Yes
+
+*2: How innovative is the paper?
+  [_] 6 (Very innovative)
+  [_] 3 (Innovative)
+  [_] -2 (Marginally)
+  [X] -4 (Not very much)
+  [_] -6 (Not at all)
+
+*3: How would you rate the technical quality of the paper?
+  [_] 6 (Very high)
+  [_] 3 (High)
+  [_] -2 (Marginal)
+  [X] -4 (Low)
+  [_] -6 (Very low)
+
+*4: How is the presentation?
+  [_] 6 (Excellent)
+  [_] 3 (Good)
+  [_] -2 (Marginal)
+  [_] -4 (Below average)
+  [X] -6 (Poor)
+
+*5: Is the paper of interest to ICDM users and practitioners?
+  [_] 3 (Yes)
+  [_] 2 (May be)
+  [X] 1 (No)
+  [_] 0 (Not applicable)
+
+*6: What is your confidence in your review of this paper?
+  [_] 2 (High)
+  [X] 1 (Medium)
+  [_] 0 (Low)
+
+*7: Overall recommendation
+  [_] 6: must accept (in top 25% of ICDM accepted papers)
+  [_] 3: should accept (in top 80% of ICDM accepted papers)
+  [_] -2: marginal (in bottom 20% of ICDM accepted papers)
+  [X] -4: should reject (below acceptance bar)
+  [_] -6: must reject (unacceptable: too weak, incomplete, or wrong)
+
+*8: Summary of the paper's main contribution and impact
+  This paper includes some studies and recommendations related to ways of fairness of machine learning algorithms.
+
+*9: Justification of your recommendation
+  The work looks premature and not ready for presentation. Its developments are hard to understand especially because key notions and goals are not clearly explained.
+
+*10: Three strong points of this paper (please number each point)
+  1.An interesting, relatively rare topic.
+2.Weak (i.i.d.) assumptions made about the data.
+3.The idea of relabelling may be interesting.
+
+*11: Three weak points of this paper (please number each point)
+  1.The meaning of key notions (fairness, trade-off) is neither strictly formalized nor intuitively clear.
+2.It is unclear what conclusions follow from the experiments, and what they do confirm.
+3.Connection between different points is hard to follow due to weak presentation.
+
+*12: Is this submission among the best 10% of submissions that you reviewed for ICDM14?
+  [X] No
+  [_] Yes
+
+*13: Would you be able to replicate the results based on the information given in the paper?
+  [X] No
+  [_] Yes
+
+*14: Are the data and implementations publicly available for possible replication?
+  [X] No
+  [_] Yes
+
+*15: If the paper is accepted, which format would you suggest?
+  [_] Regular Paper
+  [X] Short Paper
+
+*16: Does this paper contain unjustified complexity?
+  [_] No
+  [X] Yes
+
+*17: Detailed comments for the authors
+  This work is unclear even on the conceptual level. It is about 'balancing fairness and accuracy', but is the fairness a good thing to play balancing it? Usually if something is unfair then its accuracy is not trustable and is just ignored.
+What it the general meaning of 'fairness'? It is hard to conclude it from few examples presented in the section I.A. Next, you mention working in i.i.d. assumption, but what is a concrete statement which is true in this assumption and invalid if it is broken?
+What is the role of relabelling in measuring fairness? Do you check robustness on relabelling? The accuracy? Anything else? In what sense one relabelling may be more successful that another?
+
+"To the best of our knowledge, no other published method has achieved statistical parity with less than 20% error". But in Section I.A. statistical parity is quantitative as well! So which level of parity is achieved? "The results also show usefullness of RBIF as a measure of fairness.... Even when random relabelling slightly outperformes SDB in terms of label error, SDB often beats RR..." It seems to be a kind of logical circle: SDB is better because RBIF measure is high, while RBIF is a right way of measuring because it gives a strict preference to SDB.
+
+========================================================
+The review report from reviewer #2:
+
+*1: Is the paper relevant to ICDM?
+  [_] No
+  [X] Yes
+
+*2: How innovative is the paper?
+  [_] 6 (Very innovative)
+  [X] 3 (Innovative)
+  [_] -2 (Marginally)
+  [_] -4 (Not very much)
+  [_] -6 (Not at all)
+
+*3: How would you rate the technical quality of the paper?
+  [_] 6 (Very high)
+  [_] 3 (High)
+  [X] -2 (Marginal)
+  [_] -4 (Low)
+  [_] -6 (Very low)
+
+*4: How is the presentation?
+  [_] 6 (Excellent)
+  [X] 3 (Good)
+  [_] -2 (Marginal)
+  [_] -4 (Below average)
+  [_] -6 (Poor)
+
+*5: Is the paper of interest to ICDM users and practitioners?
+  [X] 3 (Yes)
+  [_] 2 (May be)
+  [_] 1 (No)
+  [_] 0 (Not applicable)
+
+*6: What is your confidence in your review of this paper?
+  [X] 2 (High)
+  [_] 1 (Medium)
+  [_] 0 (Low)
+
+*7: Overall recommendation
+  [_] 6: must accept (in top 25% of ICDM accepted papers)
+  [_] 3: should accept (in top 80% of ICDM accepted papers)
+  [X] -2: marginal (in bottom 20% of ICDM accepted papers)
+  [_] -4: should reject (below acceptance bar)
+  [_] -6: must reject (unacceptable: too weak, incomplete, or wrong)
+
+*8: Summary of the paper's main contribution and impact
+  The main contribution of this paper is a new approach to measuring the fairness of a machine learning tasks and a technique to modify a classification procedure so as to improve fairness (as measured by the above measure).
+
+*9: Justification of your recommendation
+  see details
+
+*10: Three strong points of this paper (please number each point)
+  1. a good attempt to think rigorously about fairness.
+
+*11: Three weak points of this paper (please number each point)
+  1. Somwhat confused writing.
+
+*12: Is this submission among the best 10% of submissions that you reviewed for ICDM14?
+  [X] No
+  [_] Yes
+
+*13: Would you be able to replicate the results based on the information given in the paper?
+  [X] No
+  [_] Yes
+
+*14: Are the data and implementations publicly available for possible replication?
+  [X] No
+  [_] Yes
+
+*15: If the paper is accepted, which format would you suggest?
+  [X] Regular Paper
+  [_] Short Paper
+
+*16: Does this paper contain unjustified complexity?
+  [X] No
+  [_] Yes
+
+*17: Detailed comments for the authors
+  This is an interesting alternate take on the idea of individual fairness. It views bias as a kind of noise, and sees the extent to which an algorithm can "route around" the noise and recover the original input.
+
+In a sense though, this is then really about stability. By assuming a random model of bias (and therefore viewing it as noise), the authors are able to convert a fairness question (can we recover the "fair" labels) into a stability question (can the algorithm recover from noise).
+
+This is a useful and alternate take on the notion of individual fairness. However, modeling bias as noise makes me a little uncomfortable, because most bias is in fact systematic (and that's the problem with it!) and is focused on groups, rather than individuals.
+
+I was a little confused about what exactly the paper is proposing: it seems like the main contribution is the shifted decision boundary approach to ensuring fairness, which is a way of shifting the classification boundary for a classifier so that bias is minimized. But some other methods are described as well (maybe they are baselines and should be stated as such?)
+
+The experimental results are decent. I have two things I'm puzzled about. The LFR paper does have actual data in its supplementary results: I'm not sure why the authors have to eyeball it from graphs. Secondly, why do you use LFR for CEnsus and CND for German and not both for both (they both have results on both data sets IIRC. ).
+
+A side note: the notion of disparate impact is a legal one: I don't think the paper cited introduced it, although they may have introduced it to the CS community.
+
+
+
+
+========================================================
+The review report from reviewer #3:
+
+*1: Is the paper relevant to ICDM?
+  [_] No
+  [X] Yes
+
+*2: How innovative is the paper?
+  [_] 6 (Very innovative)
+  [_] 3 (Innovative)
+  [_] -2 (Marginally)
+  [X] -4 (Not very much)
+  [_] -6 (Not at all)
+
+*3: How would you rate the technical quality of the paper?
+  [_] 6 (Very high)
+  [_] 3 (High)
+  [_] -2 (Marginal)
+  [X] -4 (Low)
+  [_] -6 (Very low)
+
+*4: How is the presentation?
+  [_] 6 (Excellent)
+  [_] 3 (Good)
+  [_] -2 (Marginal)
+  [X] -4 (Below average)
+  [_] -6 (Poor)
+
+*5: Is the paper of interest to ICDM users and practitioners?
+  [X] 3 (Yes)
+  [_] 2 (May be)
+  [_] 1 (No)
+  [_] 0 (Not applicable)
+
+*6: What is your confidence in your review of this paper?
+  [X] 2 (High)
+  [_] 1 (Medium)
+  [_] 0 (Low)
+
+*7: Overall recommendation
+  [_] 6: must accept (in top 25% of ICDM accepted papers)
+  [_] 3: should accept (in top 80% of ICDM accepted papers)
+  [_] -2: marginal (in bottom 20% of ICDM accepted papers)
+  [X] -4: should reject (below acceptance bar)
+  [_] -6: must reject (unacceptable: too weak, incomplete, or wrong)
+
+*8: Summary of the paper's main contribution and impact
+  The paper studied three classification algorithms in the context of fairness or anti-discrimination: AdaBoost, SVM, and Logistic regression. The goal is to achieve the high accuracy of classifiers while reducing the parity between the protected group and the non-protected group. The proposed idea is to shift the confidence threshold for the protected group while the confidence thresholds for the above three classifiers are straightforwardly defined. The authors also defined a new notion of fairness, random bias individual fairness (RBIF), by introducing a modeling assumption on the process generating bias in the training data.
+
+*9: Justification of your recommendation
+  The introduced notion of fairness, RBIF, is new in the anti-discrimination learning context. However, the major contribution claimed in the paper, shifting the confidence threshold, has been well studied in the literature. The presentation of the paper also needs significant improvement.
+
+*10: Three strong points of this paper (please number each point)
+  S1. An important research problem
+S2. A new notion of fairness
+
+*11: Three weak points of this paper (please number each point)
+  W1. The paper lacks of novelty or significant contribution.
+W2. The presentation is poor.
+
+*12: Is this submission among the best 10% of submissions that you reviewed for ICDM14?
+  [X] No
+  [_] Yes
+
+*13: Would you be able to replicate the results based on the information given in the paper?
+  [_] No
+  [X] Yes
+
+*14: Are the data and implementations publicly available for possible replication?
+  [X] No
+  [_] Yes
+
+*15: If the paper is accepted, which format would you suggest?
+  [_] Regular Paper
+  [X] Short Paper
+
+*16: Does this paper contain unjustified complexity?
+  [X] No
+  [_] Yes
+
+*17: Detailed comments for the authors
+  My major concern is on the novelty of paper. The proposed idea of shifting the confidence threshold for the protected group has been well studied in the literature. For example, the ICDM 01 paper "Handling conditional discrimination" introduced the local massaging and preferential sampling for discrimination prevention. The idea was to change the label for those instances which are close to the boundary. As a result, the accuracy would be maintained while the disparity/bias is reduced.
+
+The presentation of the paper is not appropriate for publication in a top conference. Some comments are listed below.
+1. Introduction section should be titled.
+2. In Background section, the notations should be given when they are first used.
+3. The difference between the random relabeling and the random massaging should be clearly described.
+4. How to determine an optimal threshold for each method needs to be studied.
+
+
+========================================================

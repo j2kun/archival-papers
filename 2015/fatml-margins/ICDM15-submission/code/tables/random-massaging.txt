@@ -1,0 +1,76 @@
+Random Massaging
+adult SVM
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+	avg, min, max, variance
+error: (0.17490326147042565, 0.17068976107118727, 0.1791044776119403, 7.076679448950362e-06)
+bias: (0.07139604423558477, 0.054223344656191746, 0.08419554199394416, 8.245088489931182e-05)
+ubif: (0.27063455305250039, 0.23544631306597671, 0.28516624040920718, 0.00022052351775000292)
+adult AdaBoost
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+	avg, min, max, variance
+error: (0.18880289908482278, 0.1766476260671949, 0.2019531969780726, 5.347871944205745e-05)
+bias: (-0.028336849432481215, -0.08473141588726471, 0.037309837637752086, 0.0014725605932435271)
+ubif: (0.42102960624984026, 0.38089171974522296, 0.45674300254452926, 0.0006814082467382467)
+adult LR
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+Initial bias: 0.19627598779361352
+Number of labels flipped: 2114
+	avg, min, max, variance
+error: (0.17970026411154108, 0.17652478348995762, 0.18217554204287206, 5.435064528919791e-06)
+bias: (-0.02828943305194349, -0.04533913031071107, -0.008294121184140663, 0.0001731928878881818)
+ubif: (0.44045430625445653, 0.4247448979591837, 0.45984455958549225, 0.00011245992162769325)

@@ -1,0 +1,66 @@
+\begin{thebibliography}{9}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Dwork et~al.(2012)Dwork, Hardt, Pitassi, Reingold, and
+  Zemel]{DworkHPR12}
+Dwork, Cynthia, Hardt, Moritz, Pitassi, Toniann, Reingold, Omer, and Zemel,
+  Richard.
+\newblock Fairness through awareness.
+\newblock In \emph{Proceedings of the 3rd Innovations in Theoretical Computer
+  Science Conference}, pp.\  214--226. ACM, 2012.
+
+\bibitem[Freund \& Schapire(1997)Freund and Schapire]{FreundS97}
+Freund, Yoav and Schapire, Robert~E.
+\newblock A decision-theoretic generalization of on-line learning and an
+  application to boosting.
+\newblock \emph{J. Comput. Syst. Sci.}, 55\penalty0 (1):\penalty0 119--139,
+  1997.
+
+\bibitem[Kamiran \& Calders(2009)Kamiran and Calders]{KamiranC09}
+Kamiran, Faisal and Calders, Toon.
+\newblock Classifying without discriminating.
+\newblock In \emph{Computer, Control and Communication, 2009. IC4 2009. 2nd
+  International Conference on}, pp.\  1--6. IEEE, 2009.
+
+\bibitem[Kamishima et~al.(2011)Kamishima, Akaho, and Sakuma]{KamashimaAS11}
+Kamishima, Toshihiro, Akaho, Shotaro, and Sakuma, Jun.
+\newblock Fairness-aware learning through regularization approach.
+\newblock In \emph{Data Mining Workshops (ICDMW), 2011 IEEE 11th International
+  Conference on}, pp.\  643--650. IEEE, 2011.
+
+\bibitem[Lichman(2013)]{UCIAdult}
+Lichman, M.
+\newblock {UCI} machine learning repository, census income data set, 2013.
+\newblock URL \url{http://archive.ics.uci.edu/ml}.
+
+\bibitem[Romei \& Ruggieri(2014)Romei and Ruggieri]{RomeiR14}
+Romei, Andrea and Ruggieri, Salvatore.
+\newblock A multidisciplinary survey on discrimination analysis.
+\newblock \emph{The Knowledge Engineering Review}, 29:\penalty0 582--638, 11
+  2014.
+\newblock ISSN 1469-8005.
+\newblock \doi{10.1017/S0269888913000039}.
+
+\bibitem[Schapire \& Freund(2012)Schapire and Freund]{SchapireF12}
+Schapire, Robert~E and Freund, Yoav.
+\newblock \emph{Boosting: Foundations and algorithms}.
+\newblock MIT press, 2012.
+
+\bibitem[Schapire et~al.(1998)Schapire, Freund, Bartlett, and
+  Lee]{SchapireFBL98}
+Schapire, Robert~E, Freund, Yoav, Bartlett, Peter, and Lee, Wee~Sun.
+\newblock Boosting the margin: A new explanation for the effectiveness of
+  voting methods.
+\newblock \emph{Annals of statistics}, pp.\  1651--1686, 1998.
+
+\bibitem[Zemel et~al.(2013)Zemel, Wu, Swersky, Pitassi, and Dwork]{ZemelWSPD13}
+Zemel, Rich, Wu, Yu, Swersky, Kevin, Pitassi, Toni, and Dwork, Cynthia.
+\newblock Learning fair representations.
+\newblock In \emph{Proceedings of the 30th International Conference on Machine
+  Learning (ICML-13)}, pp.\  325--333, 2013.
+
+\end{thebibliography}

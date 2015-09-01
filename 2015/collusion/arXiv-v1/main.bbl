@@ -1,0 +1,101 @@
+\begin{thebibliography}{10}
+
+\bibitem{AlbertJB00}
+Raka Albert, Hawoong Jeong, and Albert-Laszlo Barabasi.
+\newblock The internet's achilles' heel: Error and attack tolerance of complex
+  networks.
+\newblock {\em Nature}, 406:200--0, 2000.
+
+\bibitem{BallaniFZ07}
+Hitesh Ballani, Paul Francis, and Xinyang Zhang.
+\newblock A study of prefix hijacking and interception in the internet.
+\newblock {\em SIGCOMM Comput. Commun. Rev.}, 37(4):265--276, August 2007.
+
+\bibitem{BarabasiA99}
+Albert-Laszlo Barabasi and Reka Albert.
+\newblock Emergence of scaling in random networks.
+\newblock {\em Science}, 286(5439):509--512, 1999.
+
+\bibitem{ButlerFMR10}
+K.~Butler, T.R. Farley, P.~McDaniel, and J.~Rexford.
+\newblock A survey of bgp security issues and solutions.
+\newblock {\em Proceedings of the IEEE}, 98(1):100--122, Jan 2010.
+
+\bibitem{JimCowie}
+Jim Cowie.
+\newblock The {New} {Threat}: {Targeted} {Internet} {Traffic} {Misdirection}.
+\newblock {\em Dyn Research}, 2013.
+
+\bibitem{GoldbergHJRW08}
+Sharon Goldberg, Shai Halevi, Aaron~D. Jaggard, Vijay Ramachandran, and
+  Rebecca~N. Wright.
+\newblock Rationality and traffic attraction: Incentives for honest path
+  announcements in bgp.
+\newblock In {\em Proceedings of the ACM SIGCOMM 2008 Conference on Data
+  Communication}, SIGCOMM '08, pages 267--278, New York, NY, USA, 2008. ACM.
+
+\bibitem{GoldbergSHR10}
+Sharon Goldberg, Michael Schapira, Peter Hummon, and Jennifer Rexford.
+\newblock How secure are secure interdomain routing protocols.
+\newblock In {\em SIGCOMM}, pages 87--98, 2010.
+
+\bibitem{Goodin}
+Dan Goodin.
+\newblock Hacking team orchestrated brazen bgp hack to hijack ips it didn't
+  own.
+\newblock {\em arstechnica.com}, 2015.
+
+\bibitem{GormanV13}
+Siobhan Gorman and Jennifer Valentino-DeVries.
+\newblock New details show broader nsa surveillance reach.
+\newblock {\em The Wall Street Journal}, 2013.
+
+\bibitem{LevinSZ08}
+Hagay Levin, Michael Schapira, and Aviv Zohar.
+\newblock Interdomain routing and games.
+\newblock In {\em Proceedings of the Fortieth Annual ACM Symposium on Theory of
+  Computing}, STOC '08, pages 57--66, New York, NY, USA, 2008. ACM.
+
+\bibitem{Madory}
+Doug Madory.
+\newblock Uk traffic diverted through ukraine.
+\newblock {\em research.dyn.com}, 2015.
+
+\bibitem{NemhauserWF78}
+George Nemhauser, Laurence Wolsey, and Marhsall Fisher.
+\newblock An analysis of approximations for maximizing submodular set functions
+  - i.
+\newblock {\em Mathematical Programming}, 14(1):265--294, 1978.
+
+\bibitem{Newman06}
+M.E.J. Newman.
+\newblock www-personal.umich.edu/$\sim$mejn/netdata/, 2006.
+
+\bibitem{NordstromD04}
+Ola Nordstr\"{o}m and Constantinos Dovrolis.
+\newblock Beware of bgp attacks.
+\newblock {\em SIGCOMM Comput. Commun. Rev.}, 34(2):1--8, April 2004.
+
+\bibitem{Note1}
+Recall a set function $f:2^X \to R$ is \protect \emph {submodular} if for every
+  $S, T \subset X$ with $S \subset T$ and for every $x \in X \setminus T$, the
+  marginal gain $f(S \cup \protect \{ x \protect \}) - f(S) \geq f(T \cup
+  \protect \{ x \protect \}) - f(T)$.
+
+\bibitem{Stone08}
+Brad Stone.
+\newblock Pakistan cuts access to youtube worldwide.
+\newblock {\em The New York Times}, 2008.
+
+\bibitem{WattsS98}
+D.~J. Watts and S.~H. Strogatz.
+\newblock Collective dynamics of `small-world' networks.
+\newblock {\em Nature}, 393(6684):409--10, 1998.
+
+\bibitem{Wolsey82}
+Laurence Wolsey.
+\newblock An analysis of the greedy algorithm for the submodular set covering
+  problem.
+\newblock {\em Combinatorica}, 2(4):385--393, 1982.
+
+\end{thebibliography}
