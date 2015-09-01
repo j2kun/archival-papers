@@ -1,0 +1,43 @@
+Review 1: 
+Comments to author(s)
+-- Relationship to boosting is not clear. 
+-- How were the hyperparameters values selected? 
+
+Summary of review
+This paper presents LBGA, an algorithm for identifying communities by aggregating multiple graphs over the same set of nodes. This can also be viewed as community detection over multi-view data where a graph is constructed for each view. This is an important problem. LBGA uses the Multiplicative Weight Update Algorithm to fuse the graphs.
+
+While the approach in the paper seem reasonable, the experimental results are inconclusive. Comparisons with other baselines are only limited to synthetic datasets, and comparisons on real-world datasets are omitted with the reason that no ground truth data is available. However, this need not be the case. For example, in the GraphFuse paper, gold standard subsets of the DBLP dataset is used for comparison. I am not sure why such comparison (among others) can't be carried to evaluate the proposed method as well. I think the paper is incomplete and not ready for publication without such comparison.
+
+Review 2:
+Comments to author(s)
+This paper presents a novel graph construction approach for community detection, by aggregating the undirected graphs from multiple sources into a single graph. In particular, the proposed method emphasizes the local similarities in graphs, and utilizes an iterative reward system to aggregate graphs. Experimental results on several datasets are reported and discussed.
+
+Pros:
+1. Introducing the ideas of boosting and bandit learning to graph construction is very interesting. The authors also design specific quality measurements for community detection.
+
+2. The proposed approach is evaluated on both synthetic and real-world datasets. Results show some merits of the new approach.
+
+3. The paper is clearly written and well organized. Section 2 provides an excellent review of related work.
+
+Cons:
+1. In the definition of neighborhood overlap (NO), using log(|V|) in the equation is not well motivated.
+
+2. Qualitative analysis of algorithm is provided in Section 3.3. The authors mentioned that they didn’t show theoretical results for brevity. Actually, there’s some space in Page 6 if moving all the references to the last page. It would be very helpful if the authors can provide theoretical analysis on convergence.
+
+3. In the experiments, three parameters (e.g., \delta) are fixed for all the datasets. The authors may need to show the sensitivity of these parameters in Section 4.6.
+
+4. In Table 2, the proposed approach LBGA is only compared with related works GraphFuse and SNF on synthetic datasets. It’s necessary to show comparisons on real datasets as well. For example, the authors could report the Modularity of GraphFuse and SNF on all the datasets. Otherwise, it’s difficult to observe the superiority of LBGA in real applications.
+
+5. Typo. Page 4, Paragraph 1, [9]) -> [9]. 
+
+Summary of review
+This paper presents a novel graph aggregation approach for community detection, by introducing the ideas of boosting and bandit learning. However, this paper lacks theoretical analysis. Also, more experimental evaluations should be provided. 
+
+Review 3:
+Comments to author(s)
+The authors propose a new framework to combine multiple graphs. The clustering is conducted on the generated graph and the weight is adjusted based on the local clustering quality. The problem is interesting and applicable to many real scenarios. While the experiments demonstrate some contribution, I think there are some spaces to improve:
+1. The authors define the clustering quality measurement as the multiplication of EC and NO. The definition of NO needs more intuitive explanation. As the weight adjustment relies on the local clustering measurement, it would be more convincing to mention in what kind of test the proposed consistentNO outperforms the others by 10%.
+2. According to algorithm 1, the proposed method involves for loops on the edges. It should be stated whether the different sequences of edges in U make a difference on the final generated graph. More explanations are needed for the update rules and quality measures. Also, the novelty in the method seems to be limited.
+
+Summary of review
+The authors put forward a boosted method to combine multiple graphs and conduct clustering. The heterogeneous graph mining is a very interesting problem which is far from well solved. The experiments on the synthetic and real datasets show some convincing results. Besides its contributions, the users need to give more explanations on some algorithm details (shown in the Comments part above).

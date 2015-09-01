@@ -1,0 +1,39 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Angluin et~al.(2008)Angluin, Aspnes, Chen, and Reyzin]{jAngluinACR08}
+Dana Angluin, James Aspnes, Jiang Chen, and Lev Reyzin.
+\newblock Learning large-alphabet and analog circuits with value injection
+  queries.
+\newblock \emph{Mach. Learn.}, 72\penalty0 (1-2):\penalty0 113--138, 2008.
+
+\bibitem[Angluin et~al.(2009{\natexlab{a}})Angluin, Aspnes, Chen, Eisenstat,
+  and Reyzin]{jAngluinACER09}
+Dana Angluin, James Aspnes, Jiang Chen, David Eisenstat, and Lev Reyzin.
+\newblock Learning acyclic probabilistic circuits using test paths.
+\newblock \emph{J. Mach. Learn. Res.}, 10\penalty0 (Aug):\penalty0 1881--1911,
+  August 2009{\natexlab{a}}.
+
+\bibitem[Angluin et~al.(2009{\natexlab{b}})Angluin, Aspnes, Chen, and
+  Wu]{AngluinACW2009}
+Dana Angluin, James Aspnes, Jiang Chen, and Yinghua Wu.
+\newblock Learning a circuit by injecting values.
+\newblock \emph{J. Comput. System Sci.}, 75\penalty0 (1):\penalty0 60--77,
+  January 2009{\natexlab{b}}.
+
+\bibitem[Angluin et~al.(2010)Angluin, Aspnes, and Reyzin]{AngluinAR10}
+Dana Angluin, James Aspnes, and Lev Reyzin.
+\newblock Optimally learning social networks with activations and suppressions.
+\newblock \emph{Theor. Comput. Sci.}, 411\penalty0 (29-30):\penalty0
+  2729--2740, 2010.
+
+\bibitem[Kempe et~al.(2003)Kempe, Kleinberg, and Tardos]{KempeKT03}
+David Kempe, Jon Kleinberg, and \'{E}va Tardos.
+\newblock Maximizing the spread of influence through a social network.
+\newblock In \emph{Proceedings of the Ninth ACM SIGKDD}, pages 137--146, 2003.
+
+\end{thebibliography}

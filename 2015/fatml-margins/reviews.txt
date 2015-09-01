@@ -1,0 +1,50 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 6
+TITLE: Fair boosting: a case study
+AUTHORS: Benjamin Fish, Jeremy Kun and Ádám D. Lelkes
+
+OVERALL EVALUATION: 1 (weak accept)
+REVIEWER'S CONFIDENCE: 3 (medium)
+
+----------- REVIEW -----------
+The authors give a new definition of fairness and use three methods of relabeling within the AdaBoost margin to avoid discriminatory classifications under this definition.  They give experimental results that perform favorably in comparison to previous work.
+
+My main concern about this paper is in the lack of justification for their fairness definition.  It "makes the assumption that the process generating the bias is uniformly random."  While I see that this is a reasonable starting point when adding random noise, I believe that in the domains they're targeting it's known that this is NOT in fact true.  It would be more interesting to see a definition given generally over any random distribution.  The authors do seem to be getting at something interesting in their definition, but I'd like to see it refined and explained more.
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 6
+TITLE: Fair boosting: a case study
+AUTHORS: Benjamin Fish, Jeremy Kun and Ádám D. Lelkes
+
+OVERALL EVALUATION: 0 (borderline paper)
+REVIEWER'S CONFIDENCE: 3 (medium)
+
+----------- REVIEW -----------
+This paper presents some results of adapting the AdaBoost algorithm for taking into account some definitions of fairness.
+
+I have some concerns with the submission, even for preliminary work. The submission would have been stronger if it had used more than a single dataset for the evaluation, but that's not where my main reservations are. Rather, the exposition appears to be quite flawed. For example, description of the technique that successfully removes bias while maintaining the best precision is limited to two sentences in the manuscript. This is unfortunate, because the results obtained here appear to be good.
+
+Take, for example, the description of "margins" as presented in section 1.2. The manuscript presents a modified notion of margin (when compared to the original AdaBoost presentation), but then uses the original reference as theoretical evidence for the validity of flipping examples with small margins (in the sentence around lines 185-188 of the manuscript). If the definition of margin has changed, then the paper can't borrow arguments that use the old definition.
+
+I also confess to not understand the statements around lines 183-190. If the examples with small margins are the ones that *most* contribute to the error in AdaBoost, then how flipping those examples should *significantly* change the error rate. The manuscript claims the opposite but provides no theoretical justification. I remain confused.
+
+There are some problems with the presentation as well. Take Figure 2: is bias really going below zero? That seems to be impossible according to the definition of the authors in Lines 111-113. Is this one-sided bias instead? The listing in Algorithm 1 also appears to be play no role in the manuscript. Instead of this listing, the manuscript should show pseudocode for mean-shift relabeling (and possibly the other methods as well).
+
+My final remark is about definition 1. As stated, the definition of UBIF seems to yield a distribution of values, since every draw of the random uniform binary feature yields a different dataset X'. Is UBIF the expectation of the fraction of unchanged labels (instead of the value of a single draw as claimed by the text). If a single draw being shown, then it would be helpful to get an idea for the *variance* of UBIF as well. In addition, it's not clear to me what UBIF is actually being *used* for in this paper; the difference in UBIF for the different proposed values appear to be small, and the discussion of UBIF in the paper (lines 404--415) does not clarify the situation.
+
+In short, the experimental result claimed in the work is encouraging, but I'm reluctant to give the manuscript a higher evaluation, because the manuscript fails to explain how this result was ultimately achieved.
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 6
+TITLE: Fair boosting: a case study
+AUTHORS: Benjamin Fish, Jeremy Kun and Ádám D. Lelkes
+
+OVERALL EVALUATION: 0 (borderline paper)
+REVIEWER'S CONFIDENCE: 4 (high)
+
+----------- REVIEW -----------
+Studying the 'fairness' of boosting is a good idea. The authors would do well though to look at (for example) the very comprehensive survey of the literature on data discrimination by Romei and Ruggieri: their assertions about the different kinds of fairness measures are incomplete.
+
+It's also not entirely clear to me how error is being measured in the outcome. If it's not class-stratified, then it's not clear how much of the change in error comes from updates to the protected class (although this could go either way).

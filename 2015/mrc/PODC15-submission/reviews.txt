@@ -1,0 +1,36 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 71
+TITLE: On the Computational Complexity of MapReduce
+AUTHORS: Benjamin Fish, Jeremy Kun, Adam Lelkes, Lev Reyzin and Gyorgy Turan
+
+
+----------- REVIEW -----------
+The paper studies computational complexity of MapReduce.
+Seems out of scope for PODC.
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 71
+TITLE: On the Computational Complexity of MapReduce
+AUTHORS: Benjamin Fish, Jeremy Kun, Adam Lelkes, Lev Reyzin and Gyorgy Turan
+
+
+----------- REVIEW -----------
+The authors are proposing a result that establishes a connection between MapReduce and space-bounded computation on classical Turing machines. On the other hand, Karloff et al provided definitions for RAMs. Also, the authors are proving conditional hierarchy theorems for MapReduce rounds and time.
+The problem statement and the need to show such a relation is not clear. It will good to write some examples in the terms of classical complexity class. They are showing that regular language belongs to MRC0. Any other application can belong to MRC0. As MapReduce is used to process big-data, can the authors relate their model to such kind of computation. Is there any example that relate big-data processing using MapReduce and the suggested model, like in Karloff et al., they are showing bounds on memory, machines, and space also showing of MST and s-t connectivity. These examples looks very practical in the context of MapReduce. If the authors will give any example with algorithm like Karloff et al., it will be good to explain the paper.
+ Section 2.1, which is describing MapReduce and related work should be minimized. It is taking a lot of space of the paper. Instead of that the problem statement of the paper must be rewritten. From that part (Section 2.1), it is not very clear. Also, the authors should relate the MRC model to more classical complexity classes by studying simultaneous time- space bounds. Karloff et al. model works well for a verity of problems and can easily be modified to any class of problems.
+It is hard to recall the terms MRC and BSP in the abstract. The term MRC is not even defined in the whole paper.
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 71
+TITLE: On the Computational Complexity of MapReduce
+AUTHORS: Benjamin Fish, Jeremy Kun, Adam Lelkes, Lev Reyzin and Gyorgy Turan
+
+
+----------- REVIEW -----------
+In the paper "On the Computational Complexity of MapReduce" the authors study the MRC model, which aims to formally capture distributed MapReduce computations. They show that the class of regular languages, and all of sublogarithmic space, lies in constant-round MRC.
+
+They prove that, conditioned on a weak version of the Exponential Time Hypothesis, there are strict hierarchies within MRC, so that increasing the number of rounds or the amount of time per processor, increases the power of MRC.
+
+MapReduce is an important tool. I think that this paper contributed to our understanding of MapReduce, therefore, I recommend to except.
