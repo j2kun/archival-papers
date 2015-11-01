@@ -1,0 +1,108 @@
+\begin{thebibliography}{10}
+
+\bibitem{AndoniNOY14}
+Alexandr Andoni, Aleksandar Nikolov, Krzysztof Onak, and Grigory Yaroslavtsev.
+\newblock Parallel algorithms for geometric graph problems.
+\newblock In {\em STOC}, pages 574--583, 2014.
+
+\bibitem{BeameKS13}
+Paul Beame, Paraschos Koutris, and Dan Suciu.
+\newblock Communication steps for parallel query processing.
+\newblock In {\em PODS}, pages 273--284, 2013.
+
+\bibitem{ChuKLYBNO06}
+Cheng-Tao Chu, Sang~Kyun Kim, Yi-An Lin, YuanYuan Yu, Gary~R. Bradski,
+  Andrew~Y. Ng, and Kunle Olukotun.
+\newblock Map-reduce for machine learning on multicore.
+\newblock In {\em NIPS}, pages 281--288, 2006.
+
+\bibitem{DeanG08}
+Jeffrey Dean and Sanjay Ghemawat.
+\newblock Mapreduce: simplified data processing on large clusters.
+\newblock {\em Commun. ACM}, 51(1):107--113, 2008.
+
+\bibitem{FEGK13}
+Ahmed~K. Farahat, Ahmed Elgohary, Ali Ghodsi, and Mohamed~S. Kamel.
+\newblock Distributed column subset selection on mapreduce.
+\newblock In {\em ICDM}, pages 171--180, 2013.
+
+\bibitem{FeldmanMSSS10}
+Jon Feldman, S.~Muthukrishnan, Anastasios Sidiropoulos, Clifford Stein, and
+  Zoya Svitkina.
+\newblock On distributing symmetric streaming computations.
+\newblock {\em ACM Transactions on Algorithms}, 6(4), 2010.
+
+\bibitem{Fortnow00}
+Lance Fortnow.
+\newblock Time-space tradeoffs for satisfiability.
+\newblock {\em J. Comput. Syst. Sci.}, 60(2):337--353, 2000.
+
+\bibitem{GoodrichSZ11}
+Michael~T. Goodrich, Nodari Sitchinava, and Qin Zhang.
+\newblock Sorting, searching, and simulation in the mapreduce framework.
+\newblock In {\em ISAAC}, pages 374--383, 2011.
+
+\bibitem{ImpagliazzoP99}
+Russell Impagliazzo and Ramamohan Paturi.
+\newblock The complexity of k-sat.
+\newblock {\em 2012 IEEE 27th Conference on Computational Complexity}, 0:237,
+  1999.
+
+\bibitem{ImpagliazzoPZ01}
+Russell Impagliazzo, Ramamohan Paturi, and Francis Zane.
+\newblock Which problems have strongly exponential complexity?
+\newblock {\em J. Comput. Syst. Sci.}, 63(4):512--530, 2001.
+
+\bibitem{KR13}
+Seny Kamara and Mariana Raykova.
+\newblock Parallel homomorphic encryption.
+\newblock In {\em Financial Cryptography Workshops}, pages 213--225, 2013.
+
+\bibitem{Karloff10}
+Howard Karloff, Siddharth Suri, and Sergei Vassilvitskii.
+\newblock A model of computation for mapreduce.
+\newblock In {\em SODA '10}, pages 938--948, Philadelphia, PA, USA, 2010.
+  Society for Industrial and Applied Mathematics.
+
+\bibitem{KMVV13}
+Ravi Kumar, Benjamin Moseley, Sergei Vassilvitskii, and Andrea Vattani.
+\newblock Fast greedy algorithms in mapreduce and streaming.
+\newblock In {\em SPAA '13}, pages 1--10, New York, NY, USA, 2013. ACM.
+
+\bibitem{LokshtanovMS11}
+Daniel Lokshtanov, D{\'{a}}niel Marx, and Saket Saurabh.
+\newblock Lower bounds based on the exponential time hypothesis.
+\newblock {\em Bulletin of the {EATCS}}, 105:41--72, 2011.
+
+\bibitem{Sarma13}
+Anish~Das Sarma, Foto~N. Afrati, Semih Salihoglu, and Jeffrey~D. Ullman.
+\newblock Upper and lower bounds on the cost of a map-reduce computation.
+\newblock In {\em PVLDB'13}, pages 277--288. VLDB Endowment, 2013.
+
+\bibitem{Shepherdson59}
+J.~C. Shepherdson.
+\newblock The reduction of two-way automata to one-way automata.
+\newblock {\em IBM J. Res. Dev.}, 3(2):198--200, April 1959.
+
+\bibitem{ShvachkoKRC10}
+Konstantin Shvachko, Hairong Kuang, Sanjay Radia, and Robert Chansler.
+\newblock The hadoop distributed file system.
+\newblock In Mohammed~G. Khatib, Xubin He, and Michael Factor, editors, {\em
+  MSST}, pages 1--10. IEEE Computer Society, 2010.
+
+\bibitem{szepietowski1994turing}
+A.~Szepietowski.
+\newblock {\em Turing Machines with Sublogarithmic Space}.
+\newblock Ernst Schering Research Foundation Workshops. Springer, 1994.
+
+\bibitem{WagnerW86}
+K.~Wagner and G.~Wechsung.
+\newblock {\em Computational Complexity}.
+\newblock Mathematics and its Applications. Springer, 1986.
+
+\bibitem{Williams08}
+Ryan Williams.
+\newblock Time-space tradeoffs for counting {NP} solutions modulo integers.
+\newblock {\em Computational Complexity}, 17(2):179--219, 2008.
+
+\end{thebibliography}
