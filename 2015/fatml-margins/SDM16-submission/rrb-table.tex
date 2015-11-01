@@ -1,0 +1,28 @@
+\begin{table}[h]
+\centering
+\begin{tabular}{| c | ccc |}
+\hline
+               & Method    & Census & German & Singles \\ 
+\hline 
+               & SVM       & 0.2702 & 0.6756 & 0.2424  \\ 
+               & SVM (RR)  & 0.2821 & 0.7827 & 0.2588  \\ 
+               & SVM (RM)  & 0.2545 & 0.6232 & 0.2552  \\ 
+               & SVM (SDB) & \textbf{0.3172} & \textbf{0.8619} & \textbf{0.3064}  \\ 
+\hline
+               & LR        & 0.4647 & 0.3070 & 0.1971  \\ 
+               & LR (RR)   & 0.4696 & 0.8564 & 0.3213  \\ 
+               & LR (RM)   & 0.4282 & 0.6741 & 0.2117  \\ 
+               & LR (SDB)  & \textbf{0.5402} & \textbf{0.8687} & \textbf{0.8596}  \\ 
+\hline
+               & AB        & 0.4372 & 0.6774 & 0.2864  \\ 
+               & AB (RR)   & 0.4661 & \textbf{0.8629} & 0.3996  \\ 
+               & AB (RM)   & 0.4410 & 0.6965 & 0.3325  \\ 
+               & AB (SDB)  & \textbf{0.5461} & 0.8596 & \textbf{0.4027}  \\ 
+               & AB (FWL)  & 0.5174 & 0.6879 & 0.2971  \\ 
+\hline
+\end{tabular}
+\caption{The RRB numbers for each of our methods and baselines. In each column
+and section the largest values are shown in bold, and they are almost always
+SDB.}
+\label{table:rrb}
+\end{table}

@@ -1,0 +1,96 @@
+\begin{thebibliography}{10}
+
+\bibitem{CaldersV10}
+Toon Calders and Sicco Verwer.
+\newblock Three naive bayes approaches for discrimination-free classification.
+\newblock {\em Data Mining and Knowledge Discovery}, 21(2):277--292, 2010.
+
+\bibitem{CortesV95}
+Corinna Cortes and Vladimir Vapnik.
+\newblock Support-vector networks.
+\newblock {\em Machine learning}, 20(3):273--297, 1995.
+
+\bibitem{DworkHPR12}
+Cynthia Dwork, Moritz Hardt, Toniann Pitassi, Omer Reingold, and Richard Zemel.
+\newblock Fairness through awareness.
+\newblock In {\em Proceedings of the 3rd Innovations in Theoretical Computer
+  Science Conference}, pages 214--226. ACM, 2012.
+
+\bibitem{FriedlerSV14}
+Michael Feldman, Sorelle~A Friedler, John Moeller, Carlos Scheidegger, and
+  Suresh Venkatasubramanian.
+\newblock Certifying and removing disparate impact.
+\newblock pages 259--268, 2015.
+
+\bibitem{HastieTF09}
+Trevor Hastie, Robert Tibshirani, and Jerome Friedman.
+\newblock {\em The elements of statistical learning}, volume~2.
+\newblock Springer, 2009.
+
+\bibitem{KamiranC09}
+Faisal Kamiran and Toon Calders.
+\newblock Classifying without discriminating.
+\newblock In {\em Computer, Control and Communication, 2009. IC4 2009. 2nd
+  International Conference on}, pages 1--6. IEEE, 2009.
+
+\bibitem{KamiranCP10}
+Faisal Kamiran, Toon Calders, and Mykola Pechenizkiy.
+\newblock Discrimination aware decision tree learning.
+\newblock In {\em Data Mining (ICDM), 2010 IEEE 10th International Conference
+  on}, pages 869--874. IEEE, 2010.
+
+\bibitem{KamiranZC13}
+Faisal Kamiran, Indr{\.e} {\v{Z}}liobait{\.e}, and Toon Calders.
+\newblock Quantifying explainable discrimination and removing illegal
+  discrimination in automated decision making.
+\newblock {\em Knowledge and information systems}, 35(3):613--644, 2013.
+
+\bibitem{KamishimaAAS12}
+Toshihiro Kamishima, Shotaro Akaho, Hideki Asoh, and Jun Sakuma.
+\newblock Fairness-aware classifier with prejudice remover regularizer.
+\newblock In {\em Machine Learning and Knowledge Discovery in Databases}, pages
+  35--50. Springer, 2012.
+
+\bibitem{KamashimaAS11}
+Toshihiro Kamishima, Shotaro Akaho, and Jun Sakuma.
+\newblock Fairness-aware learning through regularization approach.
+\newblock In {\em Data Mining Workshops (ICDMW), 2011 IEEE 11th International
+  Conference on}, pages 643--650. IEEE, 2011.
+
+\bibitem{Lichman13}
+M.~Lichman.
+\newblock {UCI} machine learning repository, 2013.
+
+\bibitem{PodestaPMHZ14}
+John Podesta, Penny Pritzker, Ernest~J. Moniz, John Holdren, and Jeffrey
+  Zients.
+\newblock Big data: Seizing opportunities, preserving values, 2014.
+
+\bibitem{RomeiR14}
+Andrea Romei and Salvatore Ruggieri.
+\newblock A multidisciplinary survey on discrimination analysis.
+\newblock {\em The Knowledge Engineering Review}, 29:582--638, 11 2014.
+
+\bibitem{SchapireF12}
+Robert~E Schapire and Yoav Freund.
+\newblock {\em Boosting: Foundations and algorithms}.
+\newblock MIT press, 2012.
+
+\bibitem{SchapireFBL98}
+Robert~E Schapire, Yoav Freund, Peter Bartlett, and Wee~Sun Lee.
+\newblock Boosting the margin: A new explanation for the effectiveness of
+  voting methods.
+\newblock {\em Annals of statistics}, pages 1651--1686, 1998.
+
+\bibitem{ShalevShwartzBD14}
+Shai Shalev-Shwartz and Shai Ben-David.
+\newblock {\em Understanding Machine Learning: From Theory to Algorithms}.
+\newblock Cambridge University Press, 2014.
+
+\bibitem{ZemelWSPD13}
+Rich Zemel, Yu~Wu, Kevin Swersky, Toni Pitassi, and Cynthia Dwork.
+\newblock Learning fair representations.
+\newblock In {\em Proceedings of the 30th International Conference on Machine
+  Learning (ICML-13)}, pages 325--333, 2013.
+
+\end{thebibliography}

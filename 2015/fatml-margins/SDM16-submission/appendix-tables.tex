@@ -1,0 +1,91 @@
+\begin{table}[h]
+\centering
+\begin{tabular}{| c | ccccc |}
+\hline
+               & SVM & SVM (RR) & SVM (SDB) & SVM (RM) & LFR \cite{ZemelWSPD13} \\
+\hline
+label error    & 0.1471 & 0.2006 & 0.1869 (1.3e-05) & 0.1740 & 0.2299 \\
+bias           & 0.1689 & 0.0179 & 0.0036 (8.7e-05) & 0.0795 & 0.0020 \\
+RRB            & 0.2702 & 0.2821 & 0.3172 (6.5e-04) & 0.2545 & n/a \\
+\hline
+               & LR & LR (RR) & LR (SDB) & LR (RM) & DADT \cite{KamiranCP10} \\
+\hline
+label error    & 0.1478 & 0.2077 (1.3e-05) & 0.1802 (5.5e-06) & 0.1810 (7.8e-06) & 0.1600 \\
+bias           & 0.1968 & 0.0044 (4.1e-05) & 0.0060 (1.2e-04) & 0.0262 (6.9e-05) & 0.0090 \\
+RRB            & 0.4647 & 0.4696 (7.6e-05) & 0.5402 (1.3e-04) & 0.4282 (3.8e-04) & n/a \\
+\hline
+               & AdaBoost & AB (RR) & AB (SDB) & AB (RM) & AB (FWL)  \\
+\hline
+label error    & 0.1529 & 0.2078 (1.7e-05) & 0.1822 (2.9e-05) & 0.1864 (1.4e-05) & 0.1820 \\
+bias           & 0.1856 & 0.0091 (3.2e-05) & 0.0013 (5.1e-05) & 0.0381 (1.7e-04) & 0.0691  \\
+RRB            & 0.4372 & 0.4661 (3.7e-04) & 0.5461 (2.3e-04) & 0.4410 (1.8e-04) & 0.5174  \\
+\hline
+\hline
+\end{tabular}
+\caption{A summary of our experimental results for the Census Income data for
+relabeling, massaging, and the fair weak learner. The threshold for SDB was
+chosen to achieve perfect statistical parity on the training data.}
+\label{table:census_results}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{| c | ccccc |}
+\hline
+               & SVM & SVM (RR) & SVM (SDB) & SVM (RM) & CND \cite{KamiranC09} \\
+\hline
+label error    & 0.2823 & 0.2778 (6.4e-04) & 0.2979 (5.0e-04) & 0.3000 & 0.2757  \\
+bias           & 0.0886 & 0.0732 (4.4e-03) & 0.0266 (7.2e-03) & 0.0445 & 0.0327   \\
+RRB            & 0.6756 & 0.7827 (2.9e-03) & 0.8619 (1.7e-03) & 0.6232 & n/a  \\
+\hline
+               & LR & LR (RR) & LR (SDB) & LR (RM) &  \\
+\hline
+label error    & 0.2541 & 0.2656 (4.0e-04) & 0.2685 (4.7e-04) & 0.2625 &\\
+bias           & 0.1383 & 0.0095 (4.1e-03) & 0.0142 (4.8e-04) & 0.0202 &\\
+RRB            & 0.3070 & 0.8564 (2.0e-03) & 0.8687 (1.8e-03) & 0.6741 & \\
+\hline
+               & AdaBoost & AB (RR)  & AB (SDB)  & AB (RM)   & AB (FWL)  \\
+\hline
+label error    & 0.2602 & 0.2429 (9.6e-05) & 0.2745 (1.0e-04) & 0.2637 & 0.2859 \\
+bias           & 0.2617 & 0.0376 (1.9e-03) & 0.0034 (4.1e-03) & 0.0391 & 0.0092 \\
+RRB            & 0.6774 & 0.8629 (2.6e-03) & 0.8596 (4.5e-03) & 0.6965 & 0.6879 \\
+\hline
+\hline
+\end{tabular}
+\caption{A summary of our experimental results for the German data for
+relabeling, massaging, and the fair weak learner. The threshold for SDB was
+chosen to achieve perfect statistical parity on the training data. On this
+dataset SVM was run with a linear kernel.}
+\label{table:german_results}
+\end{table}
+
+\clearpage
+\begin{table}[h]
+\centering
+\begin{tabular}{| c | ccccc |}
+\hline
+               & SVM & SVM (RR) & SVM (SDB) & SVM (RM) & \\
+\hline
+label error    & 0.2718 & 0.2793 (7.7e-05) & 0.2716 (1.6e-04) & 0.2876 (2.2e-04)& \\
+bias           & 0.0550 & 0.1460 (3.0e-04) & 0.0106 (1.2e-03) & 0.0260 (2.2e-03)& \\
+RRB            & 0.2424 & 0.2588 (8.3e-05) & 0.3064 (1.8e-03) & 0.2552 (1.0e-03)&\\
+\hline
+               & LR & LR (RR)  & LR (SDB)  & LR (RM)  &  \\
+\hline
+label error    & 0.2742 & 0.3130 (1.3e-04) & 0.2745 (1.0e-04) & 0.2966 (6.2e-05)&\\
+bias           & 0.1468 & 0.3025 (1.6e-03) & 0.0034 (4.1e-03) & 0.0732 (5.9e-04)&\\
+RRB            & 0.1971 & 0.3213 (1.2e-03) & 0.8596 (4.5e-03) & 0.2117 (1.3e-03)& \\
+\hline
+               & AdaBoost & AB (RR) & AB (SDB) & AB (RM) & AB (FWL)   \\
+\hline
+label error    & 0.2690 & 0.3088 (8.9e-05) & 0.2990 (7.2e-05) & 0.2860 (3.7e-04) & 0.2687 (6.3e-05)\\
+bias           & 0.0966 & 0.2123 (1.7e-04) & 0.0140 (2.8e-04) & 0.0180 (1.4e-03) & 0.0463 (2.6e-04)\\
+RRB            & 0.2864 & 0.3996 (1.1e-02) & 0.4027 (3.7e-03) & 0.3325 (3.6e-03) & 0.2971 (8.0e-04)\\
+\hline
+\hline
+\end{tabular}
+\caption{A summary of our experimental results for the Singles data for relabeling, massaging, and
+the fair weak learner. The threshold for SDB was chosen to achieve perfect
+statistical parity on the training data.}
+\label{table:singles_results}
+\end{table}
