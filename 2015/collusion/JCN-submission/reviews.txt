@@ -1,0 +1,68 @@
+Reviewer(s)' Comments to Author:
+
+Reviewer: 1
+
+Comments to the Author
+This paper addresses an eavesdropping strategy that is known among network operators as "shorter distance fraud", where an agent pretends to be nearer to a destination to induce its neighbors to send traffic through itself. The authors call the problem either "interception", as it is usually called in the BGP networking literature, or "information monitoring" (a term that is more on the positive side and that is, in my opinion, both unusual and confusing).
+While most of the literature on distance frauds focuses on preventing them (see, for example, the strains of papers on Distance Bounding Protocols) this paper takes the opposite perspective and studies the scenario where several colluding agents are distributed in the network and need to come up with an optimal distance-fraud strategy.
+
+In particular, the paper rules off those easy strategies that cause hijacking, also called "black holes", where the traffic does not reach the destination anymore, and considers both the case when the colluding agents may be adjacent and the case when they are all non-adjacent. Also, two variants are taken into account: when the colluding agents have to broadcast the same distance to all neighbors (uniform model) or when they are allowed to announce different distances to different neighbors (non-uniform model).
+
+Since the network protocol is modeled as a distance vector (Section 3.1), it is somehow surprising that, given all the literature about distance vectors, distance vector security (for example for wifi protocols), distance frauds, distance-frauds countermeasures, etc. the authors introduce their model as if it was inspired by the BGP interdomain protocol. BGP is not properly a distance vector, but a "path-vector" protocol, which has several non-trivial consequences on its security and exploitability by malicious agents. Also the (policy-based) BGP "best routes" could be arbitrarily longer than the shortest routes computed by a distance vector. Therefore, all the emphasis on real-world interdomain networks and interdomain applicative scenarios (see, for example, Figure 1) seem to me nonsensical and detrimental.
+
+Results:
+
+- NP-hardness of picking a minimum-size set of colluding agents that maximize intercepted source-destination transmissions (when no colluding agent lies).
+- Proof that the problem of maximizing intercepted traffic in the nonuniform model reduces to the analogous problem in the uniform model.
+- An optimal strategy for the case where no two colluding agents are adjacent in the uniform model.
+- Discussion of the case when some colluding agents are adjacent (a non-optimal strategy for the uniform model).
+- Experiments in a simulated environment showing the impact of the strategies.
+
+Regarding the model, the authors correctly consider a pair source-destination to be intercepted if all the minimum paths (in the network adulterated by colluding agents' lies) traverse at least one colluding agent (see the discussion on "corresponding paths" and "admissible strategies" at page 6). This is due to the fact that in case of equal length minimum paths, a distance vector chooses arbitrarily one of them. However, this rigorous and oblivious choice is not applied to all results of the paper. In the same way, the authors should rule out hijacking for all valid paths. Instead, they seem to ignore an hijacking if an alternative corresponding path leads to the destination.
+In particular, in the proof of Case 1 of Theorem 5.2, when the malicious node $x$ announces a distance $k-2$ to node $y$, which is at distance $k-1$ from the destination, $y$ could reasonably switch to sending traffic to $x$ instead of the sequence of nodes $v_2, v_3, \dots$  that link $y$ (and also $x$) to the destination. In this case the interception transforms into an hijacking.
+Since Theorem 5.2 is a key result for the paper I think that this flaw deserves consideration by the authors.
+
+Some results may be further expanded. For example, in the reduction from the non-uniform model to the uniform one (Proposition 4.4, page 9), the replacement on the right side of Figure 4 (page 10) could be modified by putting a non-colluding agent in the center. This can be used to show that the problem with non-adjacent non-uniform agents reduces to the problem of non-adjacent uniform agents, for which we know how to find an optimal solution (Section 5.2). Further, the same transformation of Section 5.3 (collapsing adjacent agents) can be used to show that the case with adjacent non-uniform agents easily reduces to the case with non-adjacent non-uniform agents. Hence, all the cases for non-uniform agents could be happily solved, and only the case of adjacent uniform agents (for which a non-optimal but admissible strategy is presented in section 5.3) remains open.
+
+Overall, I think that the results contained in the submission deserve publication. However, I would ask the authors to perform a major revision as follows:
+
+1) Change the title of the paper so that it mentions "distance vector" and "interception" or "eavesdropping". Otherwise, this paper will never be found nor cited.
+2) Deeply revise the abstract and the introduction, focusing on distance vector protocols and their security issues and citing the appropriate literature in this domain rather than BGP scenarios.
+3) Avoid "black holes" for all paths that can be chosen by non-colluding agents. This could imply also assuming some rule to break the ties (for example, RIP routers stick with the first shortest announcement they receive).
+4) Possibly include results on non-uniform agents sketched above (provided they are correct).
+
+MINOR COMMENTS
+
+In the following all page numbers are those introduced by the JCN Scholarone system (not those of the original paper).
+
+Page 4, line 53: itself -> themselves
+
+Page 5, formula (3.1): the case when $rho$ is equal to one can be omitted (j announces 0 to i at time t=0 and i announces 1 to its neighbors at time t=1).
+
+Page 5, line 38: "Observe that..." in this phrase both $y$ and $t$ are used as destinations.
+
+Page 7, caption of Fig. 3: "$rho$" -> "$\rho$"
+
+Page 9, lines 14-17: "Although nonuniform lies might appear at first glance to provide a substantial increase in power
+.." this phrase is not comprehensible. Reducing the problem of finding the optimal strategy for an instance $G$ in the nonuniform model to the analogous problem in the uniform model for an instance $G'$ does not imply that uniform and nonuniform strategies have the same power.
+
+Page 12, line 13: "For a set $X$ and an integer $j$" -> "For a set of integers $X$ and an integer $j$"
+
+
+Reviewer: 2
+
+Comments to the Author
+Motivated by the recent reports of subtle BGP-based traffic redirection attacks, the paper presents a high level model of information monitoring in networks with shortest distance distributed routing.
+At a high level, the paper looked at attacks where a colluding agent announces a false distance to a certain destination to all or a subset of its neighbors. Upon success, these neighbors will send their traffic through the colluding agent giving it the chance to monitor it before forwarding it to its ultimate destination. More specifically, the paper presents two models for information monitoring in routing networks. The first is for uniform broadcast where a colluding agent announces  the same information to all its neighbors. The second is for non-uniform broadcast where a colluding agent announces different information to different neighbors. The paper then goes on to derive the optimal strategy for the first model where colluding agents can not be adjacent. This strategy is then evaluated on a set of graphs.
+
+Strength:
+- The paper studies an important problem
+- The presented theoretical framework and models can serve as good starting points for devising monitoring approaches to make the Internet routing less vulnerable to such attacks. This, however, highly depends on whether the framework and models can be generalized to networks that use complex routing strategies.
+
+Weaknesses:
+
+- Recent BGP redirection attacks were presented as the paper's main motivation, yet the rest of the paper has very little to do with BGP. BGP is not a simple distance based routing algorithm, it is a path vector protocol that allows expressing complex business policies. A BGP speaking network typically announces different routes to different neighbors depending on its business relationship with them as well as from where it has learnt the route in the first place. Longer routes are often preferred over shorter ones depending on how money flows between networks (i.e. business relationship). After reading the paper, I was left with a question about what the paper has actually achieved. In my opinion, the paper has presented an informative model for information monitoring in networks with shortest distance based routing. It would be great if the authors can elaborate on how the presented model can help mitigating/avoiding traffic redirection in BGP.
+
+- The conclusion about compromising just 18 random nodes in the US AS graph can lead to intercepting of all traffic is an over stretch for a couple reasons. First, to make a statement about a real world topology one needs to simulate BGP and not a distance-based routing protocol as mentioned above. Second, how did you measure traffic? have you used an actual traffic matrix?
+
+Overall, I think the paper presents an interesting and informative model for monitoring traffic in routing networks. It is, however, not clear how it will help mitigating/avoiding BGP redirection attacks. Further, the findings related to the US AS level topology are based on assumption that do not match the way actual networks and BGP routing work.
